@@ -11,11 +11,12 @@ const app = express();
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('Menu-General.ejs')
 })
 
 //middleware ::::::::::::::::::::::::::::::::::::::::::::::::::
 app.use(express.static("public"));
+
 
 //conexion a la base de datos::::::::::::::::::::::::::::::::::
 const conexion = mysql.createConnection({
@@ -23,7 +24,7 @@ const conexion = mysql.createConnection({
   database: 'bolilla_negra',
   user: 'root',
   password: 'Flam822'
-})
+});
 
 conexion.connect(function (err) {
   if(err){
