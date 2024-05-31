@@ -3,7 +3,7 @@
 const express = require('express');
 const mysql = require('mysql2');
 
-//objetos para llamar meetodos de express::::::::::::::::::::::
+//objetos para llamar metodos de express::::::::::::::::::::::
 const app = express();
 
 //configuraciones :::::::::::::::::::::::::::::::::::::::::::::
@@ -11,11 +11,15 @@ const app = express();
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => {
-    res.render('Menu-General.ejs')
+  res.render('Menu-General.ejs')
 })
 
-//middleware ::::::::::::::::::::::::::::::::::::::::::::::::::
-app.use(express.static("public"));
+app.get('/carga', (req, res) => {
+  res.render('carga');
+})
+
+//ruta de archivos estáticos - middleware :::::::::::::::::::::
+app.use(express.static(__dirname + '/public'));
 
 
 //conexion a la base de datos::::::::::::::::::::::::::::::::::
@@ -27,37 +31,80 @@ const conexion = mysql.createConnection({
 });
 
 conexion.connect(function (err) {
-  if(err){
+  if (err) {
     throw err;
-    console.log (`no se pudo conectar`)
-  }else{
+    console.log(`no se pudo conectar`)
+  } else {
     console.log('conexion exitosa')
   }
 })
 
 //consulta a la base de datos::::::::::::::::::::::::::::::::::
-const jugadores = 'SELECT * from players';
-conexion.query(jugadores, function (error, lista){
-if(error){
-  throw(error)}
-  else{
-      console.log(lista)
+const jugadores = 'SELECT * from players where id<10';
+conexion.query(jugadores, function (error, lista) {
+  if (error) {
+    throw (error)
+  }
+  else {
+    console.log(lista)
   }
 })
 
+//agregado de registro:::::::::::::::::::::::::::::::::::::::::
+const nuevoPlayer =
+  'INSERT INTO players (id, Alias, Nombre, Apellido, Matricula, Jefe) VALUES (NULL, "Fantasma", "NomFantasma", "ApeFantasma", 99999, "Mujer maravilla")';
+
+conexion.query(nuevoPlayer, function (error, lista) {
+  if (error) {
+    throw (error)
+  }
+  else {
+    console.log(lista.insertId, lista.fieldCount)
+  }
+})
+
+//modificar registro:::::::::::::::::::::::::::::::::::::::::
+
+const cambioPlayer =
+  'UPDATE players SET Matricula = 905509 WHERE players.id = 13';
+
+
+conexion.query(cambioPlayer, function (error, lista) {
+  if (error) {
+    throw (error)
+  }
+  else {
+    console.log(lista.insertId, lista.fieldCount)
+  }
+})
+
+
+//eliminar registro:::::::::::::::::::::::::::::::::::::::::
+
+const borrarPlayer =
+  'DELETE FROM players WHERE players.id > 13';
+
+conexion.query(borrarPlayer, function (error, lista) {
+  if (error) {
+    throw (error)
+  }
+  else {
+    console.log(lista.insertId, lista.fieldCount)
+  }
+})
 //cierre de la conexion a la base :::::::::::::::::::::::::::::
-conexion.end(function(err){
-if(err){
-  throw err;
-  console.log ('no puedo cerrar la conexión')
-}else{
-  console.log('conexión cerrada exitosamente')
-}
+conexion.end(function (err) {
+  if (err) {
+    throw err;
+    console.log('no puedo cerrar la conexión')
+  } else {
+    console.log('conexión cerrada exitosamente')
+  }
 })
 
 
 //configuración del puerto ::::::::::::::::::::::::::::::::::::
 const puerto = process.env.PORT || 3000;
-app.listen(puerto, () =>{
-    console.log (`Escuchando en puerto ${puerto}`)
+app.listen(puerto, () => {
+  console.log(`Escuchando en puerto ${puerto}`)
 })
