@@ -9,7 +9,7 @@
     <title>Blog de bolilla</title>
     <link href="assets/images/bn2.ico" rel="icon">
 
-    <link href="styles/styleblog.css" rel="stylesheet">
+    <link href="../estilos/styleblog.css" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,159 +19,157 @@
     <meta name="copyright" content="Meta Inc.">
   </head>
 
-  <body>
-    <header>
-    </header>
+  <header>
+  </header>
 
-    <section>
-      <br>
-      <h1>Carga de tarjetas</h1>
+  <section>
+    <br>
+    <h1>Carga de tarjetas</h1>
 
-      <!-- MODELO DE FORMULARIO-------------------------------->
+    <!-- MODELO DE FORMULARIO-------------------------------->
 
-      <form action="/url-del-programa-que-procesa" method="post">
+    <form action="/validar" method="post">
 
-        <!-- con method=get, el navegador pasa esto:
+      <!-- con method=get, el navegador pasa esto:
    file:///C:/url-del-programa-que-procesa?texto=va+el+nombre&archivo=BOLILLA+2023.xlsx&email=rgarcia%40consejocaba.org.ar&clave=Flam822&comentario=comentario+chico&comentafix=comentario+grande-->
 
-        <!-- con method=POST, el nvegador pasa esto:
+      <!-- con method=POST, el nvegador pasa esto:
    file:///C:/url-del-programa-que-procesa
    y nada más-->
-        <br>
-        <label for"fechator">Fecha torneo: </label><input id="date" type="date" max="2024-10-31" min="2024-01-01"></br>
-        <br>
-        <br>
-
-        <fieldset>
-          <legend>Participantes</legend>
-          <table>
-            <tr>
-              <td><label for="diegui">Diegui
-                  <input type="number" id="diegui" name="diegui" min="0" max="130" placeholder="0">
-                </label></td>
-
-              <td><label for="edu">Edu
-                  <input type="number" id="edu" name="edu" min="0" max="130" placeholder="0">
-                </label></td>
-
-              <td><label for="fer">Fer
-                  <input type="number" id="fer" name="fer" min="0" max="130" placeholder="0">
-                </label></td>
-
-              <td><label for="fer">Gaby
-                  <input type="number" id="gaby" name="gaby" min="0" max="130" placeholder="0">
-                </label></td>
-            </tr>
-
-            <tr>
-              <td><label for="joaco">Joaco
-                  <input type="number" id="joaco" name="joaco" min="0" max="130" placeholder="0">
-                </label></td>
-
-              <td><label for="juancho">Juancho
-                  <input type="number" id="juancho" name="juancho" min="0" max="130" placeholder="0">
-                </label></td>
-
-              <td><label for="julito">Julito
-                  <input type="number" id="julito" name="julito" min="0" max="130" placeholder="0">
-                </label></td>
-
-              <td><label for="juancho">Negro
-                  <input type="number" id="negro" name="negro" min="0" max="130" placeholder="0">
-                </label></td>
-
-
-            <tr>
-              <td><label for="joaco">Panza.
-                  <input type="number" id="panza" name="panza" min="0" max="130" placeholder="0">
-                </label></td>
-
-              <td><label for="juancho">Presi
-                  <input type="number" id="presi" name="presi" min="0" max="130" placeholder="0">
-                </label></td>
-
-              <td><label for="julito">Sensei
-                  <input type="number" id="sensei" name="sensei" min="0" max="130" placeholder="0">
-                </label></td>
-
-              <td><label for="juancho">Torni
-                  <input type="number" id="torni" name="torni" min="0" max="130" placeholder="0">
-                </label></td>
-          </table>
-        </fieldset>
-        <br>
-
-        <fieldset>
-          <legend>Pelotas ganadas.</legend>
-          <div>
-            <label for="lang">1°</label>
-            <select name="lenguajes" id="nombre">
-              <option value="javascript">Diegui</option>
-              <option value="php">Edu</option>
-              <option value="java">Fer</option>
-              <option value="golang">Gaby</option>
-              <option value="python">Joaco</option>
-              <option value="c#">Juancho</option>
-              <option value="C++">Julito</option>
-              <option value="erlang">Negro</option>
-              <option value="python">Panza</option>
-              <option value="c#">Presi</option>
-              <option value="C++">Sensei</option>
-              <option value="erlang">Torni</option>
-            </select>
-            <label for="peloGana">Pelotas:</label>
-            <input type="number" id="peloGana" name="peloGana" min="1" max="7">
-          </div>
-          <div>
-            <label for="lang">2°</label>
-            <select name="lenguajes" id="nombre">
-              <option value="Diegui">Diegui</option>
-              <option value="Edu">Edu</option>
-              <option value="Fer">Fer</option>
-              <option value="golang">Gaby</option>
-              <option value="python">Joaco</option>
-              <option value="c#">Juancho</option>
-              <option value="C++">Julito</option>
-              <option value="erlang">Negro</option>
-              <option value="python">Panza</option>
-              <option value="c#">Presi</option>
-              <option value="C++">Sensei</option>
-              <option value="erlang">Torni</option>
-            </select>
-            <label for="peloGana2">Pelotas:</label>
-            <input type="number" id="peloGana2" name="peloGana2" min="2" max="4">
-          </div>
-          <div>
-            <label for="lang">3°</label>
-            <select name="lenguajes" id="nombre">
-              <option value="javascript">Diegui</option>
-              <option value="php">Edu</option>
-              <option value="java">Fer</option>
-              <option value="golang">Gaby</option>
-              <option value="python">Joaco</option>
-              <option value="c#">Juancho</option>
-              <option value="C++">Julito</option>
-              <option value="erlang">Negro</option>
-              <option value="python">Panza</option>
-              <option value="c#">Presi</option>
-              <option value="C++">Sensei</option>
-              <option value="erlang">Torni</option>
-            </select>
-            <label for="peloGana3">Pelotas:</label>
-            <input type="number" id="peloGana" name="peloGana" min="1" max="1" value="1">
-          </div>
-        </fieldset>
-        <br>
-        <br>
-        <button>Enviar</button>
-      </form>
       <br>
-      <p>fin de formulario</p>
-      <br>
-      <hr>
+      <label for"fechator">Fecha torneos: </label>
+        <input id="date" type="date" max="2024-10-31" min="2024-01-01"></br>
+
+      <fieldset>
+        <legend>Participantes</legend>
+        <table>
+          <tr>
+            <td><label for="diegui">Diegui
+                <input type="number" id="diegui" name="diegui" min="0" max="130" placeholder="0">
+              </label></td>
+
+            <td><label for="edu">Edu
+                <input type="number" id="edu" name="edu" min="0" max="130" placeholder="0">
+              </label></td>
+
+            <td><label for="fer">Fer
+                <input type="number" id="fer" name="fer" min="0" max="130" placeholder="0">
+              </label></td>
+
+            <td><label for="fer">Gaby
+                <input type="number" id="gaby" name="gaby" min="0" max="130" placeholder="0">
+              </label></td>
+          </tr>
+
+          <tr>
+            <td><label for="joaco">Joaco
+                <input type="number" id="joaco" name="joaco" min="0" max="130" placeholder="0">
+              </label></td>
+
+            <td><label for="juancho">Juancho
+                <input type="number" id="juancho" name="juancho" min="0" max="130" placeholder="0">
+              </label></td>
+
+            <td><label for="julito">Julito
+                <input type="number" id="julito" name="julito" min="0" max="130" placeholder="0">
+              </label></td>
+
+            <td><label for="juancho">Negro
+                <input type="number" id="negro" name="negro" min="0" max="130" placeholder="0">
+              </label></td>
+
+
+          <tr>
+            <td><label for="joaco">Panza.
+                <input type="number" id="panza" name="panza" min="0" max="130" placeholder="0">
+              </label></td>
+
+            <td><label for="juancho">Presi
+                <input type="number" id="presi" name="presi" min="0" max="130" placeholder="0">
+              </label></td>
+
+            <td><label for="julito">Sensei
+                <input type="number" id="sensei" name="sensei" min="0" max="130" placeholder="0">
+              </label></td>
+
+            <td><label for="juancho">Torni
+                <input type="number" id="torni" name="torni" min="0" max="130" placeholder="0">
+              </label></td>
+        </table>
+      </fieldset>
       <br>
 
-      <section>
+      <fieldset>
+        <legend>Pelotas ganadas.</legend>
+
+        <div>
+          <label for="lang">1°</label>
+          <select name="jugador" id="nombre">
+            <option value="Diegui">Diegui</option>
+            <option value="Edu">Edu</option>
+            <option value="Fer">Fer</option>
+            <option value="Gaby">Gaby</option>
+            <option value="Joaco">Joaco</option>
+            <option value="Juancho">Juancho</option>
+            <option value="Julito">Julito</option>
+            <option value="Negro">Negro</option>
+            <option value="Panza">Panza</option>
+            <option value="Presi" resi</option>
+            <option value="Sensei">Sensei</option>
+            <option value="Torni">Torni</option>
+          </select>
+          <label for="peloGana1">Pelotas:</label>
+          <input type="number" id="peloGana" name="peloGana" min="1" max="7">
+        </div>
+
+        <div>
+          <label for="lang">2°</label>
+          <select name="lenguajes" id="nombre">
+            <option value="Diegui">Diegui</option>
+            <option value="Edu">Edu</option>
+            <option value="Fer">Fer</option>
+            <option value="Gaby">Gaby</option>
+            <option value="Joaco">Joaco</option>
+            <option value="Juancho">Juancho</option>
+            <option value="Julito">Julito</option>
+            <option value="Negro">Negro</option>
+            <option value="Panza">Panza</option>
+            <option value="Presi" resi</option>
+            <option value="Sensei">Sensei</option>
+            <option value="Torni">Torni</option>
+          </select>
+          <label for="peloGana2">Pelotas:</label>
+          <input type="number" id="peloGana2" name="peloGana2" min="2" max="4">
+        </div>
+
+        <div>
+          <label for="lang">3°</label>
+          <select name="lenguajes" id="nombre">
+            <option value="Diegui">Diegui</option>
+            <option value="Edu">Edu</option>
+            <option value="Fer">Fer</option>
+            <option value="Gaby">Gaby</option>
+            <option value="Joaco">Joaco</option>
+            <option value="Juancho">Juancho</option>
+            <option value="Julito">Julito</option>
+            <option value="Negro">Negro</option>
+            <option value="Panza">Panza</option>
+            <option value="Presi" resi</option>
+            <option value="Sensei">Sensei</option>
+            <option value="Torni">Torni</option>
+          </select>
+          <label for="peloGana3">Pelotas:</label>
+          <input type="number" id="peloGana" name="peloGana" min="1" max="1" value="1">
+        </div>
+      </fieldset>
+
+      <input type="submit" value="Registrar">
+      <br>
+
+    </form>
+
+
+    <!-- <section>
         <datalist id="listanombres">
           <option value="Diegui">
           <option value="Edu">
@@ -186,8 +184,8 @@
           <option value="Sensei">
           <option value="Torni">
             <!-- Agrega más opciones aquí -->
-        </datalist>
-
+    <!-- </datalist> -->
+    <!-- 
         <script>
           window.pepe.addEventListener('click', () => {
             window.ventana.showModal()
@@ -196,6 +194,7 @@
           window.hide.addEventListener('click', () => {
             window.ventana.close()
           })
-        </script>
-      </section>
-  </body>
+        </script> -->
+  </section>
+</body>
+</html>
