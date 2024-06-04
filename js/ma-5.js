@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 45; // 4 x 5 +  1 x 10  + 1 x 15
+let maximo = 50; // 4 x 5 +  1 x 10  +  1 x 20
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -12,7 +12,8 @@ let checkboxesSeleccionados = [];
 
 function obtenerValoresSeleccionados() {
   respuestas = [];
-  const grupos = ["A-11-1", "A-11-2", "A-11-3", "A-11-4", "A-11-5", "A-11-6"];
+  const grupos = ["A-5-1", "A-5-2", "A-5-3", "A-5-4", "A-5-5", "A-5-6"];
+
 
   var indiceFilas = 0;
   filasFaltantes = [];
@@ -48,39 +49,22 @@ function calculaResultados() {
     if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
 
     console.log(`i= ${i} ,
-         suma de valores ${valores} ,
-         respuesta: ${respuestas[i]}`);
+         valores ${valores} ,
+         respuestas: ${respuestas[i]}`);
 
-    if (i < 4){
-        switch (respuestas[i]) {
-          case "1": valores +=0;
-                  break;
-          case "2": valores +=(0.50 * 5);
-                  break;
-          case "3": valores +=(0.75 * 5);
-                  break;
-          case "4": valores +=(1 * 5);
-                  break;
-    }}
-    if (i==4){
-      if (respuestas[4]== 1){
-        valores +=10}
+    let precio = 0;
+    if (i == 3){precio = 10}
+      else{
+          if (i == 5){
+               precio = 20}
+            else{
+              precio = 5
+            }
+      }
+
+    if (respuestas[i] == 1) {
+          valores += precio;
     }
-
-    if (i==5) {
-      switch (respuestas[i]) {
-        case "1": valores +=0;
-                break;
-        case "2": valores +=(0.50 * 15);
-                console.log (`caso 2 ${valores}`)
-                break;
-        case "3": valores +=(0.75 * 15);
-                console.log (`caso 3 ${valores}`)
-                break;
-        case "4": valores +=(1 * 15);
-                console.log (`caso 4 ${valores}`)
-                break;
-    }}
 
     console.log(`valor despues calculo: ${valores}`);
 
@@ -100,25 +84,23 @@ document
 
 // obtener los valores de radio ::::::::::::::::::::::::::::::
     obtenerValoresSeleccionados();
-    // console.log(`indice de respuestas faltantes ${filasFaltantes}`);
+    console.log(`indice de respuestas faltantes ${filasFaltantes}`);
 
 // Si no hay faltantes sigue adelante:::::::::::::::::::::::::
     if (!(filasFaltantes.length > 0)) {
       porcientoFormateado = calculaResultados();
       porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
 
-      // console.log("Mostrando alerta personalizada...");
       mostrarMiAlerta(maximo, valores, porcientoFormateado);
       console.log(`Suma puntos ${valores},
                  valor máximo: ${maximo},
                  porcentaje ${porcientoFormateado}`);
       console.table(puntajesIndividuales);
 
-
       // Guardar el valor en LocalStorage
-      localStorage.setItem("maximo-11", JSON.stringify(maximo));
-      localStorage.setItem("valores-11", JSON.stringify(valores));
-      localStorage.setItem("porciento-11", JSON.stringify(porcientoFormateado));
+      localStorage.setItem("maximo-5", JSON.stringify(maximo));
+      localStorage.setItem("valores-5", JSON.stringify(valores));
+      localStorage.setItem("porciento-5", JSON.stringify(porcientoFormateado));
 
       // window.location.href = "Menu-A.html";
     }
@@ -157,5 +139,5 @@ function cerrarAlerta() {
 
 function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
-  window.location.href = "MA-12.html";
+  window.location.href = "MA-6.html";
 }

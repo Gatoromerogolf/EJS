@@ -64,15 +64,8 @@ function calculaResultados() {
               console.log (`caso 4 ${valores}`)
               break;
     }
-    // if ((respuestas[i] == 1)) {
-    //   valores += 5;
-    // }
-
     console.log(`valor despues calculo: ${valores}`);
 
-    // puntajesIndividuales[i][0] = i + 1;
-    // puntajesIndividuales[i][1] = respuestas[i];
-    // puntajesIndividuales[i][2] = tabla[i][respuestas[i] - 1];
   }
   const porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
   return porcientoFormateado;
@@ -95,21 +88,13 @@ document
     if (!(filasFaltantes.length > 0)) {
       porcientoFormateado = calculaResultados();
       porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
-      // alert(
-      //   `Calificación obtenida: \n
-      //         Puntaje máximo de la sección: ${maximo} \n
-      //         Calificación: ${valores} \n
-      //         Porcentual: ${porcientoFormateado}%`
-      // );
+
       // console.log("Mostrando alerta personalizada...");
       mostrarMiAlerta(maximo, valores, porcientoFormateado);
       console.log(`Suma puntos ${valores},
                  valor máximo: ${maximo},
                  porcentaje ${porcientoFormateado}`);
       console.table(puntajesIndividuales);
-
-      // // Supongamos que calculas o recibes algún valor 'nuevoValor'
-      // let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
 
       // Guardar el valor en LocalStorage
       localStorage.setItem("maximo-15", JSON.stringify(maximo));

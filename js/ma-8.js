@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 45; // 4 x 5 +  1 x 10  + 1 x 15
+let maximo = 25; // 1 x 10 +  3 x 5
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -12,7 +12,8 @@ let checkboxesSeleccionados = [];
 
 function obtenerValoresSeleccionados() {
   respuestas = [];
-  const grupos = ["A-11-1", "A-11-2", "A-11-3", "A-11-4", "A-11-5", "A-11-6"];
+  const grupos = ["A-8-1", "A-8-2", "A-8-3", "A-8-4"];
+
 
   var indiceFilas = 0;
   filasFaltantes = [];
@@ -48,39 +49,21 @@ function calculaResultados() {
     if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
 
     console.log(`i= ${i} ,
-         suma de valores ${valores} ,
-         respuesta: ${respuestas[i]}`);
+         valores ${valores} ,
+         respuestas: ${respuestas[i]}`);
 
-    if (i < 4){
-        switch (respuestas[i]) {
-          case "1": valores +=0;
-                  break;
-          case "2": valores +=(0.50 * 5);
-                  break;
-          case "3": valores +=(0.75 * 5);
-                  break;
-          case "4": valores +=(1 * 5);
-                  break;
-    }}
-    if (i==4){
-      if (respuestas[4]== 1){
-        valores +=10}
+    let precio = (i == 0) ? 10 : 5;
+
+    switch (respuestas[i]) {
+      case "1": valores +=0;
+              break;
+      case "2": valores +=(0.50 * precio);
+              break;
+      case "3": valores +=(0.75 * precio);
+              break;
+      case "4": valores +=(1 * precio);
+              break;
     }
-
-    if (i==5) {
-      switch (respuestas[i]) {
-        case "1": valores +=0;
-                break;
-        case "2": valores +=(0.50 * 15);
-                console.log (`caso 2 ${valores}`)
-                break;
-        case "3": valores +=(0.75 * 15);
-                console.log (`caso 3 ${valores}`)
-                break;
-        case "4": valores +=(1 * 15);
-                console.log (`caso 4 ${valores}`)
-                break;
-    }}
 
     console.log(`valor despues calculo: ${valores}`);
 
@@ -100,13 +83,18 @@ document
 
 // obtener los valores de radio ::::::::::::::::::::::::::::::
     obtenerValoresSeleccionados();
-    // console.log(`indice de respuestas faltantes ${filasFaltantes}`);
+    console.log(`indice de respuestas faltantes ${filasFaltantes}`);
 
 // Si no hay faltantes sigue adelante:::::::::::::::::::::::::
     if (!(filasFaltantes.length > 0)) {
       porcientoFormateado = calculaResultados();
       porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
-
+      // alert(
+      //   `Calificación obtenida: \n
+      //         Puntaje máximo de la sección: ${maximo} \n
+      //         Calificación: ${valores} \n
+      //         Porcentual: ${porcientoFormateado}%`
+      // );
       // console.log("Mostrando alerta personalizada...");
       mostrarMiAlerta(maximo, valores, porcientoFormateado);
       console.log(`Suma puntos ${valores},
@@ -114,11 +102,13 @@ document
                  porcentaje ${porcientoFormateado}`);
       console.table(puntajesIndividuales);
 
+      // // Supongamos que calculas o recibes algún valor 'nuevoValor'
+      // let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
 
       // Guardar el valor en LocalStorage
-      localStorage.setItem("maximo-11", JSON.stringify(maximo));
-      localStorage.setItem("valores-11", JSON.stringify(valores));
-      localStorage.setItem("porciento-11", JSON.stringify(porcientoFormateado));
+      localStorage.setItem("maximo-8", JSON.stringify(maximo));
+      localStorage.setItem("valores-8", JSON.stringify(valores));
+      localStorage.setItem("porciento-8", JSON.stringify(porcientoFormateado));
 
       // window.location.href = "Menu-A.html";
     }
@@ -157,5 +147,5 @@ function cerrarAlerta() {
 
 function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
-  window.location.href = "MA-12.html";
+  window.location.href = "MA-9.html";
 }

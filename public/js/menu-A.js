@@ -231,6 +231,38 @@ tablaMenuA[2][3] = JSON.parse(localStorage.getItem('maximo-3'));
 tablaMenuA[2][4] = JSON.parse(localStorage.getItem('valores-3'));
 tablaMenuA[2][5] = JSON.parse(localStorage.getItem('porciento-3'));
 
+tablaMenuA[3][3] = JSON.parse(localStorage.getItem('maximo-4'));
+tablaMenuA[3][4] = JSON.parse(localStorage.getItem('valores-4'));
+tablaMenuA[3][5] = JSON.parse(localStorage.getItem('porciento-4'));
+
+tablaMenuA[4][3] = JSON.parse(localStorage.getItem('maximo-5'));
+tablaMenuA[4][4] = JSON.parse(localStorage.getItem('valores-5'));
+tablaMenuA[4][5] = JSON.parse(localStorage.getItem('porciento-5'));
+
+tablaMenuA[5][3] = JSON.parse(localStorage.getItem('maximo-6'));
+tablaMenuA[5][4] = JSON.parse(localStorage.getItem('valores-6'));
+tablaMenuA[5][5] = JSON.parse(localStorage.getItem('porciento-6'));
+
+tablaMenuA[6][3] = JSON.parse(localStorage.getItem('maximo-7'));
+tablaMenuA[6][4] = JSON.parse(localStorage.getItem('valores-7'));
+tablaMenuA[6][5] = JSON.parse(localStorage.getItem('porciento-7'));
+
+tablaMenuA[7][3] = JSON.parse(localStorage.getItem('maximo-8'));
+tablaMenuA[7][4] = JSON.parse(localStorage.getItem('valores-8'));
+tablaMenuA[7][5] = JSON.parse(localStorage.getItem('porciento-8'));
+
+tablaMenuA[8][3] = JSON.parse(localStorage.getItem('maximo-9'));
+tablaMenuA[8][4] = JSON.parse(localStorage.getItem('valores-9'));
+tablaMenuA[8][5] = JSON.parse(localStorage.getItem('porciento-9'));
+
+tablaMenuA[9][3] = JSON.parse(localStorage.getItem('maximo-10'));
+tablaMenuA[9][4] = JSON.parse(localStorage.getItem('valores-10'));
+tablaMenuA[9][5] = JSON.parse(localStorage.getItem('porciento-10'));
+
+tablaMenuA[10][3] = JSON.parse(localStorage.getItem('maximo-11'));
+tablaMenuA[10][4] = JSON.parse(localStorage.getItem('valores-11'));
+tablaMenuA[10][5] = JSON.parse(localStorage.getItem('porciento-11'));
+
 tablaMenuA[11][3] = JSON.parse(localStorage.getItem('maximo-12'));
 tablaMenuA[11][4] = JSON.parse(localStorage.getItem('valores-12'));
 tablaMenuA[11][5] = JSON.parse(localStorage.getItem('porciento-12'));
