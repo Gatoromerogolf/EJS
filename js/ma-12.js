@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 10; // 2 por 5
+let maximo = 20; // 2 x 5 +  1 x 10
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -12,7 +12,7 @@ let checkboxesSeleccionados = [];
 
 function obtenerValoresSeleccionados() {
   respuestas = [];
-  const grupos = ["A-15-1", "A-15-2"];
+  const grupos = ["A-12-1", "A-12-2", "A-12-3"];
 
   var indiceFilas = 0;
   filasFaltantes = [];
@@ -44,6 +44,7 @@ function calculaResultados() {
   // maximo = respuestas[0] == 1 ? tabla01[0][2] : tabla02[0][2];
   // console.log(respuestas[0], maximo, tabla01[0][2], tabla02[0][2]);
 
+  let precio = 0;
   for (let i = 0; i < respuestas.length; i++) {
     if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
 
@@ -51,16 +52,18 @@ function calculaResultados() {
          valores ${valores} ,
          respuestas: ${respuestas[i]}`);
 
+    precio = (i < 2) ? 5 : 10;
+
     switch (respuestas[i]) {
       case "1": valores +=0;
               break;
-      case "2": valores +=(0.50 * 5);
+      case "2": valores +=(0.50 * precio);
               console.log (`caso 2 ${valores}`)
               break;
-      case "3": valores +=(0.75 * 5);
+      case "3": valores +=(0.75 * precio);
               console.log (`caso 3 ${valores}`)
               break;
-      case "4": valores +=(1 * 5);
+      case "4": valores +=(1 * precio);
               console.log (`caso 4 ${valores}`)
               break;
     }
@@ -112,9 +115,9 @@ document
       // let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
 
       // Guardar el valor en LocalStorage
-      localStorage.setItem("maximo-15", JSON.stringify(maximo));
-      localStorage.setItem("valores-15", JSON.stringify(valores));
-      localStorage.setItem("porciento-15", JSON.stringify(porcientoFormateado));
+      localStorage.setItem("maximo-12", JSON.stringify(maximo));
+      localStorage.setItem("valores-12", JSON.stringify(valores));
+      localStorage.setItem("porciento-12", JSON.stringify(porcientoFormateado));
 
       // window.location.href = "Menu-A.html";
     }
@@ -153,5 +156,5 @@ function cerrarAlerta() {
 
 function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
-  window.location.href = "Menu-A.html";
+  window.location.href = "MA-13.html";
 }

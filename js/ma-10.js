@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 10; // 2 por 5
+let maximo = 25; // 5 x 5
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -12,7 +12,7 @@ let checkboxesSeleccionados = [];
 
 function obtenerValoresSeleccionados() {
   respuestas = [];
-  const grupos = ["A-15-1", "A-15-2"];
+  const grupos = ["A-14-1", "A-14-2", "A-14-3", "A-14-4", "A-14-5"];
 
   var indiceFilas = 0;
   filasFaltantes = [];
@@ -112,9 +112,9 @@ document
       // let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
 
       // Guardar el valor en LocalStorage
-      localStorage.setItem("maximo-15", JSON.stringify(maximo));
-      localStorage.setItem("valores-15", JSON.stringify(valores));
-      localStorage.setItem("porciento-15", JSON.stringify(porcientoFormateado));
+      localStorage.setItem("maximo-14", JSON.stringify(maximo));
+      localStorage.setItem("valores-14", JSON.stringify(valores));
+      localStorage.setItem("porciento-14", JSON.stringify(porcientoFormateado));
 
       // window.location.href = "Menu-A.html";
     }
@@ -153,5 +153,5 @@ function cerrarAlerta() {
 
 function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
-  window.location.href = "Menu-A.html";
+  window.location.href = "MA-15.html";
 }

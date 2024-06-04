@@ -231,6 +231,18 @@ tablaMenuA[2][3] = JSON.parse(localStorage.getItem('maximo-3'));
 tablaMenuA[2][4] = JSON.parse(localStorage.getItem('valores-3'));
 tablaMenuA[2][5] = JSON.parse(localStorage.getItem('porciento-3'));
 
+tablaMenuA[11][3] = JSON.parse(localStorage.getItem('maximo-12'));
+tablaMenuA[11][4] = JSON.parse(localStorage.getItem('valores-12'));
+tablaMenuA[11][5] = JSON.parse(localStorage.getItem('porciento-12'));
+
+tablaMenuA[12][3] = JSON.parse(localStorage.getItem('maximo-13'));
+tablaMenuA[12][4] = JSON.parse(localStorage.getItem('valores-13'));
+tablaMenuA[12][5] = JSON.parse(localStorage.getItem('porciento-13'));
+
+tablaMenuA[13][3] = JSON.parse(localStorage.getItem('maximo-14'));
+tablaMenuA[13][4] = JSON.parse(localStorage.getItem('valores-14'));
+tablaMenuA[13][5] = JSON.parse(localStorage.getItem('porciento-14'));
+
 tablaMenuA[14][3] = JSON.parse(localStorage.getItem('maximo-15'));
 tablaMenuA[14][4] = JSON.parse(localStorage.getItem('valores-15'));
 tablaMenuA[14][5] = JSON.parse(localStorage.getItem('porciento-15'));
