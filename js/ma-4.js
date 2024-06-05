@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 50; // 4 x 5 +  1 x 10  +  1 x 20
+let maximo = 145; // 4 x 5 +  1 x 10  +  1 x 20
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -29,31 +29,150 @@ function obtenerValoresSeleccionados() {
   filasFaltantes = [];
   grupos.forEach((nombreGrupo) => {
     indiceFilas++;
-    if (indiceFilas == 1){indiceFilas++}; //saltea posicion 2 para auditor
+
+    // if (indiceFilas == 2){indiceFilas++}; //saltea posicion 2 para auditor
     const grupo = document.querySelector(
       `input[name="${nombreGrupo}"]:checked`
     );
     if (grupo) {
       respuestas.push(grupo.value); // Agrega el valor del radio seleccionado al arreglo
     } else {
-      respuestas.push(null); // Agrega null si no hay selección
+      respuestas.push('9'); // Agrega null si no hay selección
       filasFaltantes.push(indiceFilas);
     }
+    // console.log(`indice ${indiceFilas} y respuesta: ${respuestas}`)
   });
 
+  console.log(`indice ${indiceFilas} y respuesta:           ${respuestas}`)
+
 //  Ahora controla los condicionales, si existe comite cuando hay reunion::::::::::
+// Comité de auditoria y el auditor :::::::::::::::::::::::::::::::::
   if (respuestas[0] == 1){
     //existe comite auditoria
     const marca = document.querySelector(
       'input[name="A-4-2"]:checked');
     
     if(!marca){
-      respuestas.push(null); // Agrega null si no hay selección
-      filasFaltantes.push(1); // guarda en posicion 2??
+      respuestas.splice(1, 0, '9'); // Agrega null si no hay selección
+      filasFaltantes.splice(1, 0, 2); // guarda en posicion 2??
     } else {
-      respuestas.push(marca.value); 
+      respuestas.splice(1, 0, (marca.value))
     } 
-  }
+  }else{
+    respuestas.splice(1, 0, '9')
+  };
+
+  console.log (`respuestas despues auditor en comité${respuestas}`)
+
+// Comité de Auditoría
+  indiceFilas++;
+  if (respuestas[0] == 1){
+    const marca = document.querySelector(
+      'input[name="A-4-12"]:checked');
+  
+    if (marca) {
+      respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
+    } else {
+      respuestas.push('9'); // Agrega null si no hay selección
+      filasFaltantes.push(indiceFilas);}}
+      else {
+        console.log('agrego null por no comite auditoria')
+        respuestas.push('9'); // Agrega null si no hay comite auditoria
+      }
+
+  console.log (`respuestas despues reuniones de audi${respuestas}`);
+
+// Comité de Alta Gerencia
+  indiceFilas++;
+  if (respuestas[2] == 1){
+  const marca = document.querySelector(
+    'input[name="A-4-13"]:checked');
+  
+    if (marca) {
+    respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
+  } else {
+    respuestas.push('9'); // Agrega null si no hay selección
+    filasFaltantes.push(indiceFilas);}}
+    else {
+      console.log('agrego null por no comite alta gerencia')
+      respuestas.push('9'); // Agrega null si no hay comite auditoria
+    }
+
+console.log (`resp despues reun Alta Gerenciaaaaaa${respuestas}`);
+
+// Comité de Nominaciones y sucesiones
+    indiceFilas++;
+    if (respuestas[3] == 1){
+    const marca = document.querySelector(
+      'input[name="A-4-14"]:checked');
+    
+      if (marca) {
+      respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
+    } else {
+      respuestas.push('9'); // Agrega null si no hay selección
+      filasFaltantes.push(indiceFilas);}}
+      else {
+        console.log('agrego null por no comite nominaciones')
+        respuestas.push('9'); // Agrega null si no hay comite auditoria
+      }
+  
+  console.log (`resp despues Nominaciones     .. ...${respuestas}`);
+
+
+// Comité de Compensaciones
+  indiceFilas++;
+  if (respuestas[4] == 1){
+  const marca = document.querySelector(
+    'input[name="A-4-15"]:checked');
+  
+    if (marca) {
+    respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
+  } else {
+    respuestas.push('9'); // Agrega null si no hay selección
+    filasFaltantes.push(indiceFilas);}}
+    else {
+      console.log('agrego null por no comite compensaciones')
+      respuestas.push('9'); // Agrega null si no hay comite auditoria
+    }
+
+console.log (`resp despues Compensaciones ........${respuestas}`);
+
+
+//  Comité de tecnologías de la información
+  indiceFilas++;
+  if (respuestas[5] == 1){
+  const marca = document.querySelector(
+    'input[name="A-4-16"]:checked');
+
+    if (marca) {
+    respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
+  } else {
+    respuestas.push('9'); // Agrega null si no hay selección
+    filasFaltantes.push(indiceFilas);}}
+    else {
+      console.log('agrego null por no comite tecnologia')
+      respuestas.push('9'); // Agrega null si no hay comite auditoria
+    }
+
+console.log (`resp despues Tecnología ..............${respuestas}`);
+
+//  Comité de Riesgos
+  indiceFilas++;
+  if (respuestas[6] == 1){
+  const marca = document.querySelector(
+    'input[name="A-4-17"]:checked');
+
+    if (marca) {
+    respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
+  } else {
+    respuestas.push('9'); // Agrega null si no hay selección
+    filasFaltantes.push(indiceFilas);}}
+    else {
+      console.log('agrego null por no comite riesgos')
+      respuestas.push('9'); // Agrega null si no hay comite auditoria
+    }
+
+console.log (`resp despues Riesgos .................${respuestas}`);
 
 
 
@@ -68,9 +187,6 @@ function obtenerValoresSeleccionados() {
 // CALCULA RESULTADOS ::::::::::::::::::::::::::::::::::::
 
 function calculaResultados() {
-  // tabla = respuestas[0] == 1 ? tabla01 : tabla02;
-  // maximo = respuestas[0] == 1 ? tabla01[0][2] : tabla02[0][2];
-  // console.log(respuestas[0], maximo, tabla01[0][2], tabla02[0][2]);
 
   for (let i = 0; i < respuestas.length; i++) {
     if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
@@ -149,6 +265,39 @@ function limpiarSelecciones() {
   checkboxes.forEach(function (checkbox) {
     checkbox.checked = false;
   });
+
+  // Apagar todas las reuniones y auditor de la segunda linea
+          // fila2.style.display = 'none';
+
+  document.getElementById("tituloFrecuencia").style.display = 'none';
+
+  document.getElementById('fila-2').style.display = 'none';
+  document.getElementById('fila-2a').style.display = 'none';
+  document.getElementById('fila-2b').style.display = 'none';
+  document.getElementById('reunionComAud').style.display = 'none';
+  document.getElementById('reunionComAud1').style.display = 'none';
+  document.getElementById('reunionComAud2').style.display = 'none';
+
+  document.getElementById('lineaAltaG').style.display = 'none';
+  document.getElementById('lineaAltaG1').style.display = 'none';
+  document.getElementById('lineaAltaG2').style.display = 'none';
+  document.getElementById('lineaAltaG3').style.display = 'none';
+
+  document.getElementById('lineaNomSuc').style.display = 'none';
+  document.getElementById('lineaNomSuc1').style.display = 'none';
+  document.getElementById('lineaNomSuc2').style.display = 'none';
+
+  document.getElementById('comiteCompen').style.display = 'none';
+  document.getElementById('comiteCompen1').style.display = 'none';
+  document.getElementById('comiteCompen2').style.display = 'none';
+
+  document.getElementById('comiteTecno').style.display = 'none';
+  document.getElementById('comiteTecno1').style.display = 'none';
+  document.getElementById('comiteTecno2').style.display = 'none';
+
+  document.getElementById('comiteRiesgo').style.display = 'none';
+  document.getElementById('comiteRiesgo1').style.display = 'none';
+  document.getElementById('comiteRiesgo2').style.display = 'none';
 }
 
 function mostrarMiAlerta(maximo, valores, porcientoFormateado) {
@@ -166,5 +315,5 @@ function cerrarAlerta() {
 
 function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
-  window.location.href = "MA-6.html";
+  window.location.href = "MA-5.html";
 }
