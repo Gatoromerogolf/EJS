@@ -12,13 +12,24 @@ let checkboxesSeleccionados = [];
 
 function obtenerValoresSeleccionados() {
   respuestas = [];
-  const grupos = ["A-5-1", "A-5-2", "A-5-3", "A-5-4", "A-5-5", "A-5-6"];
-
+  const grupos = [ // las respuestas
+  "A-4-1",
+  "A-4-3",
+  "A-4-4",
+  "A-4-5",
+  "A-4-6",
+  "A-4-7",
+  "A-4-8",
+  "A-4-9",
+  "A-4-10",
+  "A-4-11",
+];
 
   var indiceFilas = 0;
   filasFaltantes = [];
   grupos.forEach((nombreGrupo) => {
     indiceFilas++;
+    if (indiceFilas == 1){indiceFilas++}; //saltea posicion 2 para auditor
     const grupo = document.querySelector(
       `input[name="${nombreGrupo}"]:checked`
     );
@@ -29,6 +40,22 @@ function obtenerValoresSeleccionados() {
       filasFaltantes.push(indiceFilas);
     }
   });
+
+//  Ahora controla los condicionales, si existe comite cuando hay reunion::::::::::
+  if (respuestas[0] == 1){
+    //existe comite auditoria
+    const marca = document.querySelector(
+      'input[name="A-4-2"]:checked');
+    
+    if(!marca){
+      respuestas.push(null); // Agrega null si no hay selección
+      filasFaltantes.push(1); // guarda en posicion 2??
+    } else {
+      respuestas.push(marca.value); 
+    } 
+  }
+
+
 
   if (filasFaltantes.length > 0) {
     alert(`Falta infomar en estas filas: ${filasFaltantes}`);
@@ -98,9 +125,9 @@ document
       console.table(puntajesIndividuales);
 
       // Guardar el valor en LocalStorage
-      localStorage.setItem("maximo-5", JSON.stringify(maximo));
-      localStorage.setItem("valores-5", JSON.stringify(valores));
-      localStorage.setItem("porciento-5", JSON.stringify(porcientoFormateado));
+      localStorage.setItem("maximo-4", JSON.stringify(maximo));
+      localStorage.setItem("valores-4", JSON.stringify(valores));
+      localStorage.setItem("porciento-4", JSON.stringify(porcientoFormateado));
 
       // window.location.href = "Menu-A.html";
     }

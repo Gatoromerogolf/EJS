@@ -93,8 +93,8 @@ let tablaMenuEs = [
     ,
   ],
   ["",
-    "MA-15.html",
-    " * * * * CALIFICACION GENERAL:",
+    "##",
+    "CALIFICACION GENERAL:",
     ,
     ,
   ],
@@ -192,8 +192,8 @@ let tablaMenuIn = [
     ,
   ],
   ["",
-    "MA-15-en.html",
-    " * * * * GENERAL EVALUATION:",
+    "##",
+    "GENERAL EVALUATION:",
     ,
     ,
   ],
@@ -307,7 +307,20 @@ for (i = 0; i < tablaMenuA.length; i++) {
   const enlace = document.createElement('a'); // Crear un elemento <a>
   enlace.href = tablaMenuA[i][1]; // Establecer el atributo href con el valor correspondiente
   enlace.textContent = tablaMenuA[i][2]; // Establecer el texto del enlace con el tercer elemento de la tabla
-  celdaEnlace.appendChild(enlace); // Agregar el enlace como hijo de la celda
+  enlace.style.textDecoration = 'none';
+    // Agregar el enlace como hijo de la celda
+  if (i == tablaMenuA.length-1){
+    enlace.style.fontSize = '18px'; // Cambiar el tamaño de la fuente
+    enlace.style.fontWeight = 'bold'; // Hacer el texto en negrita
+    enlace.style.color='black';
+
+    celdaEnlace.style.textAlign = 'center'; // Centrar el contenido horizontalmente
+    celdaEnlace.style.display = 'flex';
+    celdaEnlace.style.justifyContent = 'center';
+    celdaEnlace.style.alignItems = 'center';
+  }  
+  celdaEnlace.appendChild(enlace); 
+  
 
   celdaMaximo = lineaDatosFd.insertCell(-1);
   if (tablaMenuA[i][3] === 0) {
