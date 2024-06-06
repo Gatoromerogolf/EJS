@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar Hexágono con un Triángulo de Dos Colores</title>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+        // Función para dibujar un hexágono con un triángulo de dos colores
+        function dibujarHexagonoConTrianguloDeDosColores(x, y, radio, contexto) {
+            // Coordenadas de los vértices del hexágono
+            const vertices = [];
+            for (let i = 0; i < 6; i++) {
+                let angulo = (Math.PI / 3) * i;
+                let puntoX = x + radio * Math.cos(angulo);
+                let puntoY = y + radio * Math.sin(angulo);
+                vertices.push({x: puntoX, y: puntoY});
+            }
+
+            // Dibujar triángulos con colores
+            for (let i = 0; i < 6; i++) {
+                contexto.beginPath();
+                contexto.moveTo(x, y);
+                contexto.lineTo(vertices[i].x, vertices[i].y);
+                contexto.lineTo(vertices[(i + 1) % 6].x, vertices[(i + 1) % 6].y);
+                contexto.closePath();
+                if (i === 2) {
+                    // Dibujar el triángulo con dos colores
+                    const gradiente = contexto.createRadialGradient(x, y, 0, x, y, radio);
+                    gradiente.addColorStop(0.1, 'red'); // Color en el centro (30%)
+                    gradiente.addColorStop(1, 'black'); // Color en el lado exterior (100%)
+                    contexto.fillStyle = gradiente;
+
+                     // Dibujar leyenda
+                    contexto.font = '12px Arial';
+                    contexto.fillStyle = 'black';
+                    contexto.fillText('70%', x - 20, y + 5); // Leyenda para el color del centro
+
+                } else 
+
+                if (i === 3) {
+                    // Dibujar el triángulo con dos colores
+                    const gradiente = contexto.createRadialGradient(x, y, 0, x, y, radio);
+                    gradiente.addColorStop(0.8, 'yellow'); // Color en el centro (30%)
+                    gradiente.addColorStop(1, 'black'); // Color en el lado exterior (100%)
+                    contexto.fillStyle = gradiente;
+                } 
+                    else
+                 {
+                    contexto.fillStyle = 'gray'; // Dibujar el resto de los triángulos con un solo color
+                }
+                contexto.fill();
+            }
+        }
+
+        // Obtener el canvas y su contexto
+        const canvas = document.getElementById('canvas');
+        const contexto = canvas.getContext('2d');
+
+        // Coordenadas del centro del hexágono
+        const x = canvas.width / 2;
+        const y = canvas.height / 2;
+
+        // Radio del hexágono
+        const radio = 200;
+
+        // Dibujar el hexágono con un triángulo de dos colores
+        dibujarHexagonoConTrianguloDeDosColores(x, y, radio, contexto);
+    </script>
+</body>
+</html>

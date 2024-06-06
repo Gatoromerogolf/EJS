@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de riesgos</title>
+  <link href="../css/st-homePrueba.css" rel="stylesheet">
+  <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- anulado hasta que se necesite
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script>
+      $(function () {
+        $("#header").load("encabezado.html");
+        $("#footer").load("piepagina.html");
+      });
+    </script> -->
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../img/bdtancho.png" width="100%" alt="">
+    </div>
+
+  </header>
+
+  <!-- <div id="header-placeholder"></div> -->
+  <!-- <div id="header"></div>    -->
+
+  <section class="main">
+    <section class="gobCorpo">
+      <!-- <a href="../index.html"> <img src="../img/contenido (1).png" width="50px"></a>
+      <br><br> -->
+      <div class="header-container">
+        <h1><a href="Menu-A.html">A - Gobierno Corporativo. Autoevaluación.</a></h1>
+        <div class="nav-icons">
+          <!-- <img src="../img/anterior.png" alt="Retroceso"> -->
+          <a href="MA-2.html"><img src="../img/siguiente.png" alt="Avance"></a>
+        </div>
+      </div>
+      <p>Seleccione la opción que corresponda a su organización</p>
+
+      <hr>
+
+      <form id="formulario">
+        <br>
+        <h1 id="uno">I - La composición y responsabilidad del Directorio</h1>
+        <br>
+        <table>
+          <tr>
+            <th class="pregunta-col">Situación</th>
+            <th class="respuesta-col">0</th>
+            <th class="respuesta-col">1</th>
+            <th class="respuesta-col">2</th>
+            <th class="respuesta-col">3</th>
+            <th class="respuesta-col">4 o +</th>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">01. Cantidad de directores que componen el Directorio:</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-1" value="1" onclick="mostrarOcultar(1)">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-1" value="2" onclick="mostrarOcultar(2)">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">02. Directores con experiencia de más de 3 años como directores en Compañías:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-2" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-2" value="2">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-2" value="3">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-2" value="4">
+            </td>
+
+            <td id="linea2" class="respuesta-col cuatro-o-mas" style="display: none">
+              <div class="radio-container"><input type="radio" name="A-I-2" value="5">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">03. Directores que pueden ser considerados como empresarios/profesionales
+              prestigiosos:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-3" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-3" value="2">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-3" value="3">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-3" value="4">
+            </td>
+
+            <td id="linea3" class="respuesta-col cuatro-o-mas" style="display: none">
+              <div class="radio-container"><input type="radio" name="A-I-3" value="5">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">04. Directores con experiencia en el sector económico:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-4" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-4" value="2">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-4" value="3">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-4" value="4">
+            </td>
+
+            <td id="linea4" class="respuesta-col cuatro-o-mas" style="display: none">
+              <div class="radio-container"><input type="radio" name="A-I-4" value="5">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">05. Directores que son Directores Independientes:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-5" value="1"></div>
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-5" value="2">
+              </div>
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-5" value="3"></div>
+            </td>
+<!-- 
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-5" value="4">
+            </td> -->
+
+            <td id="linea5" class="respuesta-col" style="display: none">
+              <div class="radio-container"><input type="radio" name="A-I-5" value="4">o+
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">06. Directores mujeres:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-6" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-6" value="2">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-6" value="3">
+            </td>
+<!-- 
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-6" value="4">
+            </td>
+
+            <td id="linea6" class="respuesta-col; cuatro-o-mas" style="display: none">
+              <div class="radio-container"><input type="radio" name="A-I-6" value="5">
+            </td> -->
+          </tr>
+        </table>
+        <br>
+<!-- 
+        <table>
+          <tr>
+            <td><label for="opcion1">Transformacion digital/Change Management</label></td>
+            <td><input type="checkbox" id="opcion1" name="opcion1" value="1"></td>
+
+          </tr>
+          <tr>
+            <td><label for="opcion2">Control interno</label></td>
+            <td><input type="checkbox" id="opcion2" name="opcion2" value="2"></td>
+
+          </tr>
+          <tr>
+            <td><label for="opcion3">Manejo de riesgos</label></td>
+            <td><input type="checkbox" id="opcion3" name="opcion3" value="3"></td>
+
+          </tr>
+        </table> -->
+
+        <table class="tablaCheckbox">
+          <tr>
+            <td>
+              <ul class="listas">
+                <li>07. Marcar todas las áreas en las que por lo menos un miembro del Directorio tiene experiencia:</li>
+                <ul  class="dos-columnas">
+                  <li><input id="uno" type="checkbox" value="1"><label class="check" for="uno">Transformación
+                      digital/Change Management</label></li>
+                  <li><input id="dos" type="checkbox" value="2"><label class="check" for="dos">Control Interno</label></li>
+                  <li><input id="tres" type="checkbox" value="3"><label class="check" for="tres">Manejo de Riesgos</label></li>
+                  <li><input id="cuatro" type="checkbox" value="4"><label class="check" for="cuatro">Manejo de Crisis</label></li>
+                  <li><input id="cinco" type="checkbox" value="5"><label class="check" for="cinco">Ciberseguridad</label></li>
+                  <li><input id="seis" type="checkbox" value="6"><label class="check" for="seis">Diversidad y Cultura</label></li>
+                  <li><input id="siete" type="checkbox" value="7"><label class="check" for="siete">Ninguna de éstas</label></li>
+                </ul>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td class="pregunta-col">08. Frecuencia de reunión del Directorio:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-8" value="1">Trimestral
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-8" value="2">Mensual
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-8" value="2">Quincenal
+            </td>
+          </tr>
+        </table>
+        <br>
+
+        <table>
+          <tr>
+            <th class="pregunta-col" style="width:900px">Situación</th>
+            <th class="respuesta-col" style="width:100px">SI</th>
+            <th class="respuesta-col" style="width:100px">NO</th>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">09. El Directorio realiza reuniones adicionales Ad-Hoc:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-9" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-9" value="2">
+            </td>
+
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">10. La empresa cuenta con un Consejo Asesor:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-10" value="1"
+                  onclick="mostrarOcultarAB(this.value)">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-10" value="2"
+                  onclick="mostrarOcultarAB(this.value)">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col" id="lineaAB" style="color: red">11. El Consejo Asesor participa con cierta
+              frecuencia en las reuniones del Directorio:</td>
+
+            <td class="respuesta-col" style="color: red" id="lineaABS">
+              <div class="radio-container"><input type="radio" name="A-I-11" value="1">???
+            </td>
+
+            <td class="respuesta-col" style="color: red" id="lineaABN">
+              <div class="radio-container"><input type="radio" name="A-I-11" value="2">???
+            </td>
+
+            <td class="respuesta-col" style="display: none" id="lineaABN">
+              <div class="radio-container"><input type="radio" name="A-I-11" value="3">???
+            </td>
+
+          </tr>
+
+          <tr>
+            <td class="pregunta-col" style="color: red">12. Las funciones y responsabilidades del Directorio están documentadas:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-12" value="1">???
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-12" value="2">???
+            </td>
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-12" value="3">???
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">13. El Directorio estableció y documentó el propósito, la visión, la misión y los
+              valores:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-13" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-13" value="2">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">14. Existe un Código de Gobierno Corporativo aprobado por el Directorio:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-14" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-14" value="2">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">15. Existe un Reglamento de actuación del Directorio:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-15" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-15" value="2">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">16. Las remuneraciones del CEO, de los Directores y de la Alta Gerencia son
+              aprobadas por el Directorio:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-16" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-16" value="2">
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">17. Las reuniones de Directorio se documentan en actas y son previamente aprobadas
+              por los directores:</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-17" value="1">
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-17" value="2">
+            </td>
+          </tr>
+
+        </table>
+
+
+        <div class="centrado-flex">
+          <button type="submit" id="boton-enviar">Enviar</button>
+        </div>
+
+        <div class="centrado-flex">
+          <button type="button" id="boton-borrar" onclick="limpiarSelecciones()">Limpiar selecciones</button>
+        </div>
+
+      </form>
+    </section>
+  </section>
+
+
+  <!-- ventana al final con resultados -->
+
+  <div id="miAlerta" class="alerta-oculto">
+    <div class="alerta-contenido">
+      <div class="alerta-cabecera">
+        <span>Resumen de la sección</span>
+        <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
+      </div>
+      <div class="alerta-cuerpo">
+        <p>Puntaje máximo posible: <span id="maximo"></span></p>
+        <br>
+        <p>Calificación obtenida: <span id="calificacion"></span></p>
+        <br>
+        <p>Porcentual: <span id="porcentual"></span></p>
+        <br>
+        <button id="continuar" onclick="continuar()">Continuar</button>
+      </div>
+    </div>
+  </div>
+
+
+  <br>
+  <section>
+    <footer>
+      <hr>
+      <div class="footer">
+        <p>Contacto</p>
+        <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
+            class="fab fa-whatsapp"></i></a>
+        </p>
+      </div>
+      <p>Derechos reservados. &copy;2024 - BDT</p>
+      <br>
+      <!-- <p>Autor de la pagina</p> -->
+      <!-- <div id="footer"></div> -->
+    </footer>
+  </section>
+</body>
+
+<script>
+  function mostrarOcultar(valorSeleccionado) {
+    // Ocultar las líneas si el valor seleccionado es '1'
+    if (valorSeleccionado == '1') {
+      console.log(valorSeleccionado)
+      document.getElementById('linea2').style.display = 'none';
+      document.getElementById('linea3').style.display = 'none';
+      document.getElementById('linea4').style.display = 'none';
+      document.getElementById('linea5').style.display = 'none';
+      // document.getElementById('linea5').style.display = 'none';
+      // document.getElementById('linea6').style.display = 'none';
+    } else {
+      // Mostrar las líneas si se selecciona cualquier otro valor
+      document.getElementById('linea2').style.display = 'table-cell';
+      document.getElementById('linea3').style.display = 'table-cell';
+      document.getElementById('linea4').style.display = 'table-cell';
+      // document.getElementById('linea5-3').style.display = 'table-cell';
+      document.getElementById('linea5').style.display = 'table-cell';
+      // document.getElementById('linea6').style.display = 'table-cell';
+    }
+  }
+</script>
+
+<script>
+  function mostrarOcultarAB(valorSeleccionadoAB) {
+    // Muestra las líneas si el valor seleccionado es '1'
+    if (valorSeleccionadoAB === '1') {
+      document.getElementById('lineaAB').style.display = 'table-cell';
+      document.getElementById('lineaABS').style.display = 'table-cell';
+      document.getElementById('lineaABN').style.display = 'table-cell';
+    } else {
+      // Mostrar las líneas si se selecciona cualquier otro valor
+      document.getElementById('lineaAB').style.display = 'none';
+      document.getElementById('lineaABS').style.display = 'none';
+      document.getElementById('lineaABN').style.display = 'none';
+    }
+  }
+</script>
+
+<script src="../datos/tabla01.js"></script>
+<script src="../datos/tabla02.js"></script>
+<script src="../apps/ma-1.js"></script>
+
+</html>

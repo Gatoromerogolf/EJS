@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de riesgos</title>
+  <link href="../css/st-homePrueba.css" rel="stylesheet">
+  <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../img/bdtancho.png" width="100%" >
+    </div>
+
+  </header>
+
+  <!-- <div id="header-placeholder"></div> -->
+  <!-- <div id="header"></div>    -->
+
+  <section class="main">
+    <section class="gobCorpo">
+      <div class="header-container">
+        <h1><a href="Menu-A.html">A - Gobierno Corporativo. Autoevaluación.</a></h1>
+        <div class="nav-icons">
+          <a href="MA-8.html"><img src="../img/anterior.png" alt="Avance"></a>
+          <a href="MA-10.html"><img src="../img/siguiente.png" alt="Avance"></a>
+        </div>
+      </div>
+      <br>
+
+      <hr>
+      <form id="formulario">
+        <br>
+        <h1>IX - Cumplimiento y Control.</h1>
+        <br>
+        <ul class="listas">
+          <li>1. Existe una estructura documentada de primera y tercera línea de defensa
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+          <br>
+          <li>2. El departamento de auditoría está dirigido por un profesional competente
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+
+          <li><i><label for="porcentaje">2. Nivel de satisfacción con el desempeño del profesional a cargo del
+              departamento de auditoría:</label></li>
+            <!-- <label>
+              <input style="width: 300px" type="range" id="rangoRange" name="opcion" min="0" max="100" step="25" onchange="actualizarValorRange(this.value)">
+              </label>
+            <span id="valorRange">%</span>
+          </li>
+          <li> -->
+          <li>
+            <label style="margin-left: 200px; first-radio"><input type="radio" name="opcion" value="3">Bajo</label>
+            <label><input type="radio" name="opcion" value="4">Regular</label>
+            <label><input type="radio" name="opcion" value="4">Satisfactorio</label>
+            <label><input type="radio" name="opcion" value="4">Muy satisfactorio</label>
+          </i></li>
+          <br>
+          <li>3. El auditor interno reporta al Presidente del comité de Auditoría
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+
+          <li>4. El Comité de Auditoría somete a la aprobación del Directorio al auditor externo y su remuneración
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+        </ul>
+
+
+        <div class="centrado-flex">
+          <button type="submit" id="boton-enviar">Enviar</button>
+        </div>
+
+        <div class="centrado-flex">
+          <button type="button" id="boton-borrar" onclick="limpiarSelecciones()">Limpiar selecciones</button>
+        </div>
+
+      </form>
+    </section>
+  </section>
+
+  <br>
+  <section>
+    <footer>
+      <hr>
+      <div class="footer">
+        <p>Contacto</p>
+        <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
+            class="fab fa-whatsapp"></i></a>
+        </p>
+      </div>
+      <p>Derechos reservados. &copy;2024 - BDT</p>
+      <br>
+      <!-- <p>Autor de la pagina</p> -->
+      <!-- <div id="footer"></div> -->
+    </footer>
+  </section>
+
+</body>
+
+<script src="../datos/tabla01.js"></script>
+<script src="../datos/tabla02.js"></script>
+<script src="../apps/ma-9.js"></script>
+
+</html>

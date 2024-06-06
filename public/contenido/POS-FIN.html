@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de riesgos</title>
+  <link href="../estilos/st-homePrueba.css" rel="stylesheet">
+  <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- anulado hasta que se necesite
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script>
+      $(function () {
+        $("#header").load("encabezado.html");
+        $("#footer").load("piepagina.html");
+      });
+    </script> -->
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../img/bdtancho.png" width="100%" alt="">
+    </div>
+  </header>
+
+
+  </head>
+
+  <body>
+    <section class="main">
+      <section class="gobCorpo">
+        <a href="Menu-General.html"> <img src="../img/contenido (1).png" width="50px"></a>
+        <br><br>
+        <h1>D. Situación Financiera</h1>
+        <br>
+        <hr>
+        <br>
+        <p>Determina la capacidad de la empresa para tomar riesgos, emprender acciones de mejora y hacer frente a situaciones desafiantes o adversas. Implica efectuar el análisis de la situación a la fecha de la aplicación del Modelo.</p>
+        <br>
+
+        <form>
+          <table>
+            <tr>
+              <th class="pregunta-col">INDICADORES</th>
+              <th class="respuesta-col">Crítica</th>
+              <th class="respuesta-col">Débil</th>
+              <th class="respuesta-col">Moderada</th>
+              <th class="respuesta-col">Fuerte</th>
+            </tr>
+            <tr>
+              <td class="pregunta-col">1. Capital de Trabajo</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAmarillo" name="color" value="Amarillo">
+                  <label for="colorAmarillo" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col">2. Flujo de fondos derivados de las operaciones</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col">3. Índice de cobertura de intereses</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col">4. Ciclo de conversión de Caja</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col">5. Dias de venta en la calle</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col">6. Dias de deuda en la calle</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col">7. Rotación de inventarios</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            
+            <tr>
+              <td class="pregunta-col">8. Indice Deuda/Capital</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            
+            <tr>
+              <td class="pregunta-col">9. Liquidez</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col">10. Liquidez seca</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+
+          <div class="centrado-flex">
+            <button type="submit" id="boton-enviar">Enviar</button>
+          </div>
+
+          <div class="centrado-flex">
+            <button type="button" id="boton-borrar" onclick="limpiarSelecciones()">Limpiar selecciones</button>
+          </div>
+
+        </form>
+      </section>
+    </section>
+
+    <br>
+    <section>
+      <footer>
+        <hr>
+        <div class="footer">
+          <p>Contacto</p>
+          <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
+          <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
+              class="fab fa-whatsapp"></i></a>
+          </p>
+        </div>
+        <p>Derechos reservados. &copy;2024 - BDT</p>
+        <br>
+        <!-- <p>Autor de la pagina</p> -->
+        <!-- <div id="footer"></div> -->
+      </footer>
+    </section>
+    
+  </body>
+
+  <script>
+    function toggleVisibility() {
+      var element = document.getElementById('myElement');
+      if (element.style.display === 'none') {
+        element.style.display = 'block';
+        // Asegúrate de darle tiempo al navegador para que reconozca el cambio de 'display'
+        setTimeout(() => {
+          element.style.opacity = 1;
+        }, 10);
+      } else {
+        element.style.opacity = 0;
+        // Espera a que termine la transición de opacidad para cambiar el display a 'none'
+        element.addEventListener('transitionend', function handler() {
+          element.style.display = 'none';
+          element.removeEventListener('transitionend', handler);
+        });
+      }
+    }
+
+  </script>
+
+</html>

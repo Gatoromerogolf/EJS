@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar Hexágono con un Triángulo de Dos Colores y Leyenda</title>
+</head>
+<body>
+    <canvas id="canvas" width="700" height="700"></canvas>
+
+    <script>
+
+        const colorUno = 0.5; // Por ejemplo, el color en el centro (30%)
+
+        // Función para dibujar un hexágono con un triángulo de dos colores y leyenda
+        function dibujarHexagonoConTrianguloDeDosColoresYLeyenda(x, y, radio, contexto) {
+            // Coordenadas de los vértices del hexágono
+            const vertices = [];
+            for (let i = 0; i < 6; i++) {
+                let angulo = (Math.PI / 3) * i;
+                let puntoX = x + radio * Math.cos(angulo);
+                let puntoY = y + radio * Math.sin(angulo);
+                vertices.push({x: puntoX, y: puntoY});
+            }
+
+        // Calcular el porcentaje correspondiente
+        const porcentaje = Math.round(colorUno * 100);
+
+
+
+            // Dibujar triángulos con colores y leyenda
+            for (let i = 0; i < 6; i++) {
+                contexto.beginPath();
+                contexto.moveTo(x, y);
+                contexto.lineTo(vertices[i].x, vertices[i].y);
+                contexto.lineTo(vertices[(i + 1) % 6].x, vertices[(i + 1) % 6].y);
+                contexto.closePath();
+                if (i === 2) {
+                    // Dibujar el triángulo con dos colores
+                    const gradiente = contexto.createRadialGradient(x, y, 0, x, y, radio);
+                    gradiente.addColorStop(colorUno, 'red'); // Color en el centro (30%)
+                    gradiente.addColorStop(1, 'black'); // Color en el lado exterior (100%)
+                    contexto.fillStyle = gradiente;
+                    contexto.fill();
+                    // Dibujar leyenda
+                    contexto.font = '12px Arial';
+                    contexto.fillStyle = 'white';
+                    contexto.font = '16px Arial'; // Establece el tamaño de la fuente en 16px
+                    contexto.fillText(porcentaje + '%', x - 70, y + 25); // Leyenda para el color del centro
+                } else {
+                    // Dibujar el resto de los triángulos con un solo color
+                    contexto.fillStyle = 'gray';
+                    contexto.fill();
+                }
+            }
+                        // Después de dibujar los triángulos y sus leyendas dentro del bucle 'for'
+            // Dibuja la leyenda fuera de los triángulos
+            contexto.font = '14px Arial';
+            contexto.fillStyle = 'black';
+            contexto.fillText('Posición Financiera', 60, 450);
+            contexto.fillText('Gobierno Corporativo', 270, 550);
+        }
+
+        // Obtener el canvas y su contexto
+        const canvas = document.getElementById('canvas');
+        const contexto = canvas.getContext('2d');
+
+        // Coordenadas del centro del hexágono
+        const x = canvas.width / 2;
+        const y = canvas.height / 2;
+
+        // Radio del hexágono
+        const radio = 200;
+
+        // Dibujar el hexágono con un triángulo de dos colores y leyenda
+        dibujarHexagonoConTrianguloDeDosColoresYLeyenda(x, y, radio, contexto);
+    </script>
+</body>
+</html>

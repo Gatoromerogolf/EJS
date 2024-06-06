@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de riesgos</title>
+  <link href="../css/st-homePrueba.css" rel="stylesheet">
+  <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../img/bdtancho.png" width="100%" alt="">
+    </div>
+  </header>
+
+  <!-- <div id="header-placeholder"></div> -->
+  <!-- <div id="header"></div>    -->
+
+  <section class="main">
+    <section class="gobCorpo">
+      <div class="header-container">
+        <h1><a href="Menu-A.html">A - Gobierno Corporativo. Autoevaluación.</a></h1>
+        <div class="nav-icons">
+          <a href="MA-9.html"><img src="../img/anterior.png" alt="Avance"></a>
+          <a href="MA-11.html"><img src="../img/siguiente.png" alt="Avance"></a>
+        </div>
+      </div>
+      <br>
+
+      <hr>
+      <form id="formulario">
+        <br>
+        <h1>X - Funcionamiento.</h1>
+        <br>
+        <ul class="listas">
+          <li>1. El estatuto o el Código de Buen Gobierno determina la frecuencia de las reuniones del Directorio
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+          <li>2. El estatuto o el Código de Buen Gobierno fija las mayorías necesarias para que el Directorio
+            sesione
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+          <li>3. La frecuencia de las reuniones de los Comités del Directorio es suficiente para el desempeño de sus
+            funciones
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+          <li>4. La agenda de la reunión del Directorio cubre los temas correctos, priorizados y con una asignación de
+            tiempo adecuada
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+          <li>5. Los miembros del Directorio tienen tiempo suficiente para discutir eficazmente durante las reuniones
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+          <li>6. Los miembros del Directorio van preparados a las reuniones
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+          <li>7. Existe capacitación adecuada para los miembros del Directorio
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+          <li>8. Existe un proceso de evaluación para directores
+            <label class="first-radio"><input type="radio" name="opcion" value="3">Si</label>
+            <label><input type="radio" name="opcion" value="4">No</label>
+          </li>
+        </ul>
+
+        <div class="centrado-flex">
+          <button type="submit" id="boton-enviar">Enviar</button>
+        </div>
+
+        <div class="centrado-flex">
+          <button type="button" id="boton-borrar" onclick="limpiarSelecciones()">Limpiar selecciones</button>
+        </div>
+
+      </form>
+    </section>
+  </section>
+
+  <br>
+  <section>
+    <footer>
+      <hr>
+      <div class="footer">
+        <p>Contacto</p>
+        <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
+            class="fab fa-whatsapp"></i></a>
+        </p>
+      </div>
+      <p>Derechos reservados. &copy;2024 - BDT</p>
+      <br>
+      <!-- <p>Autor de la pagina</p> -->
+      <!-- <div id="footer"></div> -->
+    </footer>
+  </section>
+
+</body>
+
+<script src="../datos/tabla01.js"></script>
+<script src="../datos/tabla02.js"></script>
+<script src="../apps/prueba.js"></script>
+
+</html>

@@ -99,35 +99,26 @@ header nav ul li a:hover{
 }
 
 .containerTitulo div img {
-  margin-right: 0px; /* Espacio entre la imagen y el texto */
-  padding: 0px;
-}
-
-.containerTitulo div img {
   margin: 0;
   padding: 0;
+  margin-right: 0px; /* Espacio entre la imagen y el texto */
 }
 
 .right-icons {
   margin-left: auto;
   }
 
+.right-icons img {
+    margin-left: 100px;
+  }
 
 #nombreCia {
-  /*flex-grow: 1; /* Permite que el texto ocupe todo el espacio restante */
+  flex-grow: 1; /* Permite que el texto ocupe todo el espacio restante */
   text-align: center; /* Centra horizontalmente el texto */
   font-size: 20px;
   font-weight: 700;
   font-family:'Roboto', sans-serif;
   color:#0066cc
-}
-
-.right-icons {
-  margin-left: auto; /* Empuja los íconos hacia la derecha */
-}
-
-.right-icons img {
-  margin-left: 10px; /* Espacio entre los íconos */
 }
 
 

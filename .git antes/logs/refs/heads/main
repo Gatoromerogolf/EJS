@@ -1,0 +1,29 @@
+0000000000000000000000000000000000000000 01ff7bbfe483181c4ea476bee45a1c85c9ae65ce Gatoromerogolf <ruben.e.garcia@gmail.com> 1713388240 -0300	commit (initial): primero
+01ff7bbfe483181c4ea476bee45a1c85c9ae65ce f5bc843c3e1b6a6a102639f7e818f90b5f027cd3 Gatoromerogolf <ruben.e.garcia@gmail.com> 1713474618 -0300	commit: primera basica
+f5bc843c3e1b6a6a102639f7e818f90b5f027cd3 4bbc3db7a5a31a41782388ad24a56999d7da6728 Gatoromerogolf <ruben.e.garcia@gmail.com> 1713793118 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+4bbc3db7a5a31a41782388ad24a56999d7da6728 30257eb4b29f77cc81a184ac1e6f8e76725f3b42 Gatoromerogolf <ruben.e.garcia@gmail.com> 1713819868 -0300	commit: ultima beto
+30257eb4b29f77cc81a184ac1e6f8e76725f3b42 9ca47506fb776495a857bfea50ee4cb781c8fd45 Gatoromerogolf <ruben.e.garcia@gmail.com> 1713905914 -0300	commit: actual2304
+9ca47506fb776495a857bfea50ee4cb781c8fd45 9719644ef31785b8f2a718f545dc20640b92033d Gatoromerogolf <ruben.e.garcia@gmail.com> 1713969980 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+9719644ef31785b8f2a718f545dc20640b92033d 74a025cee2c9c1df992d7ef715819ea9fdbca7ed Gatoromerogolf <ruben.e.garcia@gmail.com> 1713992648 -0300	commit: act240424
+74a025cee2c9c1df992d7ef715819ea9fdbca7ed 4d96b28467d5290c865c03ecce456005d1604fb5 Gatoromerogolf <ruben.e.garcia@gmail.com> 1714079563 -0300	commit: cambios 250424
+4d96b28467d5290c865c03ecce456005d1604fb5 d761ac2f0942185d581e0d77386a4530d4adf231 Gatoromerogolf <ruben.e.garcia@gmail.com> 1714399042 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+d761ac2f0942185d581e0d77386a4530d4adf231 8f0f0c94ec8ee026039c96806b7a0607e5de987c Gatoromerogolf <ruben.e.garcia@gmail.com> 1714424761 -0300	commit: ms cambios
+8f0f0c94ec8ee026039c96806b7a0607e5de987c f5d13c3be4cf5d1d0e6941536d54350aaaf876b1 Gatoromerogolf <ruben.e.garcia@gmail.com> 1714508385 -0300	commit: listo
+f5d13c3be4cf5d1d0e6941536d54350aaaf876b1 85265e362c72dd2e904a875445a7add57687d10c Gatoromerogolf <ruben.e.garcia@gmail.com> 1714511465 -0300	commit: fin login
+85265e362c72dd2e904a875445a7add57687d10c ee2875a1192a038bc948cfaade0f6003caf0de0a Gatoromerogolf <ruben.e.garcia@gmail.com> 1714663529 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+ee2875a1192a038bc948cfaade0f6003caf0de0a 717e05cd89b1b3e6167ea2f3e234a4f711112c91 Gatoromerogolf <ruben.e.garcia@gmail.com> 1714669112 -0300	commit: vamos
+717e05cd89b1b3e6167ea2f3e234a4f711112c91 4b69d610d38ee40e0d227300b9da0ab8d3f51ea2 Gatoromerogolf <ruben.e.garcia@gmail.com> 1715087698 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+4b69d610d38ee40e0d227300b9da0ab8d3f51ea2 80f367ed60b7401be3ad25946646e09d11b97c4c Gatoromerogolf <ruben.e.garcia@gmail.com> 1715089318 -0300	commit: alta gerencia
+80f367ed60b7401be3ad25946646e09d11b97c4c fc88a9ca1bb72e3f839736de4a003cccb2dedc13 Gatoromerogolf <ruben.e.garcia@gmail.com> 1715174902 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+fc88a9ca1bb72e3f839736de4a003cccb2dedc13 9ac339c8d5ab83f64e76f73d815b99a4cdddf83b Gatoromerogolf <ruben.e.garcia@gmail.com> 1715175264 -0300	commit: frecuencia
+9ac339c8d5ab83f64e76f73d815b99a4cdddf83b b2d03f9297b48f4dd07dd51a51aa6b24f37ff7c6 Gatoromerogolf <ruben.e.garcia@gmail.com> 1715612522 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+b2d03f9297b48f4dd07dd51a51aa6b24f37ff7c6 d2bb53819629fc07ee43d582562ce30979c91fb7 Gatoromerogolf <ruben.e.garcia@gmail.com> 1715630324 -0300	commit: mujeres
+d2bb53819629fc07ee43d582562ce30979c91fb7 88546e41020deb8e2020aca733efd91eb782dcda Gatoromerogolf <ruben.e.garcia@gmail.com> 1715691442 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+88546e41020deb8e2020aca733efd91eb782dcda 53e3b7c3cb21f2b7293e228f177807e37c527ce8 Gatoromerogolf <ruben.e.garcia@gmail.com> 1715694997 -0300	commit: ajustes matrices
+53e3b7c3cb21f2b7293e228f177807e37c527ce8 548f7a77f886b46c6836473259d3285350f8ac41 Gatoromerogolf <ruben.e.garcia@gmail.com> 1715804699 -0300	commit: hexagonos
+548f7a77f886b46c6836473259d3285350f8ac41 e13a5917f4ff5e37e9d46dc48d4a7ea14550c802 Gatoromerogolf <ruben.e.garcia@gmail.com> 1715804706 -0300	pull --tags origin main: Merge made by the 'ort' strategy.
+e13a5917f4ff5e37e9d46dc48d4a7ea14550c802 9d774189556170c59734232b02b0607eeb6b88aa Gatoromerogolf <ruben.e.garcia@gmail.com> 1715865100 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+9d774189556170c59734232b02b0607eeb6b88aa dac791b5e7b560c87d2955a6d56e8e29cb751128 Gatoromerogolf <ruben.e.garcia@gmail.com> 1716234964 -0300	commit: idioma
+dac791b5e7b560c87d2955a6d56e8e29cb751128 9dafc482be5377b6950b1e75581d2ff5105545fb Gatoromerogolf <ruben.e.garcia@gmail.com> 1716298893 -0300	pull --ff --recurse-submodules --progress origin: Fast-forward
+9dafc482be5377b6950b1e75581d2ff5105545fb e7e25eb5a11e3fa74c6b1ae8140bd4ce88ba9f26 Gatoromerogolf <ruben.e.garcia@gmail.com> 1716843033 -0300	commit: ajustes
+e7e25eb5a11e3fa74c6b1ae8140bd4ce88ba9f26 20883810b17565832f66bb132ba6c5ae77ed1c24 Gatoromerogolf <ruben.e.garcia@gmail.com> 1716843270 -0300	commit: quincenal

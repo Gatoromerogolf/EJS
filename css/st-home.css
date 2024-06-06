@@ -1,0 +1,240 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+  background:#e6e6e6;
+}
+
+/*-----------------------
+      MENU SUPERIOR */
+
+header, .main, footer {
+  width:90%;
+  max-width:1000px;
+  margin:20px auto;
+}
+
+header nav{
+  background-color:#528FD5;
+  overflow: hidden;
+}
+
+header nav ul{
+  list-style: none;
+}
+
+header nav ul li{
+  float:left;
+}
+
+header nav ul li a{
+  text-decoration: none;
+  padding:10px 15px;
+  display:block;
+  color:white;
+  font-family:'Roboto', sans-serif;
+  font-size:16px;
+  /*font-weight: bolder;*/
+  font-weight: bold;
+}
+
+#tablaIndice {
+  text-decoration: none;
+  padding:2px ;
+  display:block;
+  font-family:'Roboto', sans-serif;
+  font-size:16px;
+}
+
+header nav ul li a:hover{
+  background-color:#75ACEC;
+}
+
+/*   ARTICULOS  */
+
+.main .articles{
+  width:68.5%;
+  float:left;
+  margin-right: 1.5%;
+}
+
+.main .articles article{
+  padding:20px;
+  background:#fff;
+  margin-bottom: 20px;
+  font-family:'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+aside{
+  width: 30%;
+  background:#ff8000;
+  float:left;
+  padding:20px;
+  box-sizing: border-box;
+  font-family:'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+}
+
+/*   logo hexa   */
+.logoHexa {
+  margin: 20px;
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+
+/*   PIE DE PAGINA  */
+
+.footer  {
+  font-family:'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:12px;
+  font-weight: normal;
+  background-color: rgb(#528FD5);
+  clear:both;
+  padding:10px 0px;
+  text-align: left;
+  text-decoration: none;
+  /*color:white;*/
+}
+
+.footer a {
+  display: inline-block;
+  margin-right: 20px;
+  font-family:'Lato', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:12px;
+  text-decoration: none;  
+}
+
+/*  GOB CORPORATIVO  */
+.listas {
+  margin-left: 50px;
+  font-family:'Roboto', sans-serif;
+  font: size 16px;
+  list-style-type: square;
+}
+
+.listas li{
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family:'Roboto', sans-serif;
+  color:blue;
+  font-size:20px;
+}
+
+ul ul{
+  color: rgb(70, 69, 72);
+  list-style-type:none;
+  margin-left: 50px;
+}
+
+/* .radiohori {
+  display: flex;
+  /*display: inline-block;
+  margin-right: 20px;
+} */
+
+
+.listas li {
+  display: flex;
+  align-items: center;
+}
+
+.listas li label{
+  margin-right: 15px; /* Espaciado entre cada botón de radio */
+}
+
+.listas li label.first-radio{
+  margin-left: 20px; /* Espaciado desde el texto al primer boton radio */
+}
+
+.listas li input[type="radio"] {
+  margin-right: 5px; /* Espaciado entre el radio y su etiqueta */
+}
+
+.listas li label.check{
+  display: inline-block;
+  margin-left: 5px; /* Espaciado desde el texto al primer boton checkbox */
+}
+
+.centrado-flex {
+  margin: 20px;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  /*align-items: center; Centra verticalmente*/
+  /*height: 100vh; /* Altura completa de la ventana del navegador */
+}
+
+#boton-enviar {
+  background-color: #4CAF50; /* Color de fondo */
+  color: white; /* Color de texto */
+  padding: 12px 24px; /* Espaciado alrededor del texto */
+  border: none; /* Sin bordes */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor en forma de mano al pasar el mouse */
+  transition: all 0.3s; /* Transición suave para los cambios */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+}
+
+#boton-enviar:hover {
+  background-color: #45a049; /* Color de fondo al pasar el mouse */
+}
+
+#boton-enviar:focus {
+  outline: none; /* Elimina el contorno al enfocar */
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.6); /* Sombra de foco */
+}
+
+
+/* ol{
+  margin-left:50px;
+  padding: auto;
+} */
+
+
+#olIndice {
+  font-family:'Roboto', sans-serif;
+  list-style-type: upper-roman; /* Cambia el estilo del marcador */
+  font-size: 17px; /* Tamaño del texto */
+  color: #333; /* Color del texto */
+  margin-left: auto; /* Centra horizontalmente */
+  width: 90%; /* Ajusta el ancho de la lista */
+}
+
+#olIndice li {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex; /* Utilizamos flexbox para el diseño de las columnas */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten al tamaño del conte
+    /* margin-bottom: 8px; /* Espacio entre elementos de la lista */
+}
+
+.olIndiceColumna{
+  width:25%;
+}
+
+#olIndice a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #0066cc; /* Color del enlace */
+}
+
+#olIndice a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
+}
+
+
+li a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: separate; /* Para que el espaciado se aplique */
+  border-spacing: 10px; /* Espacio entre filas y columnas */
+}

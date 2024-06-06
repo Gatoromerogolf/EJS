@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de riesgos</title>
+  <link href="../css/st-homePrueba.css" rel="stylesheet">
+  <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- anulado hasta que se necesite
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script>
+      $(function () {
+        $("#header").load("encabezado.html");
+        $("#footer").load("piepagina.html");
+      });
+    </script> -->
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../img/bdtancho.png" width="100%" alt="">
+    </div>
+
+
+  </header>
+
+  <!-- <div id="header-placeholder"></div> -->
+  <!-- <div id="header"></div>    -->
+
+
+  <section class="main">
+    <section class="gobCorpo">
+      <a href="../index.html"> <img src="../img/contenido (1).png" width="40px"></a>
+      <div class="right-icons">
+        <a href="Menu-General.html" id="spainIcon"> <img src="../img/espana.png" width="25px"></a>
+        <a href="Menu-General-en.html" id="usaIcon"> <img src="../img/usa.png" width="25px"></a>
+      </div>
+      <br><br>
+      <h1 style="margin-left: 5px">Self-evaluation.  Chapters.</h1>
+      <br>
+
+      <div class="contenedorTabla">
+        <table id="tablaIndice">
+
+          <tr>
+            <th>#</th>
+            <th style="width: 400px;">Chapter</th>
+            <th style="width: 40px;">Max</th>
+            <th style="width: 50px;">Score</th>
+            <th style="width: 40px;">%</th>
+          </tr>
+
+          <tr>
+            <td>A</td>
+            <td><a href="Menu-A-en.html">Corporate Governance</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>B</td>
+            <td><a href="menu-ape-rie-en.html">Risk appetite</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>C</td>
+            <td><a href="rie-mer-en.html">Market Risks</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>D</td>
+            <td><a href="menu-procesos-en.html">Process Risks</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>E</td>
+            <td><a href="pos-fin-en.html">Financial Situation</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          
+          <tr>
+            <td>F</td>
+            <td><a href="CAL-RES-en.html">Quality of Results</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><a href="CAL-RES-en.html">* * *  General Summary</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+        </table>
+      </div>
+    </section>
+  </section>
+
+
+  <br>
+  <section>
+    <footer>
+      <div class="footer">
+        <hr>
+        <p>
+        <p>Contact:</p>
+        <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
+            class="fab fa-whatsapp"></i></a>
+        </p>
+      </div>
+      <p>Copyright &copy;2024 - BDT</p>
+      <br>
+      <!-- <p>Autor de la pagina</p> -->
+      <!-- <div id="footer"></div> -->
+    </footer>
+  </section>
+
+  <script>
+    // Agrega un evento de clic al ícono de España
+    document.getElementById('spainIcon').addEventListener('click', function() {
+      // Setea una variable en el localStorage con valor 1 cuando se hace clic en el ícono de España
+      localStorage.setItem('idioma', '1');
+    });
+  </script>
+  
+  <script>
+    // Agrega un evento de clic al ícono de USA
+    document.getElementById('usaIcon').addEventListener('click', function() {
+      // Setea una variable en el localStorage con valor 1 cuando se hace clic en el ícono de USA
+      localStorage.setItem('idioma', '2');
+    });
+  </script>
+
+<script src=""></script>
+
+</body>
+
+</html>

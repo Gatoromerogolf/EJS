@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexágono con Arcos Concéntricos</title>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script>
+        function dibujarHexagonoConArcos(x, y, radio, contexto) {
+            const vertices = [];
+            for (let i = 0; i < 6; i++) {
+                const angulo = Math.PI / 180 * (60 * i - 30); // Ajuste para que el hexágono esté horizontal
+                const puntoX = x + radio * Math.cos(angulo);
+                const puntoY = y + radio * Math.sin(angulo);
+                vertices.push({ x: puntoX, y: puntoY });
+            }
+
+            // Dibujar el hexágono
+            contexto.beginPath();
+            contexto.moveTo(vertices[0].x, vertices[0].y);
+            for (let i = 1; i < vertices.length; i++) {
+                contexto.lineTo(vertices[i].x, vertices[i].y);
+            }
+            contexto.closePath();
+            contexto.stroke();
+
+            const colores = ['#FF6347', '#4682B4', '#32CD32', '#FFD700']; // Colores para cada "arco"
+
+            // Dibujar arcos en cada triángulo
+            for (let i = 0; i < vertices.length; i++) {
+                const nextIndex = (i + 1) % 6;
+                const vx = (vertices[i].x + vertices[nextIndex].x) / 2;
+                const vy = (vertices[i].y + vertices[nextList].y) / 2;
+
+                let lastRadius = 0;
+                for (let j = 0; j < colores.length; j++) {
+                    const thisRadius = radio * ((j + 1) / colores.length);
+                    contexto.beginPath();
+                    contexto.moveTo(x, y);
+                    contexto.arc(x, y, thisRadius, Math.atan2(vertices[i].y - y, vertices[i].x - x), Math.atan2(vertices[nextIndex].y - y, vertices[nextIndex].x - x));
+                    contexto.closePath();
+                    contexto.fillStyle = colores[j];
+                    contexto.fill();
+                }
+            }
+        }
+
+        const canvas = document.getElementById('canvas');
+        const contexto = canvas.getContext('2d');
+        const x = canvas.width / 2;
+        const y = canvas.height / 2;
+        const radio = 150;
+
+        dibujarHexagonoConArcos(x, y, radio, contexto);
+    </script>
+</body>
+</html>
+
+

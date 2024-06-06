@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de riesgos</title>
+  <link href="../css/st-homePrueba.css" rel="stylesheet">
+  <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- anulado hasta que se necesite
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script>
+      $(function () {
+        $("#header").load("encabezado.html");
+        $("#footer").load("piepagina.html");
+      });
+    </script> -->
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../img/bdtancho.png" width="100%" >
+    </div>
+
+  </header>
+
+  <!-- <div id="header-placeholder"></div> -->
+  <!-- <div id="header"></div>    -->
+
+  <section class="main">
+    <section class="gobCorpo">
+      <div class="header-container">
+        <h1><a href="Menu-A.html">A - Gobierno Corporativo. Autoevaluación.</a></h1>
+        <div class="nav-icons">
+          <a href="MA-4.html"><img src="../img/anterior.png" alt="Avance"></a>
+          <a href="MA-6.html"><img src="../img/siguiente.png" alt="Avance"></a>
+        </div>
+      </div>
+
+      <p>Seleccione la opción que corresponda a su organización</p>
+
+      <hr>
+      <form id="formulario">
+        <br>
+        <h1>V - Comité de Auditoría.</h1>
+        <br>
+
+        <table>
+          <tr>
+              <th class="pregunta-col">Situación</th>
+              <th class="respuesta-col">Si</th>
+              <th class="respuesta-col">No</th>
+          </tr>
+
+          <p style="color: red">En esta sección solo la pregunta 6 está indicada para ser respondida por SI/NO.  La declaración de "Aprueba....." puede ser respondida en una escala gradual? Qué parámetro se debería dimensionar para calificar la aprobación como Muy Efectiva, Efectiva o Poco efectiva?</td>
+          <tr>
+            <td class="pregunta-col">1. Aprueba los informes de Auditoría Interna</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-1" value="1"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-1" value="2"></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col" id="fila-2">2. Vela por la subsanación de las debilidades de control interno detectadas por la Auditoría Interna</td>
+
+            <td class="respuesta-col" id="fila-2a">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="1"></td>
+
+            <td class="respuesta-col" id="fila-2a">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="2"></td>
+          </tr>
+
+          
+          <tr>
+            <td class="pregunta-col">3. Aprueba el proceso de planificación de la Auditoría Interna y verifica el de la Auditoría Externa</td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-1" value="1"></td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-4-1" value="2"></td>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col" id="fila-2" >4. Aprueba los estados contables <span style="font-weight: 700">(OJO Son estados financieros!!!!???)<span></span></td>
+
+            <td class="respuesta-col" id="fila-2a">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="1"></td>
+
+            <td class="respuesta-col" id="fila-2b">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="2"></td>
+          </tr>
+
+          
+          <tr>
+            <td class="pregunta-col" id="fila-2">5. Aprueba los honorarios de la Auditoría Externa</td>
+
+            <td class="respuesta-col" id="fila-2a">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="1"></td>
+
+            <td class="respuesta-col" id="fila-2b">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="2"></td>
+          </tr>
+
+          
+          <tr>
+            <td class="pregunta-col" id="fila-2">6. Su Presidente es un Director independiente</td>
+
+            <td class="respuesta-col" id="fila-2a">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="1"></td>
+
+            <td class="respuesta-col" id="fila-2b">
+              <div class="radio-container"><input type="radio" name="A-4-1-1" value="2"></td>
+          </tr>
+
+        </table>
+
+
+        <div class="centrado-flex">
+          <button type="submit" id="boton-enviar">Enviar</button>
+        </div>
+
+        <div class="centrado-flex">
+          <button type="button" id="boton-borrar" onclick="limpiarSelecciones()">Limpiar selecciones</button>
+        </div>
+
+      </form>
+    </section>
+  </section>
+
+  <br>
+  <section>
+    <footer>
+      <hr>
+      <div class="footer">
+        <p>Contacto</p>
+        <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
+            class="fab fa-whatsapp"></i></a>
+        </p>
+      </div>
+      <p>Derechos reservados. &copy;2024 - BDT</p>
+      <br>
+      <!-- <p>Autor de la pagina</p> -->
+      <!-- <div id="footer"></div> -->
+    </footer>
+  </section>
+
+</body>
+
+<script src="../datos/tabla01.js"></script>
+<script src="../datos/tabla02.js"></script>
+<script src="../apps/prueba.js"></script>
+
+</html>
