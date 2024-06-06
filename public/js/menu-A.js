@@ -3,7 +3,7 @@ let tablaMenuA = [];
 let tablaMenuEs = [
   ["I.",
     // "MA-1.html",
-    "carga.html",
+    "MA-1.html",
     "La composición y responsabilidad del Directorio",
     ,
     ,

@@ -90,15 +90,27 @@ header nav ul li a:hover{
 /* ------------   NOmbre comañia centrado  -------*/
 .containerTitulo {
   display: flex;
+  justify-content: space-between;
   align-items: center; /* Centra verticalmente los elementos */
 }
 
-.containerTitulo img {
-  margin-right: 10px; /* Espacio entre la imagen y el texto */
+.containerTitulo div{
+  margin: 0;
+  padding: 0;
 }
 
+.containerTitulo div img {
+  margin: 0;
+  padding: 0;
+}
+
+.right-icons {
+  margin-left: auto;
+  }
+
+
 #nombreCia {
-  flex-grow: 1; /* Permite que el texto ocupe todo el espacio restante */
+  /*flex-grow: 1; /* Permite que el texto ocupe todo el espacio restante */
   text-align: center; /* Centra horizontalmente el texto */
   font-size: 20px;
   font-weight: 700;
