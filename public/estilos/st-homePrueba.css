@@ -94,9 +94,13 @@ header nav ul li a:hover{
   align-items: center; /* Centra verticalmente los elementos */
 }
 
-.containerTitulo div{
-  margin: 0;
-  padding: 0;
+.containerTitulo img{
+  margin-right: 10px;
+}
+
+.containerTitulo div img {
+  margin-right: 0px; /* Espacio entre la imagen y el texto */
+  padding: 0px;
 }
 
 .containerTitulo div img {
