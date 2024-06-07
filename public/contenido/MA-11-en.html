@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de riesgos</title>
+  <link href="../estilos/st-homePrueba.css" rel="stylesheet">
+  <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../img/bdtancho.png" width="100%" alt="">
+    </div>
+  </header>
+
+  <!-- <div id="header-placeholder"></div> -->
+  <!-- <div id="header"></div>    -->
+
+  <section class="main">
+    <section class="gobCorpo">
+      <div class="header-container">
+        <h1><a href="Menu-A-en.html">A - Corporate Governance. Self-assessment.</a></h1>
+        <div class="nav-icons">
+          <a href="MA-10-en.html"><img src="../img/anterior.png" alt="Avance"></a>
+          <a href="MA-12-en.html"><img src="../img/siguiente.png" alt="Avance"></a>
+        </div>
+      </div>
+
+      <p>Select the option that applies to your organization.</p>
+
+      <hr>
+      <form id="formulario">
+        <br>
+        <h1>XI - Board and Management Interaction</h1>
+        <br>
+
+        <table>
+          <tr>
+            <th class="pregunta-col">Situation</th>
+            <th class="respuesta-col">Not effective</th>
+            <th class="respuesta-col">Ineffective</th>
+            <th class="respuesta-col">Effective</th>
+            <th class="respuesta-col">Very effective</th>
+        </tr>
+
+          <tr>
+            <td class="pregunta-col">1. The Board of Directors is aware of and participates in the evaluation of the performance of executives
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-1" value="1"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-1" value="2"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-1" value="3"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-1" value="4"></label>
+
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">2. The Board of Directors supervises that talent management is adequate
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-2" value="1"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-2" value="2"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-2" value="3"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-2" value="4"></label>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">3. The Board of Directors supervises management performance evaluations
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-3" value="1"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-3" value="2"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-3" value="3"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-3" value="4"></label>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">4. The Board of Directors supervises remuneration decisions made by management
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-4" value="1"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-4" value="2"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-4" value="3"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-4" value="4"></label>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">5. There is a Code of Conduct approved by the Board of Directors and it is communicated to all members
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-5" value="1">Yes</label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-5" value="2">No</label>
+          </tr>
+
+          <tr>
+            <td class="pregunta-col">6. There is a procedure to submit misconduct by company members to the Board of Directors
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-6" value="1"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-6" value="2"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-6" value="3"></label>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-11-6" value="4"></label>
+          </tr>
+        </table>
+
+        <div class="centrado-flex">
+          <button type="submit" id="boton-enviar">Send</button>
+        </div>
+
+        <div class="centrado-flex">
+          <button type="button" id="boton-borrar" onclick="limpiarSelecciones()">Clear selections</button>
+        </div>
+
+      </form>
+    </section>
+  </section>
+
+  <br>
+  <section>
+    <footer>
+      <hr>
+      <div class="footer">
+        <p>Contact</p>
+        <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
+            class="fab fa-whatsapp"></i></a>
+        </p>
+      </div>
+      <p>Copyright. &copy;2024 - BDT</p>
+      <br>
+      <!-- <p>Autor de la pagina</p> -->
+      <!-- <div id="footer"></div> -->
+    </footer>
+  </section>
+
+  <div id="miAlerta" class="alerta-oculto">
+    <div class="alerta-contenido">
+      <div class="alerta-cabecera">
+        <span>Section summary</span>
+        <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
+      </div>
+      <div class="alerta-cuerpo">
+        <p>Maximum possible score: <span id="maximo"></span></p>
+        <br>
+        <p>Score obtained: <span id="calificacion"></span></p>
+        <br>
+        <p>Percentage: <span id="porcentual"></span></p>
+        <br>
+        <button id="continuar" onclick="continuar()">Continue</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+<!-- <script src="../datos/tabla01.js"></script> -->
+<!-- <script src="../datos/tabla02.js"></script> -->
+<script src="../../js/ma-11.js"></script>
+
+</html>

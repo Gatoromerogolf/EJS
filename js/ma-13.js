@@ -155,3 +155,8 @@ function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
   window.location.href = "MA-14.html";
 }
+
+function continuar() {
+  cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
+window.location.href = (JSON.parse(localStorage.getItem('idioma'))) == 1 ? "MA-14.html" : "MA-14-en.html"
+}
