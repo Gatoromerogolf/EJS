@@ -203,14 +203,6 @@ document
       localStorage.setItem("valores", JSON.stringify(valores));
       localStorage.setItem("porciento", JSON.stringify(porcientoFormateado));
 
-      // localStorage.setItem("1", JSON.stringify({
-      //   maximo: maximo,
-      //   valores: valores,
-      //   porciento: porcientoFormateado        
-      // }));
-
-
-      // window.location.href = 'MA-2.html'
     }
   });
 
@@ -250,7 +242,13 @@ function cerrarAlerta() {
 
 function continuar() {
   cerrarAlerta(); // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
-  window.location.href = "MA-2.html";
+
+  // if (idioma == 1) {
+  //       (window.location.href = "MA-2.html")
+  //     else
+  //       (window.location.href = "MA-2-en.html")}
+
+  window.location.href = (JSON.parse(localStorage.getItem('idioma'))) == 1 ? "MA-2.html" : "MA-2-en.html"
 }
 
 // ------------------ no se utiliza

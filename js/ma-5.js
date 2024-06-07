@@ -139,5 +139,6 @@ function cerrarAlerta() {
 
 function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
-  window.location.href = "MA-6.html";
+  // window.location.href = "MA-6.html";
+  window.location.href = (JSON.parse(localStorage.getItem('idioma'))) == 1 ? "MA-6.html" : "MA-6-en.html"
 }

@@ -48,7 +48,7 @@ let tablaMenuEs = [
 
 let tablaMenuIn = [
   ["A.",
-    "MA-1-en.html",
+    "Menu-A-en.html",
     "Corporate governance",
     ,
     ,
@@ -136,23 +136,18 @@ tablaMenuA[5][3] = JSON.parse(localStorage.getItem('maximo-F'));
 tablaMenuA[5][4] = JSON.parse(localStorage.getItem('valores-F'));
 tablaMenuA[5][5] = JSON.parse(localStorage.getItem('porciento-F'));
 
-// tablaMenuA[6][3] = JSON.parse(localStorage.getItem('maximo-G'));
-// tablaMenuA[6][4] = JSON.parse(localStorage.getItem('valores-G'));
-// tablaMenuA[6][5] = JSON.parse(localStorage.getItem('porciento-G'));
-
-
-
 for (i = 0; i < tablaMenuA.length - 1; i++) {
   tablaMenuA[6][3] += tablaMenuA[i][3];
   tablaMenuA[6][4] += tablaMenuA[i][4];
 }
 
 // if (tablaMenuA[6][4] !== 0) {
-  if (tablaMenuA[6][4] > 0) {
-  tablaMenuA[6][5] = ((tablaMenuA[i][4] / tablaMenuA[6][3]) * 100).toFixed(2)
-}
+if (tablaMenuA[6][4] > 0) {
+    tablaMenuA[6][5] = ((tablaMenuA[i][4] / tablaMenuA[6][3]) * 100).toFixed(2)} else
+    {tablaMenuA [6] [3]= 0;
+      tablaMenuA [6] [4] = 0;
+      tablaMenuA [6] [5] = 0;}
 
-// console.log(`puntos: ${valorRecuperado} y el maximo: ${valorMaximo} y el de funcion 2 ${valorFuncion2}`);
 
 //  llena la matriz 
 let lineaDatosFd = document.getElementById("lineaMenu");
