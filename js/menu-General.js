@@ -111,7 +111,7 @@ for (i = 0; i < tablaMenuA.length; i++) {
   tablaMenuA[i][4] = 0;
   tablaMenuA[i][5] = 0;
 }
-
+console.log (`linea 6  tablaMenuaA[6][3]`)
 tablaMenuA[0][3] = JSON.parse(localStorage.getItem('maximo-A'));
 tablaMenuA[0][4] = JSON.parse(localStorage.getItem('valores-A'));
 tablaMenuA[0][5] = JSON.parse(localStorage.getItem('porciento-A'));
@@ -147,7 +147,8 @@ for (i = 0; i < tablaMenuA.length - 1; i++) {
   tablaMenuA[6][4] += tablaMenuA[i][4];
 }
 
-if (tablaMenuA[6][4] !== 0) {
+// if (tablaMenuA[6][4] !== 0) {
+  if (tablaMenuA[6][4] > 0) {
   tablaMenuA[6][5] = ((tablaMenuA[i][4] / tablaMenuA[6][3]) * 100).toFixed(2)
 }
 

@@ -345,4 +345,5 @@ localStorage.setItem("maximo-A", JSON.stringify(tablaMenuA[15][3]));
 localStorage.setItem("valores-A", JSON.stringify(tablaMenuA[15][4]));
 localStorage.setItem("porciento-A", JSON.stringify(tablaMenuA[15][5]));
 
-console.log('definio los localstorage')
+
+if (tablaMenuA[14][4] > 0) {document.getElementById("botonSiguiente").style.display = "block";}
