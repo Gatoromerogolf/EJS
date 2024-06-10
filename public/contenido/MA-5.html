@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evaluación de riesgos</title>
+  <script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
   <link href="../estilos/st-homePrueba.css" rel="stylesheet">
   <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -155,15 +156,16 @@
     <div class="alerta-contenido">
       <div class="alerta-cabecera">
         <span>Resumen de la sección</span>
-        <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
       </div>
       <div class="alerta-cuerpo">
         <p>Puntaje máximo posible: <span id="maximo"></span></p>
-        <br>
         <p>Calificación obtenida: <span id="calificacion"></span></p>
-        <br>
         <p>Porcentual: <span id="porcentual"></span></p>
-        <br>
+
+      <div class="gauge-container">
+        <canvas id="gaugeChart";></canvas>
+      </div>
+
         <button id="continuar" onclick="continuar()">Continuar</button>
       </div>
     </div>

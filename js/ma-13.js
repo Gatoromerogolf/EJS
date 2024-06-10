@@ -139,12 +139,23 @@ function limpiarSelecciones() {
 }
 
 function mostrarMiAlerta(maximo, valores, porcientoFormateado) {
+
+  // Mostrar la alerta personalizada
+  document.getElementById('miAlerta').style.display = 'block';
+
+  //  crea el gauge despues de mostrar la alerta
+  const target = document.getElementById('gaugeChart'); // your canvas element
+  const gauge = new Gauge(target).setOptions(opts); // create gauge!
+  gauge.maxValue = 100; // set max gauge value
+  gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+  gauge.animationSpeed = 32; // set animation speed (32 is default value)
+  gauge.set(porcientoFormateado); // set actual value
+
   // Actualizar los contenidos
   document.getElementById('maximo').textContent = maximo;
   document.getElementById('calificacion').textContent = valores;
   document.getElementById('porcentual').innerHTML = '<strong>' + porcientoFormateado + '%<strong>';
-  // Mostrar la alerta personalizada
-  document.getElementById('miAlerta').style.display = 'block';
+
 }
 
 function cerrarAlerta() {
@@ -160,3 +171,38 @@ function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
 window.location.href = (JSON.parse(localStorage.getItem('idioma'))) == 1 ? "MA-14.html" : "MA-14-en.html"
 }
+
+// Armar velocimetro ::::::::::::::::::::::::::::::::::::::
+const opts = {
+  angle: -0.3,
+// The span of the gauge arc
+  lineWidth: 0.2, // The line thickness
+  radiusScale: 0.8, // Relative radius
+  pointer: {
+      length: 0.6, // // Relative to gauge radius
+      strokeWidth: 0.035, // The thickness
+      color: '#000000' // Fill color
+  },
+  limitMax: false,     // If false, max value increases automatically if value > maxValue
+  limitMin: false,     // If true, the min value of the gauge will be fixed
+  colorStart: '#6F6EA0',   // Colors
+  colorStop: '#C0C0DB',    // just experiment with them
+  strokeColor: '#EEEEEE',  // to see which ones work best for you
+  generateGradient: true,
+  highDpiSupport: true,     // High resolution support
+
+  // Custom segment colors
+  staticZones: [
+     {strokeStyle: "red", min: 0, max: 25}, // Red from 0 to 25
+     {strokeStyle: "orange", min: 25, max: 50}, // Red from 0 to 25
+     {strokeStyle: "green", min: 50, max: 75}, // Yellow from 50 to 75
+     {strokeStyle: "blue", min: 75, max: 100}  // Blue from 75 to 100
+  ],
+
+  staticLabels: {
+      font: "15px sans-serif",  // Specifies font
+      labels: [0, 25, 50, 75, 100],  // Print labels at these values
+      color: "#000000",  // Optional: Label text color
+      fractionDigits: 0  // Optional: Numerical precision. 0=round off.
+  },
+};
