@@ -477,6 +477,17 @@ p{
   margin-right: auto;
 }
 
+/* ---------------  VELOCIMETRO  ----*/
+.gauge-container {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Centrar horizontalmente */
+}
+
+
 /* --------------   PREGUNTAS EN TABLAS
   /* Estilos para la tabla */
   table {

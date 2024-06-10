@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evaluación de riesgos</title>
-  <script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
   <link href="../css/st-homePrueba.css" rel="stylesheet">
   <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -95,13 +94,13 @@
 
             <td class="respuesta-col">
               <div class="radio-container">
-                <input type="radio" name="A-15-2" value="1"><label for="A-15-2" class="radio-label"></label>
+                <input type="radio" name="A-15-1" value="1"><label for="A-15-1" class="radio-label"></label>
               </div>
             </td>
 
             <td class="respuesta-col">
               <div class="radio-container">
-                <input type="radio" name="A-15-2" value="0"><label for="A-15-2" class="radio-label"></label>
+                <input type="radio" name="A-15-1" value="0"><label for="A-15-1" class="radio-label"></label>
               </div>
             </td>
           </tr>
@@ -149,20 +148,13 @@
         <span>Resumen de la sección</span>
         <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
       </div>
-      <!-- <div class="gauge-container">
-        <canvas id="gaugeChart";></canvas>
-      </div> -->
       <div class="alerta-cuerpo">
         <p>Puntaje máximo posible: <span id="maximo"></span></p>
-
+        <br>
         <p>Calificación obtenida: <span id="calificacion"></span></p>
-
+        <br>
         <p>Porcentual: <span id="porcentual"></span></p>
-
-      <div class="gauge-container">
-        <canvas id="gaugeChart";></canvas>
-      </div>
-
+        <br>
         <button id="continuar" onclick="continuar()">Continuar</button>
       </div>
     </div>
@@ -173,7 +165,5 @@
 <script src="../datos/tabla01.js"></script>
 <script src="../datos/tabla02.js"></script>
 <script src="../apps/MA-15.js"></script>
-<!-- <script src="../apps/velocimetro.js"></script> -->
-
 
 </html>

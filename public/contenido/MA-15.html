@@ -150,11 +150,13 @@
       </div>
       <div class="alerta-cuerpo">
         <p>Puntaje máximo posible: <span id="maximo"></span></p>
-        <br>
         <p>Calificación obtenida: <span id="calificacion"></span></p>
-        <br>
         <p>Porcentual: <span id="porcentual"></span></p>
-        <br>
+
+        <div class="gauge-container">
+          <canvas id="gaugeChart";></canvas>
+        </div>
+                
         <button id="continuar" onclick="continuar()">Continuar</button>
       </div>
     </div>
