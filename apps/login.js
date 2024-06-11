@@ -8,9 +8,11 @@ login.addEventListener('click', (e) => {
         username: username.value,
         password: clave.value
     }
-
-
     console.log(data)
 
-    window.location.href = "../public/contenido/Menu-General.html";
+    if(JSON.parse(localStorage.getItem('idioma')) == 2){
+        window.location.href = "../public/contenido/Menu-General-en.html";
+    }  else {
+        window.location.href = "../public/contenido/Menu-General.html";
+    }
 })
