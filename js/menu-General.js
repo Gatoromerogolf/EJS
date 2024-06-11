@@ -86,7 +86,7 @@ let tablaMenuIn = [
 
   ["",
     "##",
-    "GENERAL SUMMARY:",
+    "General Summary:",
     ,
     ,
   ],

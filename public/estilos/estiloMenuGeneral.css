@@ -62,3 +62,32 @@ h1, h2, h3 {
     text-align: center; /* Alineación del texto */
     font-family:'Roboto', sans-serif;
   }
+
+  
+.botonSiguiente {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-family:'Roboto', sans-serif;
+  color: white;
+  background-color: #007BFF;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.botonSiguiente:hover {
+  background-color: #0056b3;
+}
+  .centrado-flex {
+    margin: 20px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    /*align-items: center; Centra verticalmente*/
+    /*height: 100vh; /* Altura completa de la ventana del navegador */
+  }
+  
+/* ajusta los valores de totales de Menu-A*/  
+  .ajustado-derecha{
+    text-align: right;
+  }

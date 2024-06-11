@@ -94,7 +94,7 @@ let tablaMenuEs = [
   ],
   ["",
     "##",
-    "CALIFICACION GENERAL:",
+    "Calificación general:",
     ,
     ,
   ],
@@ -193,7 +193,7 @@ let tablaMenuIn = [
   ],
   ["",
     "##",
-    "GENERAL EVALUATION:",
+    "General evaluation:",
     ,
     ,
   ],
@@ -327,18 +327,21 @@ for (i = 0; i < tablaMenuA.length; i++) {
     tablaMenuA[i][3] = ""
   }
   celdaMaximo.textContent = tablaMenuA[i][3];
+  celdaMaximo.classList.add('ajustado-derecha');
 
   celdaPuntos = lineaDatosFd.insertCell(-1);
   if (tablaMenuA[i][4] === 0) {
     tablaMenuA[i][4] = ""
   }
   celdaPuntos.textContent = tablaMenuA[i][4];
+  celdaPuntos.classList.add('ajustado-derecha');
 
   celdaPorciento = lineaDatosFd.insertCell(-1);
   if (tablaMenuA[i][5] === 0) {
     tablaMenuA[i][5] = ""
   }
   celdaPorciento.textContent = tablaMenuA[i][5];
+  celdaPorciento.classList.add('ajustado-derecha');
 }
 
 localStorage.setItem("maximo-A", JSON.stringify(tablaMenuA[15][3]));
