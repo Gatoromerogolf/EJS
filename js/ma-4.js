@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 145; // 4 x 5 +  1 x 10  +  1 x 20
+let maximo = 190; // 4 x 5 +  1 x 10  +  1 x 20
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -188,31 +188,46 @@ console.log (`resp despues Riesgos .................${respuestas}`);
 
 function calculaResultados() {
 
+  const listaPrecios = [
+    [10, 0], // 1. (i=0)comite de auditoría
+    [15, 0], // 2. (i=1)el auditor participa
+    [10, 0], // 3. (i=2)comite de Alta Gerencia
+    [5, 0], // 4. (i=3)Nominaciones
+    [5, 0], // 5. (i=4)Compensaciones
+    [5, 0], // 6. (i=5)Tecnología
+    [10, 0], // 7. (i=6)Riesgos
+    [5, 0], // 8. (i=7)estructura documentada
+    [10, 0], // 9. (i=8)un director por comite
+    [0, 5, 10], // 10. (i=9) acta por reunion
+    [5, 10, 20], // 11. (i=10) envia informes
+    [15, 10], // 12. (i=11)auditoria
+    [20, 15, 10], // 13. (i=12)alta gerencia
+    [10, 15], // 14. (i=13)nominaciones
+    [5, 10], // 15. (i=14)compensaciones
+    [10, 5],  // 16. (i=15)tecnología
+    [15, 10]  // 16. (i=16)riesgos
+  ]
+
+  let precio = 0;
+
   for (let i = 0; i < respuestas.length; i++) {
     if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
 
-    console.log(`i= ${i} ,
-         valores ${valores} ,
-         respuestas: ${respuestas[i]}`);
-
-    let precio = 0;
-    if (i == 3){precio = 10}
-      else{
-          if (i == 5){
-               precio = 20}
-            else{
-              precio = 5
-            }
-      }
-
-    if (respuestas[i] == 1) {
-          valores += precio;
+    if (respuestas[i] < 9){
+      precio = listaPrecios[i] [respuestas[i]-1];
+      valores += precio;
     }
 
-    console.log(`valor despues calculo: ${valores}`);
+    console.log(`i= ${i} ,
+      respuesta: ${respuestas[i]};
+      precio: ${listaPrecios[i] [respuestas[i]-1]};
+      valores ${valores}`    
+     );
+
 
   }
   const porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
+  console.log(`porciento formateado ${porcientoFormateado}`)
   return porcientoFormateado;
 }
 
@@ -232,6 +247,7 @@ document
 // Si no hay faltantes sigue adelante:::::::::::::::::::::::::
     if (!(filasFaltantes.length > 0)) {
       porcientoFormateado = calculaResultados();
+      console.log(`% a la vuelta del calculo ${porcientoFormateado}, maximo ${maximo}, valores: ${valores}`)
       porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
 
       mostrarMiAlerta(maximo, valores, porcientoFormateado);
