@@ -100,6 +100,13 @@ document
     valores = 0;
     event.preventDefault(); // Prevenir el envío del formulario
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   document
+//     .getElementById("survey-form")
+//     .addEventListener("submit", function (event) {
+//       let valores = 0;
+//       event.preventDefault(); // Prevenir el envío del formulario
+
     // obtener los valores de radio 
     // obtenerValoresSeleccionados();
     // console.log(`indice de respuestas faltantes ${filasFaltantes}`)

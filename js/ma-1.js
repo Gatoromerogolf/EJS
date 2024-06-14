@@ -176,7 +176,7 @@ function calculaResultados() {
 // -------------------------------
 
 document
-  .getElementById("formulario")
+.getElementById("survey-form")
   .addEventListener("submit", function (event) {
     valores = 0;
     event.preventDefault(); // Prevenir el envío del formulario
@@ -222,6 +222,10 @@ function limpiarSelecciones() {
   checkboxes.forEach(function (checkbox) {
     checkbox.checked = false;
   });
+
+  document.getElementById('lineaAB').style.display = 'none';
+  document.getElementById('lineaABS').style.display = 'none';
+  document.getElementById('lineaABN').style.display = 'none';
 }
 
 // ------------ ventana del final con resultados---------------
