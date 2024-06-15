@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de riesgos</title>
+  <script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
+  <link href="../estilos/estiloEncuestas.css" rel="stylesheet">
+  <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="survey-container">
+    <form id="survey-form">
+
+      <section class="main">
+        <section class="gobCorpo">
+          <!-- <div class="header-container">
+            <div class="nav-icons">
+              <a href="MA-14.html"><img src="../img/anterior.png" alt="Avance"></a>
+              <a href="Menu-A.html"><img src="../img/siguiente.png" alt="Avance"></a>
+            </div>
+          </div> -->
+
+          <div class="center-container">
+            <h1 id="tituloSeccion"><a href="Menu-A.html">Resumen General.</a></h1>
+          </div>
+
+          <div class="flex-graficos-resumen">
+            <div id="miAlerta" class="alerta-oculto1">
+              <div class="alerta-contenido-ResGral">
+                <div class="alerta-cabecera-ResGral">
+                  <span>Gobierno Corporativo</span>
+
+                </div>
+                <div class="alerta-cuerpo-ResGral">
+                  <p>Calificación máxima:<span id="maximo"></span></p>
+                  <p>Calificación obtenida: <span id="calificacion"></span></p>
+                  <p>Porcentual: <span id="porcentual"></span></p>
+
+                  <div class="gauge-container">
+                    <canvas id="gaugeChart"></canvas>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div id="miAlerta2" class="alerta-oculto1">
+              <div class="alerta-contenido-ResGral">
+                <div class="alerta-cabecera-ResGral">
+                  <span>Apetito de Riesgo</span>
+
+                </div>
+                <div id="datosRG2" class="alerta-cuerpo-ResGral">
+                  <p>Calificación máxima: <span id="maximo2"></span></p>
+                  <p>Calificación obtenida: <span id="calificacion2"></span></p>
+                  <p>Porcentual: <span id="porcentual2"></span></p>
+
+                  <div class="gauge-container">
+                    <canvas id="gaugeChart2" ;></canvas>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div id="miAlerta3" class="alerta-oculto1">
+              <div class="alerta-contenido-ResGral">
+                <div class="alerta-cabecera-ResGral">
+                  <span>Riesgos de Mercado</span>
+
+                </div>
+                <div class="alerta-cuerpo-ResGral">
+                  <p>Puntaje máximo posible: <span id="maximo3"></span></p>
+                  <p>Calificación obtenida: <span id="calificacion3"></span></p>
+                  <p>Porcentual: <span id="porcentual3"></span></p>
+
+                  <div class="gauge-container">
+                    <canvas id="gaugeChart3" ;></canvas>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- </form> -->
+
+          <div class="flex-graficos-resumen">
+            <div id="miAlerta4" class="alerta-oculto1">
+              <div class="alerta-contenido-ResGral">
+                <div class="alerta-cabecera-ResGral">
+                  <span>Riesgos de Procesos</span>
+ 
+                </div>
+                <div class="alerta-cuerpo-ResGral">
+                  <p>Calificación máxima: <span id="maximo4"></span></p>
+                  <p>Calificación obtenida: <span id="calificacion4"></span></p>
+                  <p>Porcentual: <span id="porcentual4"></span></p>
+
+                  <div class="gauge-container">
+                    <canvas id="gaugeChart4" ;></canvas>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+
+            <div id="miAlerta5" class="alerta-oculto1">
+              <div class="alerta-contenido-ResGral">
+                <div class="alerta-cabecera-ResGral">
+                  <span>Situación Financiera</span>
+                </div>
+
+                <div id="datosRG5" class="alerta-cuerpo-ResGral">
+                  <p>Calificación máxima: <span id="maximo5"></span></p>
+                  <p>Calificación obtenida: <span id="calificacion5"></span></p>
+                  <p>Porcentual: <span id="porcentual5"></span></p>
+                </div>
+
+                <div class="gauge-container">
+                  <canvas id="gaugeChart5"></canvas>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="miAlerta6" class="alerta-oculto1">
+              <div class="alerta-contenido-ResGral">
+                <div class="alerta-cabecera-ResGral">
+                  <span>Calidad de los Resultados</span>
+                  <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
+                </div>
+                <div class="alerta-cuerpo-ResGral">
+                  <p>Puntaje máximo posible: <span id="maximo6"></span></p>
+                  <p>Calificación obtenida: <span id="calificacion6"></span></p>
+                  <p>Porcentual: <span id="porcentual6"></span></p>
+
+                  <div class="gauge-container">
+                    <canvas id="gaugeChart6" ;></canvas>
+                  </div>
+
+                  <!-- <button id="continuar" onclick="continuar()">Continuar</button> -->
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- </form> -->
+
+          <div class="centrado-flex">
+            <button id="continuar" onclick="continuar()">Continuar</button>
+          </div>
+
+    </form>
+  </div>
+
+</body>
+
+<!-- <script src="../datos/tabla01.js"></script> -->
+<!-- <script src="../datos/tabla02.js"></script> -->
+<script src="../../js/showResGral.js"></script>
+
+</html>

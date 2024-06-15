@@ -111,7 +111,7 @@ for (i = 0; i < tablaMenuA.length; i++) {
   tablaMenuA[i][4] = 0;
   tablaMenuA[i][5] = 0;
 }
-console.log (`linea 6  tablaMenuaA[6][3]`)
+
 tablaMenuA[0][3] = JSON.parse(localStorage.getItem('maximo-A'));
 tablaMenuA[0][4] = JSON.parse(localStorage.getItem('valores-A'));
 tablaMenuA[0][5] = JSON.parse(localStorage.getItem('porciento-A'));
@@ -150,10 +150,13 @@ if (tablaMenuA[6][4] > 0) {
 
 
 //  llena la matriz 
-let lineaDatosFd = document.getElementById("lineaMenu");
+//let lineaDatosFd = document.getElementById("lineaMenu");
+//let lineaDatosFd = document.getElementById("tablaIndice");
+let tablaIndice = document.getElementById("tablaIndice");
 
 for (i = 0; i < tablaMenuA.length; i++) {
-  lineaDatosFd = tablaIndice.insertRow();
+  //lineaDatosFd = tablaIndice.insertRow();
+  let lineaDatosFd = tablaIndice.insertRow();  
 
   let celdaNombre = lineaDatosFd.insertCell(-1);
   celdaNombre.textContent = tablaMenuA[i][0];

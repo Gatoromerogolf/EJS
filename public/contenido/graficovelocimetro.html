@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico Velocímetro con Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<body>
+ 
+  <div id="miAlerta" class="alerta-oculto" sytle="display: block">
+    <div class="alerta-contenido">
+      <div class="alerta-cabecera">
+        <span>Resumen de la sección</span>
+        <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
+      </div>
+      <div class="alerta-cuerpo">
+        <p>Puntaje máximo posible: <span id="maximo"></span></p>
+        <p>Calificación obtenida: <span id="calificacion"></span></p>
+        <p>Porcentual: <span id="porcentual"></span></p>
+
+        <div class="gauge-container">
+          <canvas id="gaugeChart" ;></canvas>
+        </div>
+
+        <button id="continuar" onclick="continuar()">Continuar</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+    // function mostrarMiAlerta(maximo, valores, porcientoFormateado) {
+
+// Mostrar la alerta personalizada
+document.getElementById('miAlerta').style.display = 'block';
+
+//  crea el gauge despues de mostrar la alerta
+const target = document.getElementById('gaugeChart'); // your canvas element
+const gauge = new Gauge(target).setOptions(opts); // create gauge!
+gauge.maxValue = 100; // set max gauge value
+gauge.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+gauge.animationSpeed = 32; // set animation speed (32 is default value)
+gauge.set(porcientoFormateado); // set actual value
+</script>
+
+<!-- 
+// Armar velocimetro ::::::::::::::::::::::::::::::::::::::
+const opts = {
+  angle: -0.3,
+// The span of the gauge arc
+  lineWidth: 0.2, // The line thickness
+  radiusScale: 0.8, // Relative radius
+  pointer: {
+      length: 0.6, // // Relative to gauge radius
+      strokeWidth: 0.035, // The thickness
+      color: '#000000' // Fill color
+  },
+  limitMax: false,     // If false, max value increases automatically if value > maxValue
+  limitMin: false,     // If true, the min value of the gauge will be fixed
+  colorStart: '#6F6EA0',   // Colors
+  colorStop: '#C0C0DB',    // just experiment with them
+  strokeColor: '#EEEEEE',  // to see which ones work best for you
+  generateGradient: true,
+  highDpiSupport: true,     // High resolution support
+
+  // Custom segment colors
+  staticZones: [
+     {strokeStyle: "red", min: 0, max: 50}, // Red from 0 to 25
+     {strokeStyle: "orange", min: 50, max: 70}, // Red from 0 to 25
+     {strokeStyle: "green", min: 70, max: 90}, // Yellow from 50 to 75
+     {strokeStyle: "blue", min: 90, max: 100}  // Blue from 75 to 100
+  ],
+
+  staticLabels: {
+      font: "15px sans-serif",  // Specifies font
+      labels: [0, 50, 70, 90, 100],  // Print labels at these values
+      color: "#000000",  // Optional: Label text color
+      fractionDigits: 0  // Optional: Numerical precision. 0=round off.
+  },
+}; -->

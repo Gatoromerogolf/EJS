@@ -4,31 +4,8 @@
     padding:0;
 }
 
-/*-----------------------
-      FONDOS */
-
-/* Fondo general que queda finalmente para riesgo corporativo */
-body {
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-/* Fondo específico para la clase aperie */
-body.aperie {
-  background: url('background aperie.jpg') no-repeat center bottom fixed;
-  background-size: cover;
-}
-
-/* Fondo específico para la clase procesos */
-body.procesos {
-  background: url('background procesos.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-/* Fondo específico para la clase mercado */
-body.mercado {
-  background: url('background mercado.jpg') no-repeat center center fixed;
-  background-size: cover;
+body{
+  background:#e6e6e6;
 }
 
 /* Fondo específico para la clase fiananciero */
@@ -37,107 +14,12 @@ body.financiero {
   background-size: cover;
 }
 
-/* Fondo específico para la clase calidad */
-body.calidad {
-  background: url('background calidad.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-
-/*-----------------------
-      HEADERS */
-
-.header-container h1 {
-  background-color: #4a90e2; /* Color azulino */
-  color: white; /* Texto blanco */
-  padding: 20px 0; /* Espaciado interno arriba y abajo */
-  text-align: center; /* Centrar el texto */
-  font-size: 2em; /* Tamaño más grande */
-  margin: 0; /* Eliminar margen */
-  width: 100%; /* Asegura que la banda ocupe todo el ancho */
-  box-sizing: border-box; /* Incluye el padding dentro del ancho */
-}
-
-.header-container h1 a {
-  color: white; /* Asegura que el enlace también sea blanco */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-}
-
-
-/*-----------------------
-      FORMULARIOS */
-
-#formulario {
-  position: relative;
-  z-index: 1; /* Para asegurarse de que el contenido esté por encima del fondo translúcido */
-  color: white; /* Letras blancas */
-  padding: 20px; /* Añadir padding para separarlo del borde */
-}
-
-#formulario::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85); /* Fondo negro translúcido */
-  z-index: -1; /* Asegura que el fondo esté detrás del contenido */
-  border-radius: 5px; /* Bordes redondeados (opcional) */
-}
-
-#formulario h1, 
-#formulario p, 
-#formulario th, 
-#formulario td, 
-#formulario label {
-  color: white; /* Asegura que todos los textos dentro del formulario sean blancos */
-}
-
-/* Aumentar el tamaño del texto también puede ayudar */
-#formulario th, 
-#formulario td, 
-#formulario label {
-  font-size: 1em; /* Ajustar el tamaño de acuerdo a la necesidad */
-}
-
-/* Estilo para el párrafo específico */
-#formulario p {
-  font-size: 0.9em; /* Tamaño de letra más pequeño */
-  font-style: italic; /* Letra itálica */
-  color: white; /* Asegura que el color de la letra sea blanco para buena visibilidad */
-}
-
-#formulario th {
-  background-color: transparent; /* Sin fondo */
-  border-bottom: 1px solid #ccc; /* Solo borde inferior */
-  color: white; /* Letras blancas */
-  padding: 10px; /* Espaciado interno */
-  font-weight: bold; /* Engrosar las letras */
-  text-align: center; /* Centrar el texto */
-  font-size: 0.9em; /* Reducir tamaño de letra */
-}
-
-/* Estilo para las celdas de datos también */
-#formulario td {
-  border-bottom: 1px solid #ccc; /* Solo borde inferior */
-  padding: 10px; /* Espaciado interno */
-  font-size: 0.9em; /* Reducir tamaño de letra */
-}
-
-.header-container h1 a:hover {
-  text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace (opcional) */
-}
 
 p {
   margin-left: 20px;
   margin-bottom: 10px;
-  margin-top: 20px; /* Ajusta este valor según la cantidad de desplazamiento hacia abajo que desees */
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  color: white; /* Letra blanca */
-  font-style: italic; /* Cursiva */
-  font-size: 14px; /* Tamaño un poco más pequeño */
+  font-family:'Roboto', sans-serif;
+  font-size:16px;
 }
 
 h1 a{
@@ -151,34 +33,6 @@ h2{
   padding:10px;
 }
 
-
-
-
-/*-----------------------
-      SÓLO PARA LAS PÁGINAS DE MENÚ DE CADA ÁREA */
-
-/* Estilo para el encabezado en Menu-A */
-.menu-a-page .gobCorpo h1 {
-  color: white; /* Color del texto */
-  text-align: center; /* Centrar el texto */
-  font-size: 2em; /* Tamaño de la fuente */
-  margin: 0; /* Eliminar margen */
-  padding: 20px 0; /* Espaciado interno arriba y abajo */
-  background-color: #4a90e2; /* Fondo azulino */
-}
-
-/* Estilo para los párrafos descriptivos en Menu-A */
-.menu-a-page .gobCorpo p {
-  color: white; /* Color del texto */
-  font-size: 1em; /* Tamaño de la fuente */
-  background-color: rgba(0, 0, 0, 0.85); /* Fondo negro translúcido */
-  padding: 10px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  margin: 0; /* Eliminar márgenes para evitar espacios en blanco */
-  font-style: normal; /* Asegurarse de que la letra no sea cursiva */
-}
-
-
   /*-----------------------
       MENU SUPERIOR */
 
@@ -190,7 +44,7 @@ h2{
 
 
   header nav{
-  background-color:#8990a2;
+  background-color:#528FD5;
   overflow: hidden;
   max-width: 100%;
 }
@@ -333,23 +187,12 @@ header nav ul li a:hover{
 /* --------------- ICONOS AVANCE  RETROCESO ----------*/
 
 .header-container {
-  position: relative;
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-  background-color: #8990a2; /* Color azulino */
-}
-
-.header-container h1 {
-  color: white; /* Texto blanco */
-  text-align: center; /* Centrar el texto */
-  font-size: 2em; /* Tamaño más grande */
-  margin: 0; /* Eliminar margen */
-  padding: 20px 0; /* Espaciado interno arriba y abajo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-icons {
-  position: absolute;
-  top: -30px; /* Ajusta este valor para mover las teclas hacia arriba */
-  right: 10px; /* Ajusta este valor para mover las teclas a la derecha */
   display: flex;
   gap: 10px; /* Espacio entre las imágenes */
 }
@@ -543,7 +386,7 @@ p{
 /* -----------BOTON ENVIAR ------------------------*/
 
 #boton-enviar {
-  background-color: #4a90e2; /* Color de fondo */
+  background-color: #4CAF50; /* Color de fondo */
   color: white; /* Color de texto */
   padding: 12px 24px; /* Espaciado alrededor del texto */
   border: none; /* Sin bordes */
@@ -555,7 +398,7 @@ p{
 }
 
 #boton-enviar:hover {
-  background-color: #357ABD; /* Color de fondo al pasar el mouse */
+  background-color: #45a049; /* Color de fondo al pasar el mouse */
 }
 
 #boton-enviar:focus {
@@ -566,7 +409,7 @@ p{
 /* -----------BOTON BORRAR ------------------------*/
 
 #boton-borrar {
-    background-color: #808080; /* Color de fondo */
+    background-color: #fe0314; /* Color de fondo */
     color: white; /* Color de texto */
     padding: 12px 24px; /* Espaciado alrededor del texto */
     border: none; /* Sin bordes */
@@ -578,7 +421,7 @@ p{
   }
   
   #boton-borrar:hover {
-    background-color: #505050; /* Color de fondo al pasar el mouse */
+    background-color: #b6041c; /* Color de fondo al pasar el mouse */
   }
   
   #boton-borrar:focus {
@@ -640,6 +483,17 @@ p{
   margin-left: auto;
   margin-right: auto;
 }
+
+/* ---------------  VELOCIMETRO  ----*/
+.gauge-container {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; /* Centrar horizontalmente */
+}
+
 
 /* --------------   PREGUNTAS EN TABLAS
   /* Estilos para la tabla */
@@ -720,7 +574,7 @@ p{
 
   /*
   header nav{
-  background-color:#8990a2;
+  background-color:#528FD5;
   overflow: hidden;
   max-width: 100%;
 }
