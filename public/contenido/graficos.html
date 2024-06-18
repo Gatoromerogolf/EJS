@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos con Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .chart-item {
+            width: 45%;
+            margin: 20px 0;
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ejemplos de Gráficos con Chart.js</h1>
+
+    <div class="chart-container">
+        <div class="chart-item">
+            <h2>Line Chart</h2>
+            <canvas id="lineChart"></canvas>
+        </div>
+        <div class="chart-item">
+            <h2>Bar Chart</h2>
+            <canvas id="barChart"></canvas>
+        </div>
+        <div class="chart-item">
+            <h2>Pie Chart</h2>
+            <canvas id="pieChart"></canvas>
+        </div>
+        <div class="chart-item">
+            <h2>Radar Chart</h2>
+            <canvas id="radarChart"></canvas>
+        </div>
+        <div class="chart-item">
+            <h2>Polar Area Chart</h2>
+            <canvas id="polarAreaChart"></canvas>
+        </div>
+        <div class="chart-item">
+            <h2>Bubble Chart</h2>
+            <canvas id="bubbleChart"></canvas>
+        </div>
+        <div class="chart-item">
+            <h2>Scatter Chart</h2>
+            <canvas id="scatterChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Line Chart
+        new Chart(document.getElementById('lineChart').getContext('2d'), {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                datasets: [{
+                    label: 'Mi Primera Conjunto de Datos',
+                    data: [65, 59, 80, 81, 56, 55],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Bar Chart
+        new Chart(document.getElementById('barChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                datasets: [{
+                    label: 'Mi Primera Conjunto de Datos',
+                    data: [65, 59, 80, 81, 56, 55],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Pie Chart
+        new Chart(document.getElementById('pieChart').getContext('2d'), {
+            type: 'pie',
+            data: {
+                labels: ['Rojo', 'Azul', 'Amarillo'],
+                datasets: [{
+                    data: [300, 50, 100],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+                    hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Radar Chart
+        new Chart(document.getElementById('radarChart').getContext('2d'), {
+            type: 'radar',
+            data: {
+                labels: ['Comer', 'Beber', 'Dormir', 'Diseñar', 'Codificar', 'Ciclar', 'Correr'],
+                datasets: [{
+                    label: 'Mi Primera Conjunto de Datos',
+                    data: [65, 59, 90, 81, 56, 55, 40],
+                    backgroundColor: 'rgba(179, 181, 198, 0.2)',
+                    borderColor: 'rgba(179, 181, 198, 1)',
+                    pointBackgroundColor: 'rgba(179, 181, 198, 1)'
+                }, {
+                    label: 'Mi Segunda Conjunto de Datos',
+                    data: [28, 48, 40, 19, 96, 27, 100],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Polar Area Chart
+        new Chart(document.getElementById('polarAreaChart').getContext('2d'), {
+            type: 'polarArea',
+            data: {
+                labels: ['Rojo', 'Azul', 'Amarillo', 'Verde', 'Morado', 'Naranja'],
+                datasets: [{
+                    data: [11, 16, 7, 3, 14, 6],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Bubble Chart
+        new Chart(document.getElementById('bubbleChart').getContext('2d'), {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Mi Primer Conjunto de Datos',
+                    data: [{
+                        x: 20,
+                        y: 30,
+                        r: 15
+                    }, {
+                        x: 40,
+                        y: 10,
+                        r: 10
+                    }],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)'
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        // Scatter Chart
+        new Chart(document.getElementById('scatterChart').getContext('2d'), {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Mi Primera Conjunto de Datos',
+                    data: [{
+                        x: -10,
+                        y: 0
+                    }, {
+                        x: 0,
+                        y: 10
+                    }, {
+                        x: 10,
+                        y: 5
+                    }, {
+                        x: 0.5,
+                        y: 5.5
+                    }],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)'
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+Explicación:
+Estructura HTML:
+
+Un contenedor principal (.chart-container) para agrupar los gráficos.
+Cada gráfico está dentro de un div con la clase .chart-item.
+Cada canvas para el gráfico tiene un id único.
+CSS:
+
+.chart-container: Define un contenedor flexible que envuelve todos los gráficos.
+.chart-item: Establece el ancho y el margen para que los gráficos se dispongan adecuadamente.
+JavaScript:
+
+Utiliza Chart.js para inicializar cada tipo de gráfico.
+Cada gráfico se inicializa con datos y opciones de ejemplo.
+Este archivo HTML incluirá y mostrará todos los tipos de gráficos mencionados en la página cuando se abra en un navegador. Puedes ajustar los datos y las opciones según tus necesidades específicas.

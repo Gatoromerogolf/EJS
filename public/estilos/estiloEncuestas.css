@@ -9,6 +9,12 @@ body {
     background-attachment: fixed;
 }
 
+/* Fondo específico para la clase fiananciero */
+body.financiero {
+  background: url('background financiero.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
 .survey-container {
     max-width: 900px;
     margin: 50px auto;
@@ -131,6 +137,37 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.alerta-contenido-ResGral {
+  position: relative;
+  width: 250px;
+  margin: 5% auto;
+  padding: 8px;
+  background: rgba(180, 179, 179, 0.243);
+  border-radius: 8px;
+  font-family:'Roboto', sans-serif;
+}
+
+.alerta-cabecera-ResGral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.alerta-cuerpo-ResGral {
+  margin: 0;
+  font-size: 15px; /* Tamaño de la fuente */
+  text-align: center;
+  border-radius: 10px;
+  font-family:'Roboto', sans-serif;
+  line-height: 0.7;
+}
+
+
 #continuar{
   background-color: #4CAF50; /* Color de fondo */
   color: white; /* Color de texto */
@@ -155,6 +192,15 @@ h1, h2, h3 {
   justify-content: center;
   align-items: center;
   margin: 20px auto; /* Centrar horizontalmente */
+}
+
+/* --------------- GRAFICOS RESUMEN -------------------*/
+
+.flex-graficos-resumen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 /* --------------- ICONOS AVANCE  RETROCESO ----------*/

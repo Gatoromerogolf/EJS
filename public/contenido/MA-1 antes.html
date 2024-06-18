@@ -6,36 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evaluación de riesgos</title>
   <script src="https://cdn.jsdelivr.net/npm/gaugeJS/dist/gauge.min.js"></script>
-  <link href="../estilos/estiloEncuestas.css" rel="stylesheet">
+  <link href="../estilos/st-homePrueba.css" rel="stylesheet">
   <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- anulado hasta que se necesite
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script>
+      $(function () {
+        $("#header").load("encabezado.html");
+        $("#footer").load("piepagina.html");
+      });
+    </script> -->
 
 </head>
 
 <body>
+  <header>
+    <div class="logo">
+      <img src="../img/bdtancho.png" width="100%" alt="">
+    </div>
 
-  <div class="survey-container">
-    <form id="survey-form">
+  </header>
+
+  <!-- <div id="header-placeholder"></div> -->
+  <!-- <div id="header"></div>    -->
 
   <section class="main">
     <section class="gobCorpo">
       <!-- <a href="../index.html"> <img src="../img/contenido (1).png" width="50px"></a>
       <br><br> -->
       <div class="header-container">
+        <h1><a href="Menu-A.html">A - Gobierno Corporativo. Autoevaluación.</a></h1>
         <div class="nav-icons">
           <!-- <img src="../img/anterior.png" alt="Retroceso"> -->
           <a href="MA-2.html"><img src="../img/siguiente.png" alt="Avance"></a>
         </div>
       </div>
+      <p>Seleccione la opción que corresponda a su organización</p>
 
-      <div class="center-container">
-        <h1 id="tituloSeccion"><a href="Menu-A.html">A - Gobierno Corporativo.</a></h1>
-      </div>
+      <hr>
 
-      <h1>I - La composición y responsabilidad del Directorio</h1>
-
-      <p style="font-size:12px">Seleccione la opción que corresponda a su organización</p>
-
+      <form id="formulario">
+        <br>
+        <h1 id="uno">I - La composición y responsabilidad del Directorio</h1>
+        <br>
         <table>
           <tr>
             <th class="pregunta-col">Situación</th>
@@ -173,16 +189,41 @@
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-6" value="3">
             </td>
+<!-- 
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-6" value="4">
+            </td>
+
+            <td id="linea6" class="respuesta-col; cuatro-o-mas" style="display: none">
+              <div class="radio-container"><input type="radio" name="A-I-6" value="5">
+            </td> -->
           </tr>
         </table>
-        <!-- <br> -->
+        <br>
+<!-- 
+        <table>
+          <tr>
+            <td><label for="opcion1">Transformacion digital/Change Management</label></td>
+            <td><input type="checkbox" id="opcion1" name="opcion1" value="1"></td>
 
+          </tr>
+          <tr>
+            <td><label for="opcion2">Control interno</label></td>
+            <td><input type="checkbox" id="opcion2" name="opcion2" value="2"></td>
+
+          </tr>
+          <tr>
+            <td><label for="opcion3">Manejo de riesgos</label></td>
+            <td><input type="checkbox" id="opcion3" name="opcion3" value="3"></td>
+
+          </tr>
+        </table> -->
 
         <table class="tablaCheckbox">
           <tr>
             <td>
               <ul class="listas">
-                <li class="full-width">07. Marcar todas las áreas en las que por lo menos un miembro del Directorio tiene experiencia:</li>
+                <li>07. Marcar todas las áreas en las que por lo menos un miembro del Directorio tiene experiencia:</li>
                 <ul  class="dos-columnas">
                   <li><input id="uno" type="checkbox" value="1"><label class="check" for="uno">Transformación
                       digital/Change Management</label></li>
@@ -210,6 +251,9 @@
               <div class="radio-container"><input type="radio" name="A-I-8" value="2">Mensual
             </td>
 
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-8" value="2">Quincenal
+            </td>
           </tr>
         </table>
         <br>
@@ -235,7 +279,7 @@
           </tr>
 
           <tr>
-            <td class="pregunta-col">10. La empresa cuenta con un Advisory Board:</td>
+            <td class="pregunta-col">10. La empresa cuenta con un Consejo Asesor:</td>
 
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-10" value="1"
@@ -249,24 +293,17 @@
           </tr>
 
           <tr>
-            <td class="pregunta-col" id="lineaAB" style="display: none">11. El Adv Board participa con cierta
+            <td class="pregunta-col" id="lineaAB" style="display: none">11. El Consejo Asesor participa con cierta
               frecuencia en las reuniones del Directorio:</td>
 
-            <td class="respuesta-col" style="display: none" id="lineaAB1">
-              <div class="radio-container"><input type="radio" name="A-I-11" value="1">No
+            <td class="respuesta-col" style="display: none" id="lineaABS">
+              <div class="radio-container"><input type="radio" name="A-I-11" value="1">
             </td>
 
-            <td class="respuesta-col" style="display: none" id="lineaAB2">
-              <div class="radio-container"><input type="radio" name="A-I-11" value="2">Poco efectivo
+            <td class="respuesta-col" style="display: none" id="lineaABN">
+              <div class="radio-container"><input type="radio" name="A-I-11" value="2">
             </td>
 
-            <td class="respuesta-col" style="display: none" id="lineaAB3">
-              <div class="radio-container"><input type="radio" name="A-I-11" value="3">Efectivo
-            </td>
-
-            <td class="respuesta-col" style="display: none" id="lineaAB4">
-              <div class="radio-container"><input type="radio" name="A-I-11" value="4">Muy Efectivo
-            </td>
 
           </tr>
 
@@ -274,21 +311,12 @@
             <td class="pregunta-col">12. Las funciones y responsabilidades del Directorio están documentadas:</td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-12" value="1">No
+              <div class="radio-container"><input type="radio" name="A-I-12" value="1">
             </td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-12" value="2">Poco Efectivo
+              <div class="radio-container"><input type="radio" name="A-I-12" value="2">
             </td>
-
-            <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-12" value="3">Efectivo
-            </td>
-
-            <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-12" value="4">Muy efectivo
-            </td>
-
 
           </tr>
 
@@ -367,7 +395,6 @@
         </div>
 
       </form>
-    </div>
     </section>
   </section>
 
@@ -378,24 +405,40 @@
     <div class="alerta-contenido">
       <div class="alerta-cabecera">
         <span>Resumen de la sección</span>
-        <!-- <button type="button" onclick="cerrarAlerta()">Cerrar</button> -->
       </div>
       <div class="alerta-cuerpo">
         <p>Puntaje máximo posible: <span id="maximo"></span></p>
-        <br>
         <p>Calificación obtenida: <span id="calificacion"></span></p>
-        <br>
         <p>Porcentual: <span id="porcentual"></span></p>
 
-        <div class="gauge-container">
-          <canvas id="gaugeChart";></canvas>
-        </div>
+      <div class="gauge-container">
+        <canvas id="gaugeChart";></canvas>
+      </div>
 
         <button id="continuar" onclick="continuar()">Continuar</button>
       </div>
     </div>
   </div>
 
+
+  <br>
+  <section>
+    <footer>
+      <hr>
+      <div class="footer">
+        <p>Contacto</p>
+        <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
+        <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
+            class="fab fa-whatsapp"></i></a>
+        </p>
+      </div>
+      <p>Derechos reservados. &copy;2024 - BDT</p>
+      <br>
+      <!-- <p>Autor de la pagina</p> -->
+      <!-- <div id="footer"></div> -->
+    </footer>
+  </section>
 </body>
 
 <script>
@@ -426,17 +469,13 @@
     // Muestra las líneas si el valor seleccionado es '1'
     if (valorSeleccionadoAB === '1') {
       document.getElementById('lineaAB').style.display = 'table-cell';
-      document.getElementById('lineaAB1').style.display = 'table-cell';
-      document.getElementById('lineaAB2').style.display = 'table-cell';
-      document.getElementById('lineaAB3').style.display = 'table-cell';
-      document.getElementById('lineaAB4').style.display = 'table-cell';
+      document.getElementById('lineaABS').style.display = 'table-cell';
+      document.getElementById('lineaABN').style.display = 'table-cell';
     } else {
       // Mostrar las líneas si se selecciona cualquier otro valor
       document.getElementById('lineaAB').style.display = 'none';
-      document.getElementById('lineaAB1').style.display = 'none';
-      document.getElementById('lineaAB2').style.display = 'none';
-      document.getElementById('lineaAB3').style.display = 'none';
-      document.getElementById('lineaAB4').style.display = 'none';
+      document.getElementById('lineaABS').style.display = 'none';
+      document.getElementById('lineaABN').style.display = 'none';
     }
   }
 </script>

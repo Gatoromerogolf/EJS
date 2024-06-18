@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de riesgos</title>
+  <!-- <link href="../estilos/st-homePrueba.css" rel="stylesheet"> -->
+  <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
+  <link href="../estilos/estiloEncuestas.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* -------------  ALERTA MAS LINDO ----*/
+    .alerta-oculto {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+
+    .alerta-contenido {
+      position: relative;
+      width: 90%;
+      max-width: 900px;
+      margin: 5% auto;
+      padding: 10px;
+      background: white;
+      border-radius: 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .alerta-cabecera {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 20px; /* Tamaño de la fuente */
+      font-weight: bold; /* Negrita */
+    }
+
+    .alerta-cuerpo {
+      margin: 0;
+      font-size: 16px; /* Tamaño de la fuente */
+      text-align: center;
+    }
+
+    .gauge-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .gauge-item {
+      width: 30%;
+      margin: 1.66%;
+      box-sizing: border-box;
+    }
+
+    .gauge-item canvas {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<!-- <body class="menu-a-page financiero"> -->
+
+<body class="financiero">
+
+
+
+      <h2>Resumen General.</h2>
+      
+      <body>
+        <div id="miAlerta" class="alerta-oculto" style="display: block">
+          <div class="alerta-contenido">
+            <div class="alerta-cabecera">
+              <span>Gobierno corporativo</span>
+            </div>
+            <div class="alerta-cuerpo">
+              <p>Puntaje máximo posible: <span id="maximoA"></span></p>
+              <p>Calificación obtenida: <span id="calificacionA"></span></p>
+              <p>Porcentual: <span id="porcentualA"></span></p>
+      
+              <div class="gauge-container">
+                <div class="gauge-item">
+                  <canvas id="gaugeChart1"></canvas>
+                </div>
+                <div class="gauge-item">
+                  <canvas id="gaugeChart2"></canvas>
+                </div>
+                <div class="gauge-item">
+                  <canvas id="gaugeChart3"></canvas>
+                </div>
+                <div class="gauge-item">
+                  <canvas id="gaugeChart4"></canvas>
+                </div>
+                <div class="gauge-item">
+                  <canvas id="gaugeChart5"></canvas>
+                </div>
+                <div class="gauge-item">
+                  <canvas id="gaugeChart6"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+          // Inicializar gráficos
+          function initializeChart(chartId) {
+            var ctx = document.getElementById(chartId).getContext('2d');
+            new Chart(ctx, {
+              type: 'doughnut',
+              data: {
+                labels: ['Puntaje', 'Resto', 'Saldo'],
+                datasets: [{
+                  data: [75, 15, 10],
+                  backgroundColor: ['#FF6384', '#36A2EB', '#303030'],
+                  hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FF20FF']
+                }]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+          }
+      
+          document.addEventListener('DOMContentLoaded', (event) => {
+            initializeChart('gaugeChart1');
+            initializeChart('gaugeChart2');
+            initializeChart('gaugeChart3');
+            initializeChart('gaugeChart4');
+            initializeChart('gaugeChart5');
+            initializeChart('gaugeChart6');
+          });
+        </script>
+      </body>
+      </html>
+
+      /*
+      HTML:
+
+La estructura incluye seis gráficos <canvas> dentro de una contenedor gauge-container.
+Cada gráfico está en un div con la clase gauge-item.
+CSS:
+
+.gauge-container: Define un contenedor flexible que envuelve todos los gráficos.
+.gauge-item: Establece el ancho y el margen para que los gráficos se dispongan en dos filas de tres columnas. El ancho es el 30% del contenedor padre, y el margen es el 1.66% para que se ajuste correctamente al 100% del ancho del contenedor padre.
+JavaScript:
+
+Utiliza Chart.js para inicializar los gráficos de tipo doughnut (puedes ajustar el tipo según tus necesidades).
+La función initializeChart se llama para cada gráfico cuando el DOM se ha cargado completamente, asegurando que los gráficos se inicialicen correctamente.
+Este código debería permitirte mostrar seis gráficos dispuestos en dos filas de tres columnas, alineados horizontal y verticalmente, dentro del contenedor de alerta.
+*/
+
+
+
+
+
+

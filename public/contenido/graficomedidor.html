@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico Velocímetro con Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .chart-item {
+            width: 45%;
+            margin: 20px 0;
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gráfico Velocímetro con Chart.js</h1>
+
+    <div class="chart-container">
+        <div class="chart-item">
+            <canvas id="gaugeChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Datos para el gráfico de tipo velocímetro
+        const gaugeData = {
+            labels: ['0-50', '50-75', '75-90', '90-100', ''],
+            datasets: [{
+                data: [50, 25, 15, 10, 100],
+                backgroundColor: ['#00FF00', '#FFFF00', '#FFA500', '#FF0000', '#FFFFFF00'],
+                borderWidth: 0
+            }]
+        };
+
+        // Configuración del gráfico de tipo velocímetro
+        const gaugeConfig = {
+            type: 'doughnut',
+            data: gaugeData,
+            options: {
+                responsive: true,
+                rotation: -Math.PI, // rotación inicial
+                circumference: Math.PI, // circunferencia total del gráfico
+                cutout: '80%',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    }
+                }
+            },
+            plugins: [{
+                afterDraw: chart => {
+                    const {ctx, chartArea: {width, height}} = chart;
+                    ctx.save();
+                    ctx.translate(width / 2, height / 1.1);
+                    ctx.rotate(-Math.PI / 2);
+                    ctx.font = '20px Arial';
+                    ctx.fillStyle = '#000';
+                    ctx.fillText('Velocímetro', -50, -30);
+                    ctx.restore();
+
+                    const needleValue = 75; // valor de la aguja
+                    const needleAngle = (needleValue / 100) * Math.PI;
+                    ctx.save();
+                    ctx.translate(width / 2, height / 1.1);
+                    ctx.rotate(needleAngle);
+                    ctx.beginPath();
+                    ctx.moveTo(0, -10);
+                    ctx.lineTo(height / 2.2, 0);
+                    ctx.lineTo(0, 10);
+                    ctx.fillStyle = '#444';
+                    ctx.fill();
+                    ctx.restore();
+
+                    ctx.beginPath();
+                    ctx.arc(width / 2, height / 1.1, 10, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }]
+        };
+
+        // Crear el gráfico de tipo velocímetro
+        new Chart(document.getElementById('gaugeChart').getContext('2d'), gaugeConfig);
+    </script>
+</body>
+</html>
+
+Explicación:
+HTML: Incluye un contenedor para el gráfico.
+CSS: Define estilos para la disposición del gráfico.
+JavaScript:
+Define los datos (gaugeData) para el gráfico de tipo velocímetro, con segmentos de colores que representan diferentes rangos.
+Configura el gráfico de tipo doughnut (gaugeConfig) con una rotación inicial y una circunferencia parcial para crear el efecto de velocímetro.
+Utiliza un plugin personalizado (afterDraw) para dibujar la aguja que marca un valor determinado.
+El valor de la aguja (needleValue) se puede ajustar según sea necesario.
+Este ejemplo muestra cómo crear un gráfico tipo velocímetro con Chart.js. Puedes personalizar los colores, los rangos y la posición de la aguja según tus necesidades.
+
+
+
+
+
+

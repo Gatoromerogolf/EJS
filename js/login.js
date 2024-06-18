@@ -10,9 +10,12 @@ login.addEventListener('click', (e) => {
     }
     console.log(data)
 
-    if(JSON.parse(localStorage.getItem('idioma')) == 2){
-        window.location.href = "../public/contenido/Menu-General-en.html";
-    }  else {
-        window.location.href = "../public/contenido/Menu-General.html";
-    }
-})
+    window.location.href = "../contenido/presentacion.html"; 
+});
+
+//     if(JSON.parse(localStorage.getItem('idioma')) == 2){
+//         window.location.href = "../public/contenido/Menu-General-en.html";
+//     }  else {
+//         window.location.href = "../public/contenido/Menu-General.html";
+//     }
+// })
