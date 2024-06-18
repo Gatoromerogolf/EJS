@@ -260,15 +260,15 @@ h1, h2, h3 {
 
   .pregunta-col-2 {
     /*width: 30%; /* Ancho inicial de la columna de preguntas */
-    max-width: 200px;
+    max-width: 150px;
     /* Ancho máximo de la columna de preguntas */
     margin-left: 50px;
   }
 
   .respuesta-col {
-    width: 10%;
+    width: 12%;
     /* Ancho inicial para las columnas de respuesta */
-    max-width: 30px;
+    max-width: 40px;
     /* Ancho máximo para las columnas de respuesta */
     font-size: 13px;
   }
