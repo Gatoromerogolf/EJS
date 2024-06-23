@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+</head>
+<body>
+    <form id="encuesta">
+        <div>
+            <p>Pregunta 1:</p>
+            <label><input type="radio" name="pregunta1" value="1"> Opción 1</label>
+            <label><input type="radio" name="pregunta1" value="2"> Opción 2</label>
+            <label><input type="radio" name="pregunta1" value="3"> Opción 3</label>
+            <label><input type="radio" name="pregunta1" value="4"> Opción 4</label>
+        </div>
+        <div>
+            <p>Pregunta 2:</p>
+            <label><input type="radio" name="pregunta2" value="1"> Opción 1</label>
+            <label><input type="radio" name="pregunta2" value="2"> Opción 2</label>
+            <label><input type="radio" name="pregunta2" value="3"> Opción 3</label>
+            <label><input type="radio" name="pregunta2" value="4"> Opción 4</label>
+        </div>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Hacer una solicitud al servidor Express para obtener los datos
+            fetch('/api/getSurveyData')
+                .then(response => response.json())
+                .then(data => {
+                    // Verificar si hay datos y rellenar el formulario
+                    if (data.pregunta1) {
+                        document.querySelector(`input[name="pregunta1"][value="${data.pregunta1}"]`).checked = true;
+                    }
+                    if (data.pregunta2) {
+                        document.querySelector(`input[name="pregunta2"][value="${data.pregunta2}"]`).checked = true;
+                    }
+                })
+                .catch(error => console.error('Error al cargar los datos:', error));
+        });
+    </script>
+</body>
+</html>

@@ -66,32 +66,32 @@ conexion.query(jugadores, function (error, lista) {
 })
 
 //agregado de registro:::::::::::::::::::::::::::::::::::::::::
-const nuevoPlayer =
-  'INSERT INTO players (id, Alias, Nombre, Apellido, Matricula, Jefe) VALUES (NULL, "Fantasma", "NomFantasma", "ApeFantasma", 99999, "Mujer maravilla")';
+// const nuevoPlayer =
+//   'INSERT INTO players (id, Alias, Nombre, Apellido, Matricula, Jefe) VALUES (NULL, "Fantasma", "NomFantasma", "ApeFantasma", 99999, "Mujer maravilla")';
 
-conexion.query(nuevoPlayer, function (error, lista) {
-  if (error) {
-    throw (error)
-  }
-  else {
-    console.log(lista.insertId, lista.fieldCount)
-  }
-})
+// conexion.query(nuevoPlayer, function (error, lista) {
+//   if (error) {
+//     throw (error)
+//   }
+//   else {
+//     console.log(lista.insertId, lista.fieldCount)
+//   }
+// })
 
 //modificar registro:::::::::::::::::::::::::::::::::::::::::
 
-const cambioPlayer =
-  'UPDATE players SET Matricula = 905509 WHERE players.id = 13';
+// const cambioPlayer =
+//   'UPDATE players SET Matricula = 905509 WHERE players.id = 13';
 
 
-conexion.query(cambioPlayer, function (error, lista) {
-  if (error) {
-    throw (error)
-  }
-  else {
-    console.log(lista.insertId, lista.fieldCount)
-  }
-})
+// conexion.query(cambioPlayer, function (error, lista) {
+//   if (error) {
+//     throw (error)
+//   }
+//   else {
+//     console.log(lista.insertId, lista.fieldCount)
+//   }
+// })
 
 
 //eliminar registro:::::::::::::::::::::::::::::::::::::::::
