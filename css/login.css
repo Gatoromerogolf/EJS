@@ -11,6 +11,13 @@ body{
   justify-content: center;
   min-height: 100vh;
   background-color:#528FD5;
+
+  background-image: url('../public/img/fondo-login.webp');
+  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Hace que la imagen de fondo permanezca fija mientras se desplaza */
+
 }
 
 /*display: flex;
@@ -48,6 +55,7 @@ form label{
 form label .fa-solid{
   font-size: 20px;
   color:rgb(212, 212, 221);
+  color: black;
   margin-right: 10px;
 }
 
