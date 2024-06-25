@@ -393,3 +393,7 @@ h1, h2, h3 {
       margin: 0 auto;  /* Esto centra el contenedor en el medio de la página */
   
 }
+
+.red-text {
+  color: red;
+}

@@ -34,7 +34,7 @@
 
       <h1>I - La composición y responsabilidad del Directorio</h1>
 
-      <p style="font-size:12px">Seleccione la opción que corresponda a su organización</p>
+      <p style="font-size:12px">Seleccione la opción que corresponda a su organización.  Si desea dejar pendiente una respuesta, marque el casillero adjunto al número de pregunta.  El sistema le informará si tiene respuestas pendientes de informar</p>
 
         <table>
           <tr>
@@ -47,7 +47,9 @@
           </tr>
 
           <tr>
-            <td class="pregunta-col">01. Cantidad de directores que componen el Directorio</td>
+            <td class="pregunta-col">
+              <input type="checkbox" id="selection" name="selection" onchange="toggleRedTextAndDisableRadios(this)">
+              01. Cantidad de directores que componen el Directorio</td>
             <td></td>
             <td></td>
             <td></td>
@@ -182,7 +184,9 @@
           <tr>
             <td>
               <ul class="listas">
-                <li class="full-width">07. Áreas en las que por lo menos un miembro del Directorio tiene experiencia</li>
+                <li class="full-width">
+                  <input type="checkbox" id="selection" name="selection">
+                  07. Áreas en las que por lo menos un miembro del Directorio tiene experiencia</li>
                 <ul  class="dos-columnas">
                   <li><input id="uno" type="checkbox" value="1"><label class="check" for="uno">Transformación
                       digital/Change Management</label></li>
@@ -211,25 +215,24 @@
             </td>
 
           </tr>
-        </table>
-        <br>
+        <!-- </table>
 
-        <table>
-          <tr>
+        <table> -->
+          <!-- <tr>
             <th class="pregunta-col" style="width:900px">Situación</th>
             <th class="respuesta-col" style="width:100px">SI</th>
             <th class="respuesta-col" style="width:100px">NO</th>
-          </tr>
+          </tr> -->
 
           <tr>
             <td class="pregunta-col">09. El Directorio realiza reuniones adicionales Ad-Hoc</td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-9" value="1">
+              <div class="radio-container"><input type="radio" name="A-I-9" value="1">Si
             </td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-9" value="2">
+              <div class="radio-container"><input type="radio" name="A-I-9" value="2">No
             </td>
 
           </tr>
@@ -239,32 +242,40 @@
 
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-10" value="1"
-                  onclick="mostrarOcultarAB(this.value)">
+                  onclick="mostrarOcultarAB(this.value)">Si
             </td>
 
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-10" value="2"
-                  onclick="mostrarOcultarAB(this.value)">
+                  onclick="mostrarOcultarAB(this.value)">No
             </td>
           </tr>
+          <br><br>
 
+          <tr>
+            <th class="pregunta-col">Situación</th>
+            <th class="respuesta-col">No efectiva</th>
+            <th class="respuesta-col">Poco efectivo</th>
+            <th class="respuesta-col">Efectivo</th>
+            <th class="respuesta-col">Muy efectivo</th>
+          </tr>
           <tr>
             <td class="pregunta-col" id="lineaAB" style="display: none">11. Los miembros del Advisory Board participan con frecuencia en las reuniones del Directorio</td>
 
             <td class="respuesta-col" style="display: none" id="lineaAB1">
-              <div class="radio-container"><input type="radio" name="A-I-11" value="1">No
+              <div class="radio-container"><input type="radio" name="A-I-11" value="1">
             </td>
 
             <td class="respuesta-col" style="display: none" id="lineaAB2">
-              <div class="radio-container"><input type="radio" name="A-I-11" value="2">Poco efectivo
+              <div class="radio-container"><input type="radio" name="A-I-11" value="2">
             </td>
 
             <td class="respuesta-col" style="display: none" id="lineaAB3">
-              <div class="radio-container"><input type="radio" name="A-I-11" value="3">Efectivo
+              <div class="radio-container"><input type="radio" name="A-I-11" value="3">
             </td>
 
             <td class="respuesta-col" style="display: none" id="lineaAB4">
-              <div class="radio-container"><input type="radio" name="A-I-11" value="4">Muy Efectivo
+              <div class="radio-container"><input type="radio" name="A-I-11" value="4">
             </td>
 
           </tr>
@@ -273,19 +284,19 @@
             <td class="pregunta-col">12. Las funciones y responsabilidades del Directorio están documentadas</td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-12" value="1">No
+              <div class="radio-container"><input type="radio" name="A-I-12" value="1">
             </td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-12" value="2">Poco Efectivo
+              <div class="radio-container"><input type="radio" name="A-I-12" value="2">
             </td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-12" value="3">Efectivo
+              <div class="radio-container"><input type="radio" name="A-I-12" value="3">
             </td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-12" value="4">Muy efectivo
+              <div class="radio-container"><input type="radio" name="A-I-12" value="4">
             </td>
 
 
@@ -479,6 +490,40 @@
     }
   }
 </script>
+
+<!-- <script>
+  function toggleRedText(checkbox) {
+      var row = checkbox.closest('tr'); // Encuentra la fila (tr) más cercana
+      if (checkbox.checked) {
+          row.classList.add('red-text');
+      } else {
+          row.classList.remove('red-text');
+      }
+  }
+</script> -->
+
+<script>
+  function toggleRedTextAndDisableRadios(checkbox) {
+      var row = checkbox.closest('tr'); // Encuentra la fila (tr) más cercana
+      var radios = row.querySelectorAll('input[type="radio"]'); // Encuentra todos los radio buttons en la fila
+
+      if (checkbox.checked) {
+          row.classList.add('red-text');
+          radios.forEach(function(radio) {
+              radio.disabled = true; // Deshabilita cada radio button
+          });
+          alert("Al marcar esta opción esta pregunta quedará pendiente de respuesta, deshabilitandose el marcado de opciones.\n\nCuando sepa qué contestar puede volver a este lugar.\n\nLe vamos a recordar todas las situaciones pendientes de respuesta.\n\nPara dar respuesta a la situación pendiente, simplemente desmarque la casilla y se habilitarán nuevamente las opciones.");
+      } else {
+          row.classList.remove('red-text');
+          radios.forEach(function(radio) {
+              radio.disabled = false; // Habilita cada radio button
+          });
+      }
+  }
+</script>
+
+
+
 
 <script src="../datos/tabla01.js"></script>
 <script src="../datos/tabla02.js"></script>
