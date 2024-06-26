@@ -8,7 +8,7 @@ let filasFaltantes = [];
 
 let checkboxesSeleccionados = [];
 
-// --------------------------
+// obtenerValoresSeleccionados :::::::::::::::::::::
 
 function obtenerValoresSeleccionados() {
   respuestas = [];
@@ -81,7 +81,7 @@ function obtenerValoresSeleccionados() {
   }
 }
 
-// --------------------------
+// obtenerCheckboxSeleccionados :::::::::::::::::::::::::::::::::
 
 function obtenerCheckboxSeleccionados() {
   let errorCheckbox = 0;
@@ -127,7 +127,7 @@ function obtenerCheckboxSeleccionados() {
   return errorCheckbox;
 }
 
-// --------------------------
+// sumaPuntosCheckbox :::::::::::::::::::::::::::::::::::::::::::
 
 function sumaPuntosCheckbox() {
   // acumula los puntos por los checkbox seleccionados
@@ -147,7 +147,7 @@ function sumaPuntosCheckbox() {
   }
   // errorCheckbox = 0;
 }
-// --------------------------------
+// calculaResultados ::::::::::::::::::::::::::::::::::
 
 function calculaResultados() {
   tabla = respuestas[0] == 1 ? tabla01 : tabla02;
@@ -173,7 +173,7 @@ function calculaResultados() {
   return porcientoFormateado;
 }
 
-// -------------------------------
+// PRINCIPAL ::::::::::::::::::::::::::::::::::::::::::::::::
 
 document
 .getElementById("survey-form")
@@ -206,7 +206,7 @@ document
     }
   });
 
-// ---------------------------
+// limpiarSelecciones :::::::::::::::::::::::::::::::::
 
 function limpiarSelecciones() {
   // Obtener todos los inputs tipo radio y checkbox
@@ -267,50 +267,50 @@ function continuar() {
 
 // ------------------ no se utiliza
 
-function validarSeleccionGrupos() {
-  var grupos = [
-    "A-I-1",
-    "A-I-2",
-    "A-I-3",
-    "A-I-4",
-    "A-I-5",
-    "A-I-6",
-    "A-I-8",
-    "A-I-9",
-    "A-I-10",
-    "A-I-12",
-    "A-I-13",
-    "A-I-14",
-    "A-I-15",
-    "A-I-16",
-    "A-I-17",
-  ];
+// function validarSeleccionGrupos() {
+//   var grupos = [
+//     "A-I-1",
+//     "A-I-2",
+//     "A-I-3",
+//     "A-I-4",
+//     "A-I-5",
+//     "A-I-6",
+//     "A-I-8",
+//     "A-I-9",
+//     "A-I-10",
+//     "A-I-12",
+//     "A-I-13",
+//     "A-I-14",
+//     "A-I-15",
+//     "A-I-16",
+//     "A-I-17",
+//   ];
 
-  var indiceFilas = 0;
-  var respuestas = [];
-  var completado = true;
+//   var indiceFilas = 0;
+//   var respuestas = [];
+//   var completado = true;
 
-  grupos.forEach((nombreGrupo) => {
-    indiceFilas++;
-    const grupo = document.querySelector(
-      `input[name="${nombreGrupo}"]:checked`
-    );
-    if (!grupo) {
-      alert(`Por favor seleccionar una opción en la fila ${indiceFilas}`);
-      completado = false;
-    } else {
-      respuestas.push(grupo.value);
-    }
-  });
+//   grupos.forEach((nombreGrupo) => {
+//     indiceFilas++;
+//     const grupo = document.querySelector(
+//       `input[name="${nombreGrupo}"]:checked`
+//     );
+//     if (!grupo) {
+//       alert(`Por favor seleccionar una opción en la fila ${indiceFilas}`);
+//       completado = false;
+//     } else {
+//       respuestas.push(grupo.value);
+//     }
+//   });
 
-  if (completado) {
-    console.log("Todas las selecciones completadas:", respuestas);
-    // Aquí puedes proceder con la siguiente parte de tu lógica de aplicación, como enviar el formulario, etc.
-  } else {
-    console.log("No todas las selecciones fueron completadas");
-    // Puedes decidir dejar que el usuario corrija o hacer alguna otra acción aquí.
-  }
-}
+//   if (completado) {
+//     console.log("Todas las selecciones completadas:", respuestas);
+//     // Aquí puedes proceder con la siguiente parte de tu lógica de aplicación, como enviar el formulario, etc.
+//   } else {
+//     console.log("No todas las selecciones fueron completadas");
+//     // Puedes decidir dejar que el usuario corrija o hacer alguna otra acción aquí.
+//   }
+// }
 
 
 // Armar velocimetro ::::::::::::::::::::::::::::::::::::::
