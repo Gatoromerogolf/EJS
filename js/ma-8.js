@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 25; // 1 x 10 +  3 x 5
+let maximo = 50; // 1 x 10 +  3 x 5
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -52,7 +52,7 @@ function calculaResultados() {
          valores ${valores} ,
          respuestas: ${respuestas[i]}`);
 
-    let precio = (i == 0) ? 10 : 5;
+    let precio = (i == 0) ? 20 : 10;
 
     switch (respuestas[i]) {
       case "1": valores +=0;
@@ -61,7 +61,7 @@ function calculaResultados() {
               break;
       case "3": valores +=(0.75 * precio);
               break;
-      case "4": valores +=(1 * precio);
+      case "4": valores +=precio;
               break;
     }
 
@@ -183,15 +183,15 @@ const opts = {
 
   // Custom segment colors
   staticZones: [
-     {strokeStyle: "red", min: 0, max: 25}, // Red from 0 to 25
-     {strokeStyle: "orange", min: 25, max: 50}, // Red from 0 to 25
-     {strokeStyle: "green", min: 50, max: 75}, // Yellow from 50 to 75
-     {strokeStyle: "blue", min: 75, max: 100}  // Blue from 75 to 100
+     {strokeStyle: "red", min: 0, max: 50}, // Red from 0 to 25
+     {strokeStyle: "orange", min: 50, max: 75}, // Red from 0 to 25
+     {strokeStyle: "green", min: 75, max: 90}, // Yellow from 50 to 75
+     {strokeStyle: "blue", min: 90, max: 100}  // Blue from 75 to 100
   ],
 
   staticLabels: {
       font: "15px sans-serif",  // Specifies font
-      labels: [0, 25, 50, 75, 100],  // Print labels at these values
+      labels: [0, 50, 75, 90, 100],  // Print labels at these values
       color: "#000000",  // Optional: Label text color
       fractionDigits: 0  // Optional: Numerical precision. 0=round off.
   },
