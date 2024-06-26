@@ -216,15 +216,15 @@ const opts = {
 
   // Custom segment colors
   staticZones: [
-     {strokeStyle: "red", min: 0, max: 25}, // Red from 0 to 25
-     {strokeStyle: "orange", min: 25, max: 50}, // Red from 0 to 25
-     {strokeStyle: "green", min: 50, max: 75}, // Yellow from 50 to 75
-     {strokeStyle: "blue", min: 75, max: 100}  // Blue from 75 to 100
+     {strokeStyle: "red", min: 0, max: 50}, // Red from 0 to 25
+     {strokeStyle: "orange", min: 50, max: 70}, // Red from 0 to 25
+     {strokeStyle: "green", min: 70, max: 90}, // Yellow from 50 to 75
+     {strokeStyle: "blue", min: 90, max: 100}  // Blue from 75 to 100
   ],
 
   staticLabels: {
       font: "15px sans-serif",  // Specifies font
-      labels: [0, 25, 50, 75, 100],  // Print labels at these values
+      labels: [0, 50, 70, 90, 100],  // Print labels at these values
       color: "#000000",  // Optional: Label text color
       fractionDigits: 0  // Optional: Numerical precision. 0=round off.
   },

@@ -34,7 +34,7 @@
 
       <h1>I - La composición y responsabilidad del Directorio</h1>
 
-      <p style="font-size:12px">Seleccione la opción que corresponda a su organización.  Si desea dejar pendiente una respuesta, marque el casillero adjunto al número de pregunta.  El sistema le informará si tiene respuestas pendientes de informar</p>
+      <p style="font-size:12px">Seleccione la opción que corresponda a su organización.</p>
 
         <table>
           <tr>
@@ -47,9 +47,7 @@
           </tr>
 
           <tr>
-            <td class="pregunta-col">
-              <input type="checkbox" id="selection" name="selection" onchange="toggleRedTextAndDisableRadios(this)">
-              01. Cantidad de directores que componen el Directorio</td>
+            <td class="pregunta-col">01. Cantidad de directores que componen el Directorio</td>
             <td></td>
             <td></td>
             <td></td>
@@ -490,39 +488,6 @@
     }
   }
 </script>
-
-<!-- <script>
-  function toggleRedText(checkbox) {
-      var row = checkbox.closest('tr'); // Encuentra la fila (tr) más cercana
-      if (checkbox.checked) {
-          row.classList.add('red-text');
-      } else {
-          row.classList.remove('red-text');
-      }
-  }
-</script> -->
-
-<script>
-  function toggleRedTextAndDisableRadios(checkbox) {
-      var row = checkbox.closest('tr'); // Encuentra la fila (tr) más cercana
-      var radios = row.querySelectorAll('input[type="radio"]'); // Encuentra todos los radio buttons en la fila
-
-      if (checkbox.checked) {
-          row.classList.add('red-text');
-          radios.forEach(function(radio) {
-              radio.disabled = true; // Deshabilita cada radio button
-          });
-          alert("Al marcar esta opción esta pregunta quedará pendiente de respuesta, deshabilitandose el marcado de opciones.\n\nCuando sepa qué contestar puede volver a este lugar.\n\nLe vamos a recordar todas las situaciones pendientes de respuesta.\n\nPara dar respuesta a la situación pendiente, simplemente desmarque la casilla y se habilitarán nuevamente las opciones.");
-      } else {
-          row.classList.remove('red-text');
-          radios.forEach(function(radio) {
-              radio.disabled = false; // Habilita cada radio button
-          });
-      }
-  }
-</script>
-
-
 
 
 <script src="../datos/tabla01.js"></script>

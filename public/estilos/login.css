@@ -12,20 +12,12 @@ body{
   min-height: 100vh;
   background-color:#528FD5;
 
-<<<<<<< Updated upstream
-  background-image: url('../../public/img/fondo-login.webp');
-  background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Hace que la imagen de fondo permanezca fija mientras se desplaza */
-=======
   background-image: url('../../img/fondo1.webp');
   background-size: cover; /* Asegura que la imagen cubra todo el fondo */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center center; /* Centra la imagen en la pantalla */
   background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
   
->>>>>>> Stashed changes
 }
 
 /*display: flex;
