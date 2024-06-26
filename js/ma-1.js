@@ -160,7 +160,7 @@ function calculaResultados() {
     console.log(`i= ${i} ,
          valores ${valores} ,
          tabla: ${tabla[i]},
-         respuestas: ${respuestas[i]},
+         respuesta: ${respuestas[i]},
          tablarespuesta: ${tabla[i][respuestas[i] - 1]}`);
     valores += tabla[i][respuestas[i] - 1];
     console.log(`valor despues calculo: ${valores}`);
