@@ -12,7 +12,7 @@ let checkboxesSeleccionados = [];
 
 
 
-// --------------------------
+// obtenerCheckboxSeleccionados ::::::::::::::::::::::::::::::::::::::
 
 function obtenerCheckboxSeleccionados() {
   let errorCheckbox = 0;
@@ -42,7 +42,7 @@ function obtenerCheckboxSeleccionados() {
   }
 
 
-// --------------------------
+// sumaPuntosCheckbox ::::::::::::::::::::::::::::::::::::::::::::
 
 function sumaPuntosCheckbox() {
   // acumula los puntos por los checkbox seleccionados
@@ -64,8 +64,9 @@ function sumaPuntosCheckbox() {
   }
   // errorCheckbox = 0;
 }
-// --------------------------------
 
+
+// calculaResultados::::::::::::::::::::::::::::::::::::::::::::
 
 function calculaResultados() {
   tabla = respuestas[0] == 1 ? tabla01 : tabla02;
@@ -92,7 +93,7 @@ function calculaResultados() {
   return porcientoFormateado;
 }
 
-// -------------------------------
+// PRINCIPAL :::::::::::::::::::::::::::::::::::::::::::::::::
 
 document
   .getElementById("formulario")
@@ -162,8 +163,7 @@ document
 
  
 
-// ---------------------------
-
+// limpiarSelecciones ::::::::::::::::::::::::::::::::::::::::::::
 
 function limpiarSelecciones() {
   // Obtener todos los inputs tipo radio y checkbox
@@ -182,7 +182,6 @@ function limpiarSelecciones() {
 }
 
 // ------------ ventana del final con resultados---------------
-
 
 function mostrarMiAlerta(maximo, valores, porcientoFormateado) {
 

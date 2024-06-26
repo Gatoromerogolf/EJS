@@ -11,8 +11,7 @@ const maximo = 140;
 let checkboxesSeleccionados = [];
 
 
-
-// --------------------------
+// obtenerCheckboxSeleccionados :::::::::::::::::::::::::::::::::::::::
 
 function obtenerCheckboxSeleccionados() {
   let errorCheckbox = 0;
@@ -29,20 +28,20 @@ function obtenerCheckboxSeleccionados() {
   if (!otrosSeleccionados) {
     alert("Por favor seleccionar al menos una opción");
     return errorCheckbox = 1;
-  } 
-
-  checkboxes.forEach(function (checkbox) {
-      if (checkbox.checked) {
-        checkboxesSeleccionados.push(checkbox.value);
-      }
-    });
-
-    console.log("Checkboxes seleccionados:", checkboxesSeleccionados);
-    return errorCheckbox = 0;
   }
 
+  checkboxes.forEach(function (checkbox) {
+    if (checkbox.checked) {
+      checkboxesSeleccionados.push(checkbox.value);
+    }
+  });
 
-// --------------------------
+  console.log("Checkboxes seleccionados:", checkboxesSeleccionados);
+  return errorCheckbox = 0;
+}
+
+
+// sumaPuntosCheckbox() :::::::::::::::::::::::::::::::::::::::::::::::
 
 function sumaPuntosCheckbox() {
   // acumula los puntos por los checkbox seleccionados
@@ -50,11 +49,10 @@ function sumaPuntosCheckbox() {
 
   // puntajesIndividuales[6][2] = 0;
   for (i = 0; i < checkboxesSeleccionados.length; i++) {
-    if (checkboxesSeleccionados[i] < 5)
-      {valores += 20}
-      else{
-        valores += 10
-      }
+    if (checkboxesSeleccionados[i] < 5) { valores += 20 }
+    else {
+      valores += 10
+    }
 
     // valores += tabla[6][checkboxesSeleccionados[i] - 1];
 
@@ -64,12 +62,12 @@ function sumaPuntosCheckbox() {
   }
   // errorCheckbox = 0;
 }
-// --------------------------------
 
+// CalculaResultados ::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 function calculaResultados() {
   tabla = respuestas[0] == 1 ? tabla01 : tabla02;
-  console.log (tabla);
+  console.log(tabla);
   maximo = respuestas[0] == 1 ? tabla01[0][2] : tabla02[0][2];
   console.log(respuestas[0], maximo, tabla01[0][2], tabla02[0][2]);
 
@@ -93,17 +91,13 @@ function calculaResultados() {
   return porcientoFormateado;
 }
 
-// -------------------------------
+// PRINCIPAL ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 document
   .getElementById("formulario")
   .addEventListener("submit", function (event) {
     valores = 0;
     event.preventDefault(); // Prevenir el envío del formulario
-
-    // obtener los valores de radio 
-    // obtenerValoresSeleccionados();
-    // console.log(`indice de respuestas faltantes ${filasFaltantes}`)
 
     // obtener CheckboxSeleccionados();
     let resultadoError = obtenerCheckboxSeleccionados();
@@ -128,23 +122,16 @@ document
       // console.table(puntajesIndividuales);
 
 
-      // // Supongamos que calculas o recibes algún valor 'nuevoValor'
-      // let nuevoValor = porcientoFormateado; // Función hipotética que genera un valor
-
       // Guardar el valor en LocalStorage
-
       localStorage.setItem('maximo-3', JSON.stringify(maximo));
       localStorage.setItem('valores-3', JSON.stringify(valores));
       localStorage.setItem('porciento-3', JSON.stringify(porcientoFormateado));
-
-      // window.location.href = 'MA-4.html'
 
     }
   });
 
 
-// ---------------------------
-
+// Limpiar Selecciones ::::::::::::::::::::::::::::::::::::::::::
 
 function limpiarSelecciones() {
   // Obtener todos los inputs tipo radio y checkbox
@@ -162,8 +149,7 @@ function limpiarSelecciones() {
   });
 }
 
-// ------------ ventana del final con resultados---------------
-
+// Ventana del final con resultados :::::::::::::::::::::::::::::::::::
 
 function mostrarMiAlerta(maximo, valores, porcientoFormateado) {
 
@@ -182,13 +168,13 @@ function mostrarMiAlerta(maximo, valores, porcientoFormateado) {
   document.getElementById('maximo').textContent = maximo;
   document.getElementById('calificacion').textContent = valores;
   document.getElementById('porcentual').innerHTML = '<strong>' + porcientoFormateado + '%<strong>';
-
 }
 
 function cerrarAlerta() {
   document.getElementById("miAlerta").style.display = "none";
 }
 
+// Continuar :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 function continuar() {
   cerrarAlerta();  // Opcional, depende de si quieres cerrar la alerta antes de cambiar la página
   // window.location.href = "MA-4.html";
@@ -198,13 +184,13 @@ function continuar() {
 // Armar velocimetro ::::::::::::::::::::::::::::::::::::::
 const opts = {
   angle: -0.3,
-// The span of the gauge arc
+  // The span of the gauge arc
   lineWidth: 0.2, // The line thickness
   radiusScale: 0.8, // Relative radius
   pointer: {
-      length: 0.6, // // Relative to gauge radius
-      strokeWidth: 0.035, // The thickness
-      color: '#000000' // Fill color
+    length: 0.6, // // Relative to gauge radius
+    strokeWidth: 0.035, // The thickness
+    color: '#000000' // Fill color
   },
   limitMax: false,     // If false, max value increases automatically if value > maxValue
   limitMin: false,     // If true, the min value of the gauge will be fixed
@@ -216,16 +202,16 @@ const opts = {
 
   // Custom segment colors
   staticZones: [
-     {strokeStyle: "red", min: 0, max: 50}, // Red from 0 to 25
-     {strokeStyle: "orange", min: 50, max: 70}, // Red from 0 to 25
-     {strokeStyle: "green", min: 70, max: 90}, // Yellow from 50 to 75
-     {strokeStyle: "blue", min: 90, max: 100}  // Blue from 75 to 100
+    { strokeStyle: "red", min: 0, max: 50 }, // Red from 0 to 25
+    { strokeStyle: "orange", min: 50, max: 70 }, // Red from 0 to 25
+    { strokeStyle: "green", min: 70, max: 90 }, // Yellow from 50 to 75
+    { strokeStyle: "blue", min: 90, max: 100 }  // Blue from 75 to 100
   ],
 
   staticLabels: {
-      font: "15px sans-serif",  // Specifies font
-      labels: [0, 50, 70, 90, 100],  // Print labels at these values
-      color: "#000000",  // Optional: Label text color
-      fractionDigits: 0  // Optional: Numerical precision. 0=round off.
+    font: "15px sans-serif",  // Specifies font
+    labels: [0, 50, 70, 90, 100],  // Print labels at these values
+    color: "#000000",  // Optional: Label text color
+    fractionDigits: 0  // Optional: Numerical precision. 0=round off.
   },
 };
