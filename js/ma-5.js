@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 50; // 4 x 5 +  1 x 10  +  1 x 20
+let maximo = 100; // 4 x 5 +  1 x 10  +  1 x 20
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -41,6 +41,9 @@ function obtenerValoresSeleccionados() {
 // CALCULA RESULTADOS ::::::::::::::::::::::::::::::::::::
 
 function calculaResultados() {
+  const preciosPlanos = [10, 10, 20, 10, 40];
+  const precioVela = [0, 2.5, 5, 10];
+
   // tabla = respuestas[0] == 1 ? tabla01 : tabla02;
   // maximo = respuestas[0] == 1 ? tabla01[0][2] : tabla02[0][2];
   // console.log(respuestas[0], maximo, tabla01[0][2], tabla02[0][2]);
@@ -49,26 +52,26 @@ function calculaResultados() {
     if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
 
     console.log(`i= ${i} ,
+         ctdd respuestas ${respuestas.length},
          valores ${valores} ,
-         respuestas: ${respuestas[i]}`);
+         respuestas: ${respuestas[i]},
+         valor de vela ${respuestas[5]}`);
 
     let precio = 0;
-    if (i == 3){precio = 10}
-      else{
-          if (i == 5){
-               precio = 20}
-            else{
-              precio = 5
-            }
-      }
 
-    if (respuestas[i] == 1) {
-          valores += precio;
+    if (respuestas[i] == 1 && i<5){
+      precio = preciosPlanos[i];
     }
 
+    if (i==5){
+      precio = precioVela[respuestas[5]]; }  
+    
+    valores += precio;
+    
     console.log(`valor despues calculo: ${valores}`);
 
   }
+
   const porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
   return porcientoFormateado;
 }
