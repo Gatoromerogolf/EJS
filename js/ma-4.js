@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 190; // 4 x 5 +  1 x 10  +  1 x 20
+let maximo = 310; // 4 x 5 +  1 x 10  +  1 x 20
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -14,15 +14,16 @@ function obtenerValoresSeleccionados() {
   respuestas = [];
   const grupos = [ // las respuestas
   "A-4-1",
-  "A-4-3",
+  // saltea posicion 2 para auditor porque depende de 1
+  "A-4-3",  
   "A-4-4",
   "A-4-5",
   "A-4-6",
   "A-4-7",
   "A-4-8",
   "A-4-9",
-  "A-4-10",
-  "A-4-11",
+  "A-4-10"
+  // "A-4-11",
 ];
 
   var indiceFilas = 0;
@@ -62,13 +63,13 @@ function obtenerValoresSeleccionados() {
     respuestas.splice(1, 0, '9')
   };
 
-  console.log (`respuestas despues auditor en comité${respuestas}`)
+  console.log (`respuestas despues auditor en comité  ${respuestas}`)
 
 // Comité de Auditoría
   indiceFilas++;
   if (respuestas[0] == 1){
     const marca = document.querySelector(
-      'input[name="A-4-12"]:checked');
+      'input[name="A-4-11"]:checked');
   
     if (marca) {
       respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
@@ -80,13 +81,13 @@ function obtenerValoresSeleccionados() {
         respuestas.push('9'); // Agrega null si no hay comite auditoria
       }
 
-  console.log (`respuestas despues reuniones de audi${respuestas}`);
+  console.log (`respuestas despues reuniones de audi  ${respuestas}`);
 
-// Comité de Alta Gerencia
+// Comité de Nominaciones y Sucesiones
   indiceFilas++;
   if (respuestas[2] == 1){
   const marca = document.querySelector(
-    'input[name="A-4-13"]:checked');
+    'input[name="A-4-12"]:checked');
   
     if (marca) {
     respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
@@ -98,13 +99,13 @@ function obtenerValoresSeleccionados() {
       respuestas.push('9'); // Agrega null si no hay comite auditoria
     }
 
-console.log (`resp despues reun Alta Gerenciaaaaaa${respuestas}`);
+console.log (`resp despues reun Nominaciones y Suc  ${respuestas}`);
 
-// Comité de Nominaciones y sucesiones
+// Comité de Compensaciones
     indiceFilas++;
     if (respuestas[3] == 1){
     const marca = document.querySelector(
-      'input[name="A-4-14"]:checked');
+      'input[name="A-4-13"]:checked');
     
       if (marca) {
       respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
@@ -116,14 +117,14 @@ console.log (`resp despues reun Alta Gerenciaaaaaa${respuestas}`);
         respuestas.push('9'); // Agrega null si no hay comite auditoria
       }
   
-  console.log (`resp despues Nominaciones     .. ...${respuestas}`);
+  console.log (`resp despues Compensaciones   .. ...${respuestas}`);
 
 
-// Comité de Compensaciones
+// Comité de Tecnología
   indiceFilas++;
   if (respuestas[4] == 1){
   const marca = document.querySelector(
-    'input[name="A-4-15"]:checked');
+    'input[name="A-4-14"]:checked');
   
     if (marca) {
     respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
@@ -135,14 +136,14 @@ console.log (`resp despues reun Alta Gerenciaaaaaa${respuestas}`);
       respuestas.push('9'); // Agrega null si no hay comite auditoria
     }
 
-console.log (`resp despues Compensaciones ........${respuestas}`);
+console.log (`resp despues Tecnología.............${respuestas}`);
 
 
-//  Comité de tecnologías de la información
+//  Comité de Riesgos
   indiceFilas++;
   if (respuestas[5] == 1){
   const marca = document.querySelector(
-    'input[name="A-4-16"]:checked');
+    'input[name="A-4-15"]:checked');
 
     if (marca) {
     respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
@@ -154,25 +155,25 @@ console.log (`resp despues Compensaciones ........${respuestas}`);
       respuestas.push('9'); // Agrega null si no hay comite auditoria
     }
 
-console.log (`resp despues Tecnología ..............${respuestas}`);
-
-//  Comité de Riesgos
-  indiceFilas++;
-  if (respuestas[6] == 1){
-  const marca = document.querySelector(
-    'input[name="A-4-17"]:checked');
-
-    if (marca) {
-    respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
-  } else {
-    respuestas.push('9'); // Agrega null si no hay selección
-    filasFaltantes.push(indiceFilas);}}
-    else {
-      console.log('agrego null por no comite riesgos')
-      respuestas.push('9'); // Agrega null si no hay comite auditoria
-    }
-
 console.log (`resp despues Riesgos .................${respuestas}`);
+
+// //  Comité de Riesgos
+//   indiceFilas++;
+//   if (respuestas[6] == 1){
+//   const marca = document.querySelector(
+//     'input[name="A-4-17"]:checked');
+
+//     if (marca) {
+//     respuestas.push(marca.value); // Agrega el valor del radio seleccionado al arreglo
+//   } else {
+//     respuestas.push('9'); // Agrega null si no hay selección
+//     filasFaltantes.push(indiceFilas);}}
+//     else {
+//       console.log('agrego null por no comite riesgos')
+//       respuestas.push('9'); // Agrega null si no hay comite auditoria
+//     }
+
+// console.log (`resp despues Riesgos .................${respuestas}`);
 
 
 
@@ -189,23 +190,21 @@ console.log (`resp despues Riesgos .................${respuestas}`);
 function calculaResultados() {
 
   const listaPrecios = [
-    [10, 0], // 1. (i=0)comite de auditoría
-    [15, 0], // 2. (i=1)el auditor participa
-    [10, 0], // 3. (i=2)comite de Alta Gerencia
-    [5, 0], // 4. (i=3)Nominaciones
-    [5, 0], // 5. (i=4)Compensaciones
-    [5, 0], // 6. (i=5)Tecnología
-    [10, 0], // 7. (i=6)Riesgos
-    [5, 0], // 8. (i=7)estructura documentada
-    [10, 0], // 9. (i=8)un director por comite
-    [0, 5, 10], // 10. (i=9) acta por reunion
-    [5, 10, 20], // 11. (i=10) envia informes
-    [15, 10], // 12. (i=11)auditoria
-    [20, 15, 10], // 13. (i=12)alta gerencia
-    [10, 15], // 14. (i=13)nominaciones
-    [5, 10], // 15. (i=14)compensaciones
-    [10, 5],  // 16. (i=15)tecnología
-    [15, 10]  // 16. (i=16)riesgos
+    [20, 0], // 1. (i=0)comite de auditoría
+    [30, 0], // 2. (i=1)el auditor participa
+    [10, 0], // 3. (i=2)Nominaciones
+    [10, 0], // 4. (i=3)Compensaciones
+    [10, 0], // 5. (i=4)Tecnología
+    [20, 0], // 6. (i=5)Riesgos
+    [20, 0], // 7. (i=6)Director independiente
+    [0, 5, 7.5, 10], // 8. (i=7)estructura documentada
+    [0, 10, 15, 20], // 9. (i=8)acta por reunion
+    [0, 20, 30, 40], // 10. (i=9) envia informes
+    [20, 10], // 11. (i=10) auditoría
+    [30, 20], // 12. (i=11)Nominaciones
+    [20, 10], // 13. (i=12)Compensaciones
+    [20, 10], // 14. (i=13)Tecnología
+    [30, 20] // 15. (i=14)Riesgos
   ]
 
   let precio = 0;
@@ -367,15 +366,15 @@ const opts = {
 
   // Custom segment colors
   staticZones: [
-     {strokeStyle: "red", min: 0, max: 25}, // Red from 0 to 25
-     {strokeStyle: "orange", min: 25, max: 50}, // Red from 0 to 25
-     {strokeStyle: "green", min: 50, max: 75}, // Yellow from 50 to 75
-     {strokeStyle: "blue", min: 75, max: 100}  // Blue from 75 to 100
+     {strokeStyle: "red", min: 0, max: 50}, // Red from 0 to 25
+     {strokeStyle: "orange", min: 50, max: 75}, // Red from 0 to 25
+     {strokeStyle: "green", min: 75, max: 90}, // Yellow from 50 to 75
+     {strokeStyle: "blue", min: 90, max: 100}  // Blue from 75 to 100
   ],
 
   staticLabels: {
       font: "15px sans-serif",  // Specifies font
-      labels: [0, 25, 50, 75, 100],  // Print labels at these values
+      labels: [0, 50, 75, 90, 100],  // Print labels at these values
       color: "#000000",  // Optional: Label text color
       fractionDigits: 0  // Optional: Numerical precision. 0=round off.
   },
