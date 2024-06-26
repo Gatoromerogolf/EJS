@@ -33,7 +33,7 @@
           <h1>XV - Secretaría del Directorio.</h1>
 
           <p style="font-size:12px">Seleccione la opción que corresponda a su organización.</p>
-          <p style="font-size:12px">Si desea dejar pendiente una respuesta, marque el casillero adjunto al número de pregunta.  El sistema le informará si tiene respuestas pendientes de informar</p>
+          <p style="font-size:12px">Si desea dejar pendiente una respuesta, marque el casillero adjunto al número de pregunta.  El sistema le recordará las respuestas pendientes de informar</p>
 
           <form id="formulario">
 
@@ -158,7 +158,7 @@
           radios.forEach(function(radio) {
               radio.disabled = true; // Deshabilita cada radio button
           });
-          alert("Al marcar esta opción esta pregunta quedará pendiente de respuesta, deshabilitandose el marcado de opciones.\n\nCuando sepa qué contestar puede volver a este lugar.\n\nLe vamos a recordar todas las situaciones pendientes de respuesta.\n\nPara dar respuesta a la situación pendiente, simplemente desmarque la casilla y se habilitarán nuevamente las opciones.");
+          alert("Al seleccionar esta opción, la situación planteada quedará pendiente de respuesta y se deshabilitará el marcado de opciones.\n\nCuando desee completar la respuesta puede regresar a esta página.\n\nLe recordaremos todas las situaciones pendientes de respuesta.\n\nPara responder a la situación pendiente, simplemente desmarque la casilla y  las opciones se habilitarán nuevamente.");
       } else {
           row.classList.remove('red-text');
           radios.forEach(function(radio) {
