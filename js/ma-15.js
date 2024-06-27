@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 20; // 2 por 5
+let maximo = 20; // 2 por 10
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
