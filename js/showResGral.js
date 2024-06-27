@@ -108,8 +108,8 @@ let checkboxesSeleccionados = [];
 
 window.addEventListener('load', function () {
   // Obtener los datos almacenados en LocalStorage
-  const maximo = JSON.parse(localStorage.getItem('maximo-15')) || 1267;
-  const valores = JSON.parse(localStorage.getItem('valores-15')) || 980;
+  const maximo = JSON.parse(localStorage.getItem('maximo-15')) || 1875;
+  const valores = JSON.parse(localStorage.getItem('valores-15')) || 1357.50;
   const porcientoFormateado = JSON.parse(localStorage.getItem('porciento-15')) || 75.20;
 
   const maximo2 = 0;

@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 10; // 2 por 5
+let maximo = 20; // 2 por 5
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -54,13 +54,13 @@ function calculaResultados() {
     switch (respuestas[i]) {
       case "1": valores +=0;
               break;
-      case "2": valores +=(0.50 * 5);
+      case "2": valores +=(0.50 * 10);
               console.log (`caso 2 ${valores}`)
               break;
-      case "3": valores +=(0.75 * 5);
+      case "3": valores +=(0.75 * 10);
               console.log (`caso 3 ${valores}`)
               break;
-      case "4": valores +=(1 * 5);
+      case "4": valores +=10;
               console.log (`caso 4 ${valores}`)
               break;
     }

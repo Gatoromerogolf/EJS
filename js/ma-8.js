@@ -184,8 +184,8 @@ const opts = {
   // Custom segment colors
   staticZones: [
      {strokeStyle: "red", min: 0, max: 50}, // Red from 0 to 25
-     {strokeStyle: "orange", min: 50, max: 75}, // Red from 0 to 25
-     {strokeStyle: "green", min: 75, max: 90}, // Yellow from 50 to 75
+     {strokeStyle: "orange", min: 50, max: 70}, // Red from 0 to 25
+     {strokeStyle: "green", min: 70, max: 90}, // Yellow from 50 to 75
      {strokeStyle: "blue", min: 90, max: 100}  // Blue from 75 to 100
   ],
 

@@ -1,7 +1,7 @@
 let respuestas = [];
 let tabla = [];
 let valores = 0;
-let maximo = 45; // 4 x 5 +  1 x 10  + 1 x 15
+let maximo = 90; // 4 x 5 +  1 x 10  + 1 x 15
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
@@ -50,40 +50,28 @@ function calculaResultados() {
     console.log(`i= ${i} ,
          suma de valores ${valores} ,
          respuesta: ${respuestas[i]}`);
+    puntaje = 0;
 
     if (i < 4){
-        switch (respuestas[i]) {
-          case "1": valores +=0;
-                  break;
-          case "2": valores +=(0.50 * 5);
-                  break;
-          case "3": valores +=(0.75 * 5);
-                  break;
-          case "4": valores +=(1 * 5);
-                  break;
-    }}
-    if (i==4){
-      if (respuestas[4]== 1){
-        valores +=10}
+        puntaje = 10}
+        else{
+          if (i == 4){
+            puntaje = 20}
+            else{
+            puntaje = 30}
+          }
+
+    switch (respuestas[i]) {
+      case "1": valores +=0;
+              break;
+      case "2": valores +=(0.50 * puntaje);
+              break;
+      case "3": valores +=(0.75 * puntaje);
+              break;
+      case "4": valores +=puntaje;
+              break;
     }
-
-    if (i==5) {
-      switch (respuestas[i]) {
-        case "1": valores +=0;
-                break;
-        case "2": valores +=(0.50 * 15);
-                console.log (`caso 2 ${valores}`)
-                break;
-        case "3": valores +=(0.75 * 15);
-                console.log (`caso 3 ${valores}`)
-                break;
-        case "4": valores +=(1 * 15);
-                console.log (`caso 4 ${valores}`)
-                break;
-    }}
-
     console.log(`valor despues calculo: ${valores}`);
-
   }
   const porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
   return porcientoFormateado;
@@ -192,15 +180,15 @@ const opts = {
 
   // Custom segment colors
   staticZones: [
-     {strokeStyle: "red", min: 0, max: 25}, // Red from 0 to 25
-     {strokeStyle: "orange", min: 25, max: 50}, // Red from 0 to 25
-     {strokeStyle: "green", min: 50, max: 75}, // Yellow from 50 to 75
-     {strokeStyle: "blue", min: 75, max: 100}  // Blue from 75 to 100
+     {strokeStyle: "red", min: 0, max: 50}, // Red from 0 to 25
+     {strokeStyle: "orange", min: 50, max: 70}, // Red from 0 to 25
+     {strokeStyle: "green", min: 70, max: 90}, // Yellow from 50 to 75
+     {strokeStyle: "blue", min: 90, max: 100}  // Blue from 75 to 100
   ],
 
   staticLabels: {
       font: "15px sans-serif",  // Specifies font
-      labels: [0, 25, 50, 75, 100],  // Print labels at these values
+      labels: [0, 50, 70, 90, 100],  // Print labels at these values
       color: "#000000",  // Optional: Label text color
       fractionDigits: 0  // Optional: Numerical precision. 0=round off.
   },

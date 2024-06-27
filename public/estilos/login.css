@@ -12,7 +12,7 @@ body{
   min-height: 100vh;
   background-color:#528FD5;
 
-  background-image: url('../../img/fondo1.webp');
+  background-image: url('background procesos.jpg');
   background-size: cover; /* Asegura que la imagen cubra todo el fondo */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center center; /* Centra la imagen en la pantalla */
