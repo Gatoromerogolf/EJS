@@ -1,8 +1,8 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-image: url('../img/reuniones.png'); /*../estilos/estiloMenuGeneral.css*/
-    background-image: url('background-aperie.jpg'); /*../estilos/estiloMenuGeneral.css*/
-    background-image: url('../estilos/background aperie.jpg'); ../estilos/estiloMenuGeneral.css */
+    /* background-image: url('../img/reuniones.png'); ../estilos/estiloMenuGeneral.css */
+    background-image: url('background.jpg'); /*../estilos/estiloMenuGeneral.css*/
+    background-image: url('../estilos/background.jpg'); /*../estilos/estiloMenuGeneral.css */
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
