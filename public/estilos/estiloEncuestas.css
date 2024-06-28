@@ -89,7 +89,7 @@ h1, h2, h3 {
 }
 
 .centrado-flex {
-    margin: 20px;
+    margin: 5px;
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     /*align-items: center; Centra verticalmente*/
@@ -141,11 +141,11 @@ h1, h2, h3 {
 
 .alerta-contenido-ResGral {
   position: relative;
-  width: 250px;
-  margin: 5% auto;
-  padding: 8px;
+  width: 900px;
+  /* marginxxx: 1% auto;
+  paddingxxx: 2px; */
   background: rgba(180, 179, 179, 0.243);
-  border-radius: 8px;
+  border-radius: 12px;
   font-family:'Roboto', sans-serif;
 }
 
@@ -169,7 +169,12 @@ h1, h2, h3 {
   line-height: 0.7;
 }
 
+.chart-containerxxx {
+  /*position: relative;*/
+  height: 700px;
+  width: 900px;
 
+}
 #continuar{
   background-color: #4CAF50; /* Color de fondo */
   color: white; /* Color de texto */

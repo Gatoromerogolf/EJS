@@ -39,7 +39,7 @@ let tablaMenuEs = [
     ,
   ],
   ["",
-    "resumenGeneral2.html",
+    "resumenGeneral3.html",
     "Resumen General:",
     ,
     ,
