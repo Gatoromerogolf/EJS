@@ -29,13 +29,11 @@ function drawBackground(ctx, chartArea) {
 }
 
 const var1 = JSON.parse(localStorage.getItem('porciento-A'));
-// const var1 = 75.2;
-let var2 = JSON.parse(localStorage.getItem('porciento-B'));
-if (!var2>0) {var2=0.1};
-let var3 = 45;
-let var4 = 80;
-const var5 = 70;
-const var6 = 95;
+let var2 = 3;
+let var3 = 3;
+let var4 = 3;
+const var5 = 3;
+const var6 = 3;
 
 const data = {
     labels: ['Gobierno Corporativo', 'Apetito de Riesgo', 'Riesgos de Mercado', 'Riesgos de Procesos', 'Situación Financiera', 'Calidad de los Resultados'],
@@ -127,7 +125,7 @@ plugins: {
             },
             align: 'end', // Cambiar 'center' a 'end'
             anchor: 'end', // Cambiar 'center' a 'end'
-            offset: -50, // Añadir un offset negativo para moverlo dentro de la barra
+            offset: -20, // Añadir un offset negativo para moverlo dentro de la barra
             formatter: function(value) {
             return value + '%';
             }
