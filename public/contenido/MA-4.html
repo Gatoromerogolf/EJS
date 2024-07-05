@@ -55,7 +55,7 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col" id="fila-2" style="display: none">2. El Auditor interno pertenece o concurre a
+              <td class="pregunta-col" id="fila-2" style="display: none">2. El Auditor interno integra o concurre a
                 todas las reuniones del Comité de Auditoría</td>
 
               <td class="respuesta-col" id="fila-2a" style="display: none">
@@ -135,7 +135,7 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">7. Cada Comité está compuesto por al menos un director independiente</td>
+              <td class="pregunta-col">7. Cada Comité del Directorio está compuesto por al menos un director independiente</td>
 
               <td class="respuesta-col">
                 <div class="radio-container"><input type="radio" name="A-4-7" value="1"></div>
@@ -155,7 +155,7 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">8. La estructura de cada comité del Directorio está documentada</td>
+              <td class="pregunta-col">8. La estructura de Comités del Directorio está documentada</td>
 
               <td class="respuesta-col">
                 <div class="radio-container"><input type="radio" name="A-4-8" value="1"></div>
@@ -217,18 +217,22 @@
             </tr>
 
             <tr>
-              <td id="tituloFrecuencia" style="display: none">--. Frecuencia de las reuniones del</td>
+              <td id="tituloFrecuencia" style="display: none; font-weight: 600">--. Frecuencia de las reuniones del:</td>
             </tr>
 
             <tr>
               <td class="pregunta-col" id="reunionComAud" style="display: none">11. Comité de Auditoría</td>
 
               <td class="respuesta-col" id="reunionComAud1" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-11" value="1">Mensual</div>
+                <div class="radio-container"><input type="radio" name="A-4-11" value="1">No hay</div>
               </td>
 
               <td class="respuesta-col" id="reunionComAud2" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-11" value="2">Ad-hoc</div>
+                <div class="radio-container"><input type="radio" name="A-4-11" value="2">Mensual</div>
+              </td>
+
+              <td class="respuesta-col" id="reunionComAud3" style="display: none; font-size: 13px">
+                <div class="radio-container"><input type="radio" name="A-4-11" value="3">Ad-hoc</div>
               </td>
             </tr>
 
@@ -237,23 +241,31 @@
               </td>
 
               <td class="respuesta-col" id="lineaNomSuc1" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-12" value="1">Anual</div>
+                <div class="radio-container"><input type="radio" name="A-4-12" value="1">No hay</div>
               </td>
 
               <td class="respuesta-col" id="lineaNomSuc2" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-12" value="2">Ad-hoc</div>
+                <div class="radio-container"><input type="radio" name="A-4-12" value="2">Anual</div>
+              </td>
+
+              <td class="respuesta-col" id="lineaNomSuc3" style="display: none; font-size: 13px">
+                <div class="radio-container"><input type="radio" name="A-4-12" value="3">Ad-hoc</div>
               </td>
             </tr>
 
             <tr>
               <td class="pregunta-col" id="comiteCompen" style="display: none">13. Comité de Compensaciones</td>
-
+           
               <td class="respuesta-col" id="comiteCompen1" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-13" value="1">Anual</div>
+                <div class="radio-container"><input type="radio" name="A-4-13" value="1">No hay</div>
               </td>
 
               <td class="respuesta-col" id="comiteCompen2" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-13" value="2">Ad-hoc</div>
+                <div class="radio-container"><input type="radio" name="A-4-13" value="2">Anual</div>
+              </td>
+
+              <td class="respuesta-col" id="comiteCompen3" style="display: none; font-size: 13px">
+                <div class="radio-container"><input type="radio" name="A-4-13" value="3">Ad-hoc</div>
               </td>
             </tr>
 
@@ -261,11 +273,15 @@
               <td class="pregunta-col" id="comiteTecno" style="display: none">14. Comité de Tecnologías de la Información</td>
 
               <td class="respuesta-col" id="comiteTecno1" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-14" value="1">Mensual</div>
+                <div class="radio-container"><input type="radio" name="A-4-14" value="1">No hay</div>
               </td>
 
               <td class="respuesta-col" id="comiteTecno2" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-14" value="2">Ad-hoc</div>
+                <div class="radio-container"><input type="radio" name="A-4-14" value="2">Mensual</div>
+              </td>
+
+              <td class="respuesta-col" id="comiteTecno3" style="display: none; font-size: 13px">
+                <div class="radio-container"><input type="radio" name="A-4-14" value="3">Ad-hoc</div>
               </td>
             </tr>
 
@@ -273,11 +289,15 @@
               <td class="pregunta-col" id="comiteRiesgo" style="display: none">15. Comité de Riesgos</td>
 
               <td class="respuesta-col" id="comiteRiesgo1" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-15" value="1">Mensual</div>
+                <div class="radio-container"><input type="radio" name="A-4-15" value="1">No hay</div>
               </td>
 
               <td class="respuesta-col" id="comiteRiesgo2" style="display: none; font-size: 13px">
-                <div class="radio-container"><input type="radio" name="A-4-15" value="2">Ad-hoc</div>
+                <div class="radio-container"><input type="radio" name="A-4-15" value="2">Mensual</div>
+              </td>
+
+              <td class="respuesta-col" id="comiteRiesgo3" style="display: none; font-size: 13px">
+                <div class="radio-container"><input type="radio" name="A-4-15" value="3">Ad-hoc</div>
               </td>
             </tr>
           </table>
@@ -377,12 +397,14 @@
         document.getElementById('lineaNomSuc').style.display = 'table-cell';
         document.getElementById('lineaNomSuc1').style.display = 'table-cell';
         document.getElementById('lineaNomSuc2').style.display = 'table-cell';
+        document.getElementById('lineaNomSuc3').style.display = 'table-cell';
         document.getElementById("tituloFrecuencia").style.display = 'table-cell';
       } else {
         // Mostrar las líneas si se selecciona cualquier otro valor
         document.getElementById('lineaNomSuc').style.display = 'none';
         document.getElementById('lineaNomSuc1').style.display = 'none';
         document.getElementById('lineaNomSuc2').style.display = 'none';
+        document.getElementById('lineaNomSuc3').style.display = 'none';        
       }
     }
   </script>
@@ -394,12 +416,14 @@
         document.getElementById('comiteCompen').style.display = 'table-cell';
         document.getElementById('comiteCompen1').style.display = 'table-cell';
         document.getElementById('comiteCompen2').style.display = 'table-cell';
+        document.getElementById('comiteCompen3').style.display = 'table-cell';
         document.getElementById("tituloFrecuencia").style.display = 'table-cell';
       } else {
         // Mostrar las líneas si se selecciona cualquier otro valor
         document.getElementById('comiteCompen').style.display = 'none';
         document.getElementById('comiteCompen1').style.display = 'none';
         document.getElementById('comiteCompen2').style.display = 'none';
+        document.getElementById('comiteCompen3').style.display = 'none';
       }
     }
   </script>
@@ -411,12 +435,14 @@
         document.getElementById('comiteTecno').style.display = 'table-cell';
         document.getElementById('comiteTecno1').style.display = 'table-cell';
         document.getElementById('comiteTecno2').style.display = 'table-cell';
+        document.getElementById('comiteTecno3').style.display = 'table-cell';
         document.getElementById("tituloFrecuencia").style.display = 'table-cell';
       } else {
         // Mostrar las líneas si se selecciona cualquier otro valor
         document.getElementById('comiteTecno').style.display = 'none';
         document.getElementById('comiteTecno1').style.display = 'none';
         document.getElementById('comiteTecno2').style.display = 'none';
+        document.getElementById('comiteTecno3').style.display = 'none';
       }
     }
   </script>
@@ -428,13 +454,16 @@
         document.getElementById('comiteRiesgo').style.display = 'table-cell';
         document.getElementById('comiteRiesgo1').style.display = 'table-cell';
         document.getElementById('comiteRiesgo2').style.display = 'table-cell';
+        document.getElementById('comiteRiesgo3').style.display = 'table-cell';
         document.getElementById("tituloFrecuencia").style.display = 'table-cell';
       } else {
         // Mostrar las líneas si se selecciona cualquier otro valor
         document.getElementById('comiteRiesgo').style.display = 'none';
         document.getElementById('comiteRiesgo1').style.display = 'none';
         document.getElementById('comiteRiesgo2').style.display = 'none';
+        document.getElementById('comiteRiesgo3').style.display = 'none';
       }
+
     }
   </script>
 
@@ -455,6 +484,7 @@
         document.getElementById('reunionComAud').style.display = 'table-cell';
         document.getElementById('reunionComAud1').style.display = 'table-cell';
         document.getElementById('reunionComAud2').style.display = 'table-cell';
+        document.getElementById('reunionComAud3').style.display = 'table-cell';
       } else {
         // fila2.style.display = 'none';
         document.getElementById('fila-2').style.display = 'none';
@@ -463,6 +493,7 @@
         document.getElementById('reunionComAud').style.display = 'none';
         document.getElementById('reunionComAud1').style.display = 'none';
         document.getElementById('reunionComAud2').style.display = 'none';
+        document.getElementById('reunionComAud3').style.display = 'none';
 
       }
     }
