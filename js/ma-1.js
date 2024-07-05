@@ -152,6 +152,8 @@ function sumaPuntosCheckbox() {
 function calculaResultados() {
   tabla = respuestas[0] == 1 ? tabla01 : tabla02;
   maximo = respuestas[0] == 1 ? tabla01[0][2] : tabla02[0][2];
+  localStorage.setItem("3o4Direct", JSON.stringify(respuestas[0]));
+
   console.log(respuestas[0], maximo, tabla01[0][2], tabla02[0][2]);
 
   for (let i = 0; i < respuestas.length; i++) {

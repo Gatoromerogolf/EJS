@@ -200,11 +200,11 @@ function calculaResultados() {
     [0, 5, 7.5, 10], // 8. (i=7)estructura documentada
     [0, 10, 15, 20], // 9. (i=8)acta por reunion
     [0, 20, 30, 40], // 10. (i=9) envia informes
-    [20, 10], // 11. (i=10) auditoría
-    [30, 20], // 12. (i=11)Nominaciones
-    [20, 10], // 13. (i=12)Compensaciones
-    [20, 10], // 14. (i=13)Tecnología
-    [30, 20] // 15. (i=14)Riesgos
+    [0, 20, 10], // 11. (i=10) auditoría
+    [0, 30, 20], // 12. (i=11)Nominaciones
+    [0, 20, 10], // 13. (i=12)Compensaciones
+    [0, 20, 10], // 14. (i=13)Tecnología
+    [0, 30, 20] // 15. (i=14)Riesgos
   ]
 
   let precio = 0;

@@ -1,0 +1,69 @@
+<!-- /*Explicación:
+Incluir la biblioteca SortableJS:
+
+Usamos un CDN para incluir Sortable.min.js.
+HTML:
+
+Una lista desordenada (<ul>) con algunos elementos de lista (<li>).
+CSS:
+
+Estilos básicos para la lista y los elementos de lista.
+JavaScript:
+
+Usamos Sortable para hacer que la lista sea ordenable. La función new Sortable(el, { animation: 150 }); inicializa SortableJS en la lista con una animación de 150ms.
+Este código te dará una lista de ítems que puedes arrastrar y soltar para reordenar. SortableJS proporciona muchas opciones adicionales y eventos que puedes utilizar para personalizar la funcionalidad según tus necesidades.
+*/ -->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Ordenable</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.css" integrity="sha512-wZdS0e6Q/N54Q5PPZKnxMfzr1Orx0T9pqNodt6mKKHVtSLW7ksY5Uil8iChf8ZQF3ufCVR2z8xKlXDA8hrhTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #items {
+            list-style-type: none;
+            padding: 20;
+            width: 500px;
+        }
+        #items li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <h2>Lista Ordenable</h2>
+    <ul id="items">
+        <li>La composición y responsabilidad del Directorio</li>
+        <li>Estructura organizacional</li>
+        <li>El Directorio y su articulación con las Gerencias</li>
+        <li>Comités del Directorio</li>
+        <li>Comité de auditoría</li>
+        <li>Información para el Directorio</li>
+        <li>Estrategia</li>
+    </ul>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-C6mV5i6UPY0Fk3m6gB5HBBXxriD6ot+Q0MNYvU6+u8OHhXGTvR5dWzLUHgCmivKZ3P6oIY6AhtNq32NRfZfsag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var el = document.getElementById('items');
+            new Sortable(el, {
+                animation: 150,
+                ghostClass: 'ghost',
+                chosenClass: 'chosen',
+                dragClass: 'drag'
+            });
+        });
+    </script>
+</body>
+</html>

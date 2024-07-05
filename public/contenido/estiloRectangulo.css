@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+  }
+  
+  .drag-container {
+    width: 200px;
+    padding: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  .draggable {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #ddd;
+    cursor: move;
+  }
+  
+  .drop-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 2px dashed #aaa;
+  }
+  

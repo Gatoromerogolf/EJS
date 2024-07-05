@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastrar y Soltar con SortableJS</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .list-container {
+            width: 45%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            min-height: 300px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <h2>Arrastrar y Soltar con SortableJS</h2>
+    <div class="container">
+        <div class="list-container">
+            <h3>Lista de Ítems</h3>
+            <ul id="items">
+                <li>Ítem 1</li>
+                <li>Ítem 2</li>
+                <li>Ítem 3</li>
+                <li>Ítem 4</li>
+                <li>Ítem 5</li>
+            </ul>
+        </div>
+        <div class="list-container">
+            <h3>Ítems Seleccionados</h3>
+            <ul id="selected-items">
+                <!-- Items seleccionados irán aquí -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-C6mV5i6UPY0Fk3m6gB5HBBXxriD6ot+Q0MNYvU6+u8OHhXGTvR5dWzLUHgCmivKZ3P6oIY6AhtNq32NRfZfsag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var items = document.getElementById('items');
+            var selectedItems = document.getElementById('selected-items');
+
+            // Inicializar SortableJS en la lista de ítems
+            new Sortable(items, {
+                group: {
+                    name: 'shared',
+                    pull: 'clone', // Permite clonar el ítem cuando se arrastra
+                    put: false // No permite arrastrar ítems de vuelta a esta lista
+                },
+                animation: 150,
+                sort: false // No permite ordenar esta lista
+            });
+
+            // Inicializar SortableJS en la lista de ítems seleccionados
+            new Sortable(selectedItems, {
+                group: 'shared', // Permite el arrastre entre listas
+                animation: 150,
+                onAdd: function (evt) {
+                    evt.item.parentNode.removeChild(evt.item); // Remueve el ítem de la lista de origen
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrastrar y Soltar con Orden</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  .page-container {
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; /* Para alinear los elementos al principio y al final */
+    width: 900px;
+    height: 580px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px; /* Ajustar margen según necesites */
+    position: relative; /* Para poder posicionar los botones absolutamente */
+  }
+
+  .drag-container {
+    width: 400px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+  }
+
+  .draggable {
+    margin: 5px 0;
+    padding: 7px;
+    background-color: #ddd;
+    cursor: move;
+    text-align: left;
+  }
+
+  .drop-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 2px dashed #aaa;
+    text-align: center;
+    overflow-y: auto;
+    position: relative; /* Para posicionar los botones absolutamente dentro de este contenedor */
+  }
+
+  .buttons-container {
+    position: absolute;
+    top: 50%; /* Ajustar la posición vertical según necesites */
+    right: calc(100% + 20px); /* Ajustar la posición horizontal según necesites */
+    transform: translateY(-50%); /* Centrar verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+
+</style>
+</head>
+<body>
+
+<div class="page-container">
+  <h1 class="title">Seleccion los que considere importantes</h1>
+  <h3>Luego, dentro de los DESTACADOS se puede cambiar el orden arrastrando a otra posición</h3>
+  
+  <div class="container">
+    <div class="drag-container" id="drag-container">
+        <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+            I. La composición y responsabilidad del Directorio</div>
+        <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+            II. Estructura organizacional</div>
+        <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+            III. El Directorio y su articulación con las Gerencias</div>
+        <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+            IV. Comités del Directorio</div>
+        <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+            V. Comité de Auditoría</div>
+        <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+            VI. Información para el Directorio</div>
+
+    <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+        VII. Estrategia</div>
+    <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+        VIII. Gestión de Riesgos</div>
+    <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+        IX. Cumplimiento y control</div>
+    <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+        X. Funcionamiento</div>
+    <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+        XI. El Directorio y las Gerencias</div>
+    <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+        XII. Cultura y conducta empresarial</div>
+    <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+        XIII. Sucesiones</div>
+    <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+        XIV. Presidente del Directorio</div>
+    <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+        XV. Secretaría del Directorio</div>
+    </div>
+    
+    <div class="drop-container" id="drop-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+  </div>
+</div>
+
+<div class="buttons-container">
+    <button class="button" onclick="resetSelection()">Reiniciar Selección</button>
+    <button class="button" onclick="continueProcess()">Continuar Proceso</button>
+</div>
+<script>
+  var draggedElement = null; // Variable global para almacenar el elemento arrastrado
+
+  // Función para permitir el drop
+  function allowDrop(event) {
+    event.preventDefault();
+  }
+
+  // Función para iniciar el arrastre
+  function drag(event) {
+    draggedElement = event.target;
+    event.dataTransfer.setData("text", ""); // No es necesario enviar datos, solo establecer el tipo
+  }
+
+  // Función para soltar el elemento
+  function drop(event) {
+    event.preventDefault();
+    
+    // Verificar si hay un elemento arrastrado
+    if (!draggedElement) {
+      return;
+    }
+    
+    // Eliminar el elemento original del contenedor de drag
+    draggedElement.parentNode.removeChild(draggedElement);
+    
+    // Agregar el elemento arrastrado al contenedor de drop
+    event.target.appendChild(draggedElement);
+    
+    // Reiniciar la variable global de elemento arrastrado
+    draggedElement = null;
+  }
+
+    // Función para reiniciar la selección
+    function resetSelection() {
+    var dropContainer = document.getElementById('drop-container');
+    var dragContainer = document.getElementById('drag-container');
+    
+    // Mover todos los elementos de vuelta al contenedor de drag
+    while (dropContainer.firstChild) {
+      dragContainer.appendChild(dropContainer.firstChild);
+    }
+  }
+
+   // Función para continuar el proceso
+   function continueProcess() {
+    alert('Continuar con el proceso...');
+    // Aquí puedes agregar la lógica para continuar con el proceso
+  } 
+
+</script>
+
+</body>
+</html>

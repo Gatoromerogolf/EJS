@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrastrar y Soltar con Orden</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  .page-container {
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    width: 900px;
+    height: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px; /* Ajustar margen según necesites */
+  }
+
+  .drag-container {
+    width: 400px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+  }
+
+  .draggable {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #ddd;
+    cursor: move;
+  }
+
+  .drop-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 2px dashed #aaa;
+    text-align: center;
+    overflow-y: auto;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  } 
+</style>
+</head>
+<body>
+    <div class="page-container">
+        <h1 class="title">Seleccione los 5 secciones que para Ud son las más importantes</h1>
+
+<div class="container">
+  <div class="drag-container" id="drag-container">
+    <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+        La composición y responsabilidad del Directorio</div>
+    <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+        Estructura organizacional</div>
+    <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+        El Directorio y su articulación con las Gerencias</div>
+    <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+        Comités del Directorio</div>
+    <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+        Comité de Auditoría</div>
+    <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+        Información para el Directorio</div>
+
+    <!-- <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+        Estrategia</div>
+    <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+        Gestión de Riesgos</div>
+    <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+        Cumplimiento y control</div>
+    <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+        Funcionamiento</div>
+    <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+        El Directorio y las Gerencias</div>
+    <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+        Cultura y conducta empresarial</div> -->
+
+    <!-- <div class="draggable" draggable="true" id="drag1" ondragstart="drag(event)">
+        Sucesiones</div>
+    <div class="draggable" draggable="true" id="drag2" ondragstart="drag(event)">
+        Presidente del Directorio</div>
+    <div class="draggable" draggable="true" id="drag3" ondragstart="drag(event)">
+        Secretaría del Directorio</div> -->
+
+  </div>
+  
+  <div class="drop-container" id="drop-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+    Área receptora
+  </div>
+</div>
+</div>
+
+<script>
+
+    var draggedItemId = null; // Variable global para almacenar el ID del elemento arrastrado
+  // Función para permitir el drop
+  function allowDrop(event) {
+    event.preventDefault();
+  }
+
+  // Función para iniciar el arrastre
+  function drag(event) {
+    draggedItemId = event.target.id;
+    event.dataTransfer.setData("text", draggedItemId);
+  }
+
+  // Función para soltar el elemento
+  function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    
+    // Verificar si el elemento arrastrado es diferente al seleccionado
+    if (data !== draggedItemId) {
+      return; // Evitar mover un elemento diferente
+    }
+    
+    var draggedElement = document.getElementById(data);
+    
+    // Eliminar el elemento original del contenedor de drag
+    draggedElement.parentNode.removeChild(draggedElement);
+    
+    // Agregar el elemento arrastrado al contenedor de drop
+    event.target.appendChild(draggedElement);
+  }
+</script>
+
+</body>
+</html>

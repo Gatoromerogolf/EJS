@@ -5,7 +5,7 @@ let valores = 0;
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
-const maximo = 280;
+const maximo = 310;
 
 // Crear un array para almacenar los IDs de los checkboxes seleccionados
 let checkboxesSeleccionados = [];
@@ -51,8 +51,10 @@ function sumaPuntosCheckbox() {
   for (i = 0; i < checkboxesSeleccionados.length; i++) {
     if (checkboxesSeleccionados[i] < 5) { valores += 40 }
     else {
+      if (checkboxesSeleccionados[i] == 7) { valores += 30 }
+      else {
       valores += 20
-    }
+    }}
 
     // valores += tabla[6][checkboxesSeleccionados[i] - 1];
 

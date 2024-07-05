@@ -5,11 +5,13 @@ let valores = 0;
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
-const maximo = 130;
+const maximo = 160;
+if (JSON.parse(localStorage.getItem('3o4Direct')) == 1) {
+      maximo =+ 10;
+}
 
 // Crear un array para almacenar los IDs de los checkboxes seleccionados
 let checkboxesSeleccionados = [];
-
 
 
 // obtenerCheckboxSeleccionados ::::::::::::::::::::::::::::::::::::::
@@ -49,12 +51,20 @@ function sumaPuntosCheckbox() {
   // if (!puntajesIndividuales[6]) puntajesIndividuales[6] = []; // Asegurar que existe el arreglo antes de asignar valores
 
   // puntajesIndividuales[6][2] = 0;
+
   for (i = 0; i < checkboxesSeleccionados.length; i++) {
-    if (checkboxesSeleccionados[i] == 10 || checkboxesSeleccionados[i] == 11)
+    if (checkboxesSeleccionados[i] == 11 || checkboxesSeleccionados[i] == 12)
       {valores += 20}
-      else{
-        valores += 10
+      else{ 
+        if (checkboxesSeleccionados[i] == 8) {
+        valores += 30}
+        else {
+          valores += 10
+        }
       }
+     // si selecciono IA y es de 3 directores, le suma 10, porque el valor es 40 y no 30
+     if (checkboxesSeleccionados[i] == 8  &&  JSON.parse(localStorage.getItem('3o4Direct')) == 1)
+          {valores += 10}
 
     // valores += tabla[6][checkboxesSeleccionados[i] - 1];
 
