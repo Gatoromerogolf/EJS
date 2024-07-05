@@ -184,10 +184,10 @@
             <td>
               <ul class="listas">
                 <li class="full-width">
-                  07. Áreas en las que por lo menos un miembro del Directorio tiene experiencia</li>
+                  07. El Directorio posee por lo menos un miembro con experiencia en:</li>
                 <ul  class="dos-columnas">
                   <li><input id="uno" type="checkbox" value="1"><label class="check" for="uno">Transformación
-                      digital/Change Management</label></li>
+                      digital/Manejo del cambio</label></li>
                   <li><input id="dos" type="checkbox" value="2"><label class="check" for="dos">Control Interno</label></li>
                   <li><input id="tres" type="checkbox" value="3"><label class="check" for="tres">Manejo de Riesgos</label></li>
                   <li><input id="cuatro" type="checkbox" value="4"><label class="check" for="cuatro">Manejo de Crisis</label></li>
@@ -202,28 +202,25 @@
 
         <table>
           <tr>
-            <td class="pregunta-col">08. Frecuencia de reunión del Directorio</td>
+            <td class="pregunta-col">08. Frecuencia de las reuniones del Directorio</td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-8" value="1">Trimestral
+              <div class="radio-container"><input type="radio" name="A-I-8" value="1">No hay</div>
             </td>
 
             <td class="respuesta-col">
-              <div class="radio-container"><input type="radio" name="A-I-8" value="2">Mensual
+              <div class="radio-container"><input type="radio" name="A-I-8" value="1">Trimestral</div>
+            </td>
+
+            <td class="respuesta-col">
+              <div class="radio-container"><input type="radio" name="A-I-8" value="2">Mensual</div>
             </td>
 
           </tr>
-        <!-- </table>
 
-        <table> -->
-          <!-- <tr>
-            <th class="pregunta-col" style="width:900px">Situación</th>
-            <th class="respuesta-col" style="width:100px">SI</th>
-            <th class="respuesta-col" style="width:100px">NO</th>
-          </tr> -->
 
           <tr>
-            <td class="pregunta-col">09. El Directorio realiza reuniones adicionales Ad-Hoc</td>
+            <td class="pregunta-col">09. Se realizan reuniones Ad-hoc de ser necesario</td>
 
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-9" value="1">Si
@@ -240,15 +237,51 @@
 
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-10" value="1"
-                  onclick="mostrarOcultarAB(this.value)">Si
+                  onclick="mostrarOcultarAB(this.value)">Si</div>
             </td>
 
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-10" value="2"
-                  onclick="mostrarOcultarAB(this.value)">No
+                  onclick="mostrarOcultarAB(this.value)">No</div>
             </td>
           </tr>
+        </table>
           <br><br>
+
+          <!-- <P>Para cada situación presentada, indique el grado de cumplimiento o aplicación en la siguiente escala:</P>
+          <table>
+            <td>1 = 'Totalmente en desacuerdo'<br> (no se aplica, no existe o es completamente insatisfactorio).</td>
+            <td></td>
+            <td>5 = 'Totalmente de acuerdo'<br> (cumplimiento o satisfacción total)</td>
+          </table>
+
+          <tr>
+            <th class="pregunta-col">Situación</th>
+            <th class="respuesta-col">1</th>
+            <th class="respuesta-col">2</th>
+            <th class="respuesta-col">3</th>
+            <th class="respuesta-col">4</th>
+            <th class="respuesta-col">5</th>
+          </tr>
+          <tr></tr> -->
+<!-- 
+          <table>
+            <td>1 = 'Totalmente en desacuerdo'<br> (no se aplica, no existe o es completamente insatisfactorio).</td>
+            <td></td>
+            <td>5 = 'Totalmente de acuerdo'<br> (cumplimiento o satisfacción total)</td>
+          </table> -->
+          <p><span style="font-size: 13px">En cada situación indique el grado de aplicación en la siguiente escala: 1 = 'Totalmente en desacuerdo' (no aplica, no existe o es insatisfactorio) y 5 = 'Totalmente de acuerdo' (cumplimiento o satisfacción total)</span></p>
+          <table>
+
+          <tr>
+            <th class="pregunta-col">Situación</th>
+            <th class="respuesta-col">1</th>
+            <th class="respuesta-col">2</th>
+            <th class="respuesta-col">3</th>
+            <th class="respuesta-col">4</th>
+            <th class="respuesta-col">5</th>
+          </tr>
+
 
           <tr>
             <th class="pregunta-col">Situación</th>
@@ -257,8 +290,9 @@
             <th class="respuesta-col">Efectivo</th>
             <th class="respuesta-col">Muy efectivo</th>
           </tr>
+
           <tr>
-            <td class="pregunta-col" id="lineaAB" style="display: none">11. Los miembros del Advisory Board participan con frecuencia en las reuniones del Directorio</td>
+            <td class="pregunta-col" id="lineaAB" style="display: none">11. Los miembros del Advisory Board participan habitualmente en las reuniones del Directorio</td>
 
             <td class="respuesta-col" style="display: none" id="lineaAB1">
               <div class="radio-container"><input type="radio" name="A-I-11" value="1">
@@ -342,7 +376,7 @@
           </tr>
 
           <tr>
-            <td class="pregunta-col">15. Existe un Reglamento del Directorio</td>
+            <td class="pregunta-col">15. Se ha confeccionado un Reglamento de funcionamiento del Directorio</td>
 
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-15" value="1">
@@ -362,8 +396,7 @@
           </tr>
 
           <tr>
-            <td class="pregunta-col">16. Las remuneraciones del CEO, de los directores y de la Alta Gerencia son
-              aprobadas por el Directorio</td>
+            <td class="pregunta-col">16. La remuneración del CEO, de los directores y de la Alta Gerencia es aprobada por el Directorio</td>
 
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-16" value="1">
@@ -383,8 +416,7 @@
           </tr>
 
           <tr>
-            <td class="pregunta-col">17. Las reuniones de Directorio se documentan en actas y son previamente aprobadas
-              por los directores</td>
+            <td class="pregunta-col">17. Las reuniones de Directorio se documentan en actas que son previamente aprobadas por los directores</td>
 
             <td class="respuesta-col">
               <div class="radio-container"><input type="radio" name="A-I-17" value="1">
