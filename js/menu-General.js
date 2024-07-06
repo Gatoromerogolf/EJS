@@ -4,7 +4,7 @@ let tablaMenuEs = [
   ["A.",
     // "MA-1.html",
     "Menu-A.html",
-    "Gobierno Corporativo",
+    "Riesgos de Gobierno Corporativo",
     ,
     ,
   ],
