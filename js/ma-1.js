@@ -202,7 +202,7 @@ document
 
       //  agrega los checkbox seleccionados al vector de respuestas.
       respuestas[6] = checkboxesSeleccionados;
-      console.log (`resultado del array valores con los checkboxes ${valores}`);
+      console.log (`resultado del array valores con los checkboxes ${respuestas}`);
 
       // Guardar el valor en LocalStorage
       localStorage.setItem("maximo", JSON.stringify(maximo));
