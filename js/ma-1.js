@@ -57,7 +57,7 @@ function obtenerValoresSeleccionados() {
     alert(`Falta infomar en estas filas: ${filasFaltantes}`);
   } else {
     //  inserta con 6 el valor de los checkbox para que se posicione en la ultima = 0
-    respuestas.splice(6, 0, 6);
+    respuestas.splice(6, 0, 9);
 
     const advisoryBoard = document.querySelector(
       `input[name="A-I-10"]:checked`
@@ -75,11 +75,14 @@ function obtenerValoresSeleccionados() {
       } else {
         alert(`No selecciono lo del AB en la fila 11`);
       }
+      } else {
+        respuestas.splice(10, 0, '9'); // oone 9 como marca de no respuesta    
+      }
     }
     console.log(`respuestas con 7 y 11 ${respuestas}`);
     return respuestas; // Devuelve el arreglo si necesitas hacer algo más con él
   }
-}
+
 
 // obtenerCheckboxSeleccionados :::::::::::::::::::::::::::::::::
 
@@ -158,6 +161,7 @@ function calculaResultados() {
 
   for (let i = 0; i < respuestas.length; i++) {
     if (i === 6) continue;
+    if (i === 10 && respuestas[10] == 9) continue;
     if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
     console.log(`i= ${i} ,
          valores ${valores} ,
@@ -206,6 +210,27 @@ document
       console.log (`resultado del array valores con los checkboxes:  ${respuestas}`);
       console.log (`posición 6:  ${respuestas[6]}`)
       console.log (`respuesta 7 despues de la inserción:  ${respuestas[7]}`)
+      console.table (respuestas)
+
+      // Usar un bucle para imprimir cada elemento con su índice
+      respuestas.forEach((elemento, indice) => {
+      if (Array.isArray(elemento)) {
+          console.log(`Índice ${indice}: [${elemento.join(', ')}]`);
+      } else {
+          console.log(`Índice ${indice}: ${elemento}`);
+      }
+    });
+
+      // Función personalizada para imprimir el arreglo
+      function printArray(array) {
+        array.forEach((elemento, indice) => {
+            if (Array.isArray(elemento)) {
+                console.log(`Índice ${indice}: [${elemento.join(', ')}]`);
+            } else {
+                console.log(`Índice ${indice}: ${elemento}`);
+            }
+        });
+      }
 
       // Guardar el valor en LocalStorage
       localStorage.setItem("maximo", JSON.stringify(maximo));
