@@ -201,8 +201,11 @@ document
       mostrarMiAlerta(maximo, valores, porcientoFormateado);
 
       //  agrega los checkbox seleccionados al vector de respuestas.
+      console.log (`respuesta 7 antes de inserción ${respuestas[7]}`)
       respuestas[6] = checkboxesSeleccionados;
       console.log (`resultado del array valores con los checkboxes ${respuestas}`);
+      console.log (`posición 6 ${respuestas[6]}`)
+      console.log (`respuesta 7 despues de la inserción ${respuesta[7]}`)
 
       // Guardar el valor en LocalStorage
       localStorage.setItem("maximo", JSON.stringify(maximo));
