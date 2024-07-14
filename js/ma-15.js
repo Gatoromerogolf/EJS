@@ -44,14 +44,11 @@ function calculaResultados() {
   // maximo = respuestas[0] == 1 ? tabla01[0][2] : tabla02[0][2];
   // console.log(respuestas[0], maximo, tabla01[0][2], tabla02[0][2]);
 
-  for (let i = 0; i < respuestas.length; i++) {
-    if (!puntajesIndividuales[i]) puntajesIndividuales[i] = []; // Asegurar que existe el arreglo antes de asignar valores
+    // console.log(`i= ${i} ,
+    //      valores ${valores} ,
+    //      respuestas: ${respuestas[i]}`);
 
-    console.log(`i= ${i} ,
-         valores ${valores} ,
-         respuestas: ${respuestas[i]}`);
-
-    switch (respuestas[i]) {
+    switch (respuestas[0]) {
       case "1": valores +=0;
               break;
       case "2": valores +=(0.50 * 10);
@@ -63,10 +60,14 @@ function calculaResultados() {
       case "4": valores +=10;
               console.log (`caso 4 ${valores}`)
               break;
-    }
-    console.log(`valor despues calculo: ${valores}`);
+      }
 
-  }
+    if (respuestas[1] == 1) {
+        valores +=10
+      } 
+ 
+    console.log(`valor despues calculo: ${valores}`);
+  
   const porcientoFormateado = ((valores / maximo) * 100).toFixed(2);
   return porcientoFormateado;
 }
