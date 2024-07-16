@@ -24,8 +24,8 @@ let tablaMenuApeRie = [
     ,
   ],
    ["",
-    "APE-RIE-5.html",
-    " - - - - - - - - - - CALIFICACION GENERAL - - -",
+    "##",
+    "Calificación general:",
     ,
     ,
   ],
@@ -86,6 +86,19 @@ for (i = 0; i < tablaMenuApeRie.length; i++) {
   const enlace = document.createElement('a'); // Crear un elemento <a>
   enlace.href = tablaMenuApeRie[i][1]; // Establecer el atributo href con el valor correspondiente
   enlace.textContent = tablaMenuApeRie[i][2]; // Establecer el texto del enlace con el tercer elemento de la tabla
+  enlace.style.textDecoration = 'none';
+
+  if (i == tablaMenuApeRie.length-1){
+    enlace.style.fontSize = '18px'; // Cambiar el tamaño de la fuente
+    enlace.style.fontWeight = 'bold'; // Hacer el texto en negrita
+    enlace.style.color='black';
+
+    celdaEnlace.style.textAlign = 'center'; // Centrar el contenido horizontalmente
+    celdaEnlace.style.display = 'flex';
+    celdaEnlace.style.justifyContent = 'center';
+    celdaEnlace.style.alignItems = 'center';
+  }  
+
   celdaEnlace.appendChild(enlace); // Agregar el enlace como hijo de la celda
 
   celdaMaximo = lineaDatosFd.insertCell(-1);

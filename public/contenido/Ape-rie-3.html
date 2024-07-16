@@ -5,51 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evaluación de riesgos</title>
-  <link href="../estilos/st-homePrueba.css" rel="stylesheet">
+  <link href="../estilos/estiloEncuestas.css" rel="stylesheet">
   <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-  <!-- anulado hasta que se necesite
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-    <script>
-      $(function () {
-        $("#header").load("encabezado.html");
-        $("#footer").load("piepagina.html");
-      });
-    </script> -->
-
 </head>
 
-<body>
-  <header>
-    <div class="logo">
-      <img src="../img/bdtancho.png" width="100%" alt="">
-    </div>
-  </header>
+<body class="menu-a-page aperie">
+  
+  <div class="survey-container">
+    <form id="survey-form">
 
-  <section class="main">
-    <section class="gobCorpo">
-      <div class="header-container">
-        <h1><a href="Menu-ape-rie.html">B - Apetito de riesgo. Autoevaluación.</a></h1>
-        <div class="nav-icons">
-          <a href="ape-rie-2.html"><img src="../img/anterior.png" alt="Retroceso"></a>
-          <a href="ape-rie-4.html"><img src="../img/siguiente.png" alt="Avance"></a>
-        </div>
-      </div>
-      <br>
-      <hr>
+      <section class="main">
+        <section class="gobCorpo">
+          <div class="header-container">
+            <div class="nav-icons">
+              <a href="ape-rie-2.html"><img src="../img/anterior.png" alt="Retroceso"></a>
+              <a href="ape-rie-4.html"><img src="../img/siguiente.png" alt="Avance"></a>
+            </div>
+          </div>
 
-      <form id="formulario">
-        <br>
-        <h1 id="uno">III - Circunstancias históricas.</h1>
-        <br>
+          <div class="center-container">
+            <h3 id="tituloSeccion"><a href="Menu-ape-rie.html">B - Autoevaluación del manejo del apetito de riesgo</a></h3>
+          </div>
+          <h3>III - Circunstancias históricas</h3>
 
-        <p> Seleccione la opción que mejor describa a su organización.</p>
-        <form>
+          <p style="font-size:12px">Seleccione la opción que corresponda a su organización.</p>
+
           <table>
             <tr>
-              <th class="pregunta-col">INDICADORES</th>
+              <th class="pregunta-col">AFIRMACIÓN</th>
               <th class="respuesta-col">Irracional</th>
               <th class="respuesta-col">Poco razonable</th>
               <th class="respuesta-col">Algo razonable</th>
@@ -404,25 +389,6 @@
 
         </form>
     </section>
-  </section>
-
-  <br>
-  <section>
-    <footer>
-      <hr>
-      <div class="footer">
-        <p>Contacto</p>
-        <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
-        <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
-            class="fab fa-whatsapp"></i></a>
-        </p>
-      </div>
-      <p>Derechos reservados. &copy;2024 - BDT</p>
-      <br>
-      <!-- <p>Autor de la pagina</p> -->
-      <!-- <div id="footer"></div> -->
-    </footer>
   </section>
   
 </body>

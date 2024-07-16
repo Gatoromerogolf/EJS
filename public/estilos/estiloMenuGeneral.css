@@ -7,16 +7,33 @@ body {
     background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
     margin: 0;
     padding: 0;
-    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    height: 100%;
+}
+
+/* Fondo específico para la clase fiananciero */
+body.financiero {
+  background: url('background financiero.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Fondo específico para la clase fiananciero */
+body.aperie {
+  background: url('background aperie.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+h3 {
+  margin-top: 0;
 }
 
 .survey-container {
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
 }
 
 .containerTitulo {
@@ -26,16 +43,23 @@ body {
     padding: 10px;/* Espacio alrededor del contenido*/
   }
   
-  .left-icon {
-    display: flex; /* Alineación por si hay más elementos en el futuro */
-    align-items: center;
-  }
-  
-  .right-icons {
-    display: flex; /* Flexbox para alinear los iconos a la derecha */
-    align-items: center;
-    gap: 15px; /* Espacio entre los iconos */
-  }
+.contenedorTabla {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;     /* (Opcional) Centra el contenido verticalmente */
+  /*height: 50vh;           /* (Opcional) Ajusta la altura del contenedor al 100% del viewport */
+}
+
+.left-icon {
+  display: flex; /* Alineación por si hay más elementos en el futuro */
+  align-items: center;
+}
+
+.right-icons {
+  display: flex; /* Flexbox para alinear los iconos a la derecha */
+  align-items: center;
+  gap: 15px; /* Espacio entre los iconos */
+}
   
 h1, h2, h3 {
     text-align: center;

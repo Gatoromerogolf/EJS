@@ -5,63 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evaluación de riesgos</title>
-  <link href="../estilos/st-homePrueba.css" rel="stylesheet">
+  <link href="../estilos/estiloEncuestas.css" rel="stylesheet">
   <!-- <link href="css/st-gobCorpo.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-  <!-- anulado hasta que se necesite
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-    <script>
-      $(function () {
-        $("#header").load("encabezado.html");
-        $("#footer").load("piepagina.html");
-      });
-    </script> -->
-
 </head>
 
-<body>
-  <header>
-    <div class="logo">
-      <img src="../img/bdtancho.png" width="100%" alt="">
-    </div>
-  </header>
+<body class="menu-a-page mercado">
+  <div class="survey-container">
+    <form id="survey-form">
+      <section class="main">
+        <section class="gobCorpo">
+          <a href="Menu-General.html"> <img src="../img/contenido (1).png" width="30px"></a>
+          <br><br>
+          <div class="center-container">
+            <h3 id="tituloSeccion"><a href="Menu-ape-rie.html">C - Autoevaluación del manejo de los riesgos de
+                mercado</a></h3>
+          </div>
+          <h3>Riesgos de mercado</h3>
 
-    <section class="main">
-      <section class="gobCorpo">
-        <a href="Menu-General.html"> <img src="../img/contenido (1).png" width="30px"></a>
-        <br><br>
-        <h1>C. Riesgos de Mercado</h1>
-        <br>
+          <p style="font-size:12px">Seleccione la opción que corresponda a su organización.</p>
 
-        <P>Para cada situación presentada, indique el grado de cumplimiento o aplicación en la siguiente escala:</P>
-        <table>
-          <td>1 = 'Totalmente en desacuerdo'<br> (no se aplica, no existe o es completamente insatisfactorio).</td>
-          <td></td>
-          <td>5 = 'Totalmente de acuerdo'<br> (cumplimiento o satisfacción total)</td>
-        </table>
-
-        <p> Seleccione la opción que mejor describa a su organización.</p>
-        <form>
           <table>
             <tr>
-              <th class="pregunta-col">INDICADORES</th>
+              <th class="pregunta-col">AFIRMACIÓN</th>
               <th class="respuesta-col">No efectivo</th>
               <th class="respuesta-col">Poco efectivo</th>
               <th class="respuesta-col">Efectivo</th>
               <th class="respuesta-col">Muy efectivo</th>
             </tr>
+
             <tr>
-              <th class="pregunta-col">Situación</th>
-              <th class="respuesta-col">1</th>
-              <th class="respuesta-col">2</th>
-              <th class="respuesta-col">3</th>
-              <th class="respuesta-col">4</th>
-              <th class="respuesta-col">5</th>
-            </tr>
-            <tr>
-              <td class="pregunta-col">1. Confecciona un análisis FODA para desarrollar estrategias que capitalicen las fortalezas, aprovechen las oportunidades, mitiguen las debilidades y enfrenten las amenazas</td>
+              <td class="pregunta-col">1. Confecciona un análisis FODA para desarrollar estrategias que capitalicen las
+                fortalezas, aprovechen las oportunidades, mitiguen las debilidades y enfrenten las amenazas</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color" value="Rojo">
@@ -89,7 +64,8 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">2. Se han relacionado las Fortalezas con Oportunidades (FO), Fortalezas con Amenazas (FA), Debilidades con Oportunidades (DO) y Debilidades con Amenazas (DA)</td>
+              <td class="pregunta-col">2. Se han relacionado las Fortalezas con Oportunidades (FO), Fortalezas con
+                Amenazas (FA), Debilidades con Oportunidades (DO) y Debilidades con Amenazas (DA)</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -117,7 +93,8 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">3. Se ha volcado la estrategia (mediano plazo) y las tácticas (corto plazo) en un documento</td>
+              <td class="pregunta-col">3. Se ha volcado la estrategia (mediano plazo) y las tácticas (corto plazo) en un
+                documento</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -139,7 +116,8 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">4. Evalúa la correlación entre diferentes tipos de riesgos para comprender mejor el impacto conjunto</td>
+              <td class="pregunta-col">4. Evalúa la correlación entre diferentes tipos de riesgos para comprender mejor
+                el impacto conjunto</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -161,7 +139,8 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">5. Evalúa cómo cada riesgo identificado podría afectar a los ingresos, costos y beneficios de la empresa</td>
+              <td class="pregunta-col">5. Evalúa cómo cada riesgo identificado podría afectar a los ingresos, costos y
+                beneficios de la empresa</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -184,7 +163,8 @@
 
 
             <tr>
-              <td class="pregunta-col">6. Evalúa cómo se comportaría la empresa en cada escenario y cómo podrían cambiar las estrategias para mitigar los riesgos</td>
+              <td class="pregunta-col">6. Evalúa cómo se comportaría la empresa en cada escenario y cómo podrían cambiar
+                las estrategias para mitigar los riesgos</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -228,7 +208,8 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">8. Establece políticas y procedimientos para gestionar los riesgos de manera proactiva</td>
+              <td class="pregunta-col">8. Establece políticas y procedimientos para gestionar los riesgos de manera
+                proactiva</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -250,52 +231,8 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">9. Confecciona una matriz de riesgos detallando: riesgo, impacto, tolerancia al riesgo, accioones de mitigación y métricas</td>
-              <td class="respuesta-col">
-                <div class="radio-container">
-                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                  <label for="colorRojo" class="radio-label"></label>
-                </div>
-              </td>
-              <td class="respuesta-col">
-                <div class="radio-container">
-                  <input type="radio" id="colorAzul" name="color1" value="Azul">
-                  <label for="colorAzul" class="radio-label"></label>
-                </div>
-              </td>
-              <td class="respuesta-col">
-                <div class="radio-container">
-                  <input type="radio" id="colorVerde" name="color1" value="Verde">
-                  <label for="colorVerde" class="radio-label"></label>
-                </div>
-              </td>
-            </tr>
-
-
-            <tr>
-              <td class="pregunta-col">10. Implementa un sistema de monitoreo continuo para evaluar los riesgos de mercado</td>
-              <td class="respuesta-col">
-                <div class="radio-container">
-                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                  <label for="colorRojo" class="radio-label"></label>
-                </div>
-              </td>
-              <td class="respuesta-col">
-                <div class="radio-container">
-                  <input type="radio" id="colorAzul" name="color1" value="Azul">
-                  <label for="colorAzul" class="radio-label"></label>
-                </div>
-              </td>
-              <td class="respuesta-col">
-                <div class="radio-container">
-                  <input type="radio" id="colorVerde" name="color1" value="Verde">
-                  <label for="colorVerde" class="radio-label"></label>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="pregunta-col">11. Ajusta las estrategias de mitigación según sea necesario en respuesta a cambios en las condiciones de mercado</td>
+              <td class="pregunta-col">9. Confecciona una matriz de riesgos detallando: riesgo, impacto, tolerancia al
+                riesgo, accioones de mitigación y métricas</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -318,7 +255,8 @@
 
 
             <tr>
-              <td class="pregunta-col">12. Realiza revisiones periódicas de la evaluación de riesgos para asegurar que esté actualizada y refleje las condiciones actuales del mercado</td>
+              <td class="pregunta-col">10. Implementa un sistema de monitoreo continuo para evaluar los riesgos de
+                mercado</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -340,7 +278,32 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">13. Desarrolla informes que destaquen los riesgos más significativos y las medidas tomadas para mitigarlos</td>
+              <td class="pregunta-col">11. Ajusta las estrategias de mitigación según sea necesario en respuesta a
+                cambios en las condiciones de mercado</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col">12. Realiza revisiones periódicas de la evaluación de riesgos para asegurar que
+                esté actualizada y refleje las condiciones actuales del mercado</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -362,7 +325,8 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">14. Un documento conteniendo la estrategia ha sido comunicado a la Alta Gerencia</td>
+              <td class="pregunta-col">13. Desarrolla informes que destaquen los riesgos más significativos y las
+                medidas tomadas para mitigarlos</td>
               <td class="respuesta-col">
                 <div class="radio-container">
                   <input type="radio" id="colorRojo" name="color1" value="Rojo">
@@ -382,22 +346,44 @@
                 </div>
               </td>
             </tr>
+
             <tr>
-              <td></td>
+              <td class="pregunta-col">14. Un documento conteniendo la estrategia ha sido comunicado a la Alta Gerencia
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
             </tr>
-            <tr>
-              <th class="pregunta-col">Situación</th>
-              <th class="respuesta-col">1</th>
-              <th class="respuesta-col">2</th>
-              <th class="respuesta-col">3</th>
-              <th class="respuesta-col">4</th>
-              <th class="respuesta-col">5</th>
-            </tr>
-            <tr>
-              <td class="pregunta-col">En la creación de la estrategia se han tenido en cuenta los factores que hacen a los riesgos de Mercado, a saber para el corto y mediano plazo:</td>
-            </tr>
+          </table>
+          <br>
+          <P style="font-size:15px">En la creación de la estrategia se han tenido en cuenta los factores que hacen a los
+            riesgos de Mercado, a saber para el corto y mediano plazo:</td>
+          </P>
 
 
+          <table>
+            <tr>
+              <th class="pregunta-col">AFIRMACIÓN</th>
+              <th class="respuesta-col">No efectivo</th>
+              <th class="respuesta-col">Poco efectivo</th>
+              <th class="respuesta-col">Efectivo</th>
+              <th class="respuesta-col">Muy efectivo</th>
+            </tr>
             <tr>
               <td class="pregunta-col-2">15. Factores macroeconómicos que podrían afectar al sector</td>
               <td class="respuesta-col">
@@ -488,597 +474,597 @@
                   <label for="colorVerde" class="radio-label"></label>
                 </div>
               </td>
-            </tr> 
+            </tr>
 
-              <tr>
-                <td class="pregunta-col-2">19. Conflictos internacionales que impactan el abastecimineto o las ventas
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-          
-
-              <tr>
-                <td class="pregunta-col-2">20. Abastecimiento de materias primas o insumos</td>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-          
-          
-
-              <tr>
-                <td class="pregunta-col-2">21. Tasas de crecimiento económico</td>
-
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
+            <tr>
+              <td class="pregunta-col-2">19. Conflictos internacionales que impactan el abastecimineto o las ventas
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
 
 
-              <tr>
-                <td class="pregunta-col-2">22. Tasas de interés</td>
-
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-              
-              <tr>
-                <td class="pregunta-col-2">23. Tasas de cambio internas</td>
-
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-
-              
-              <tr>
-                <td class="pregunta-col-2">24. Fluctuaciones entre monedas</td>
-
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-              
-              <tr>
-                <td class="pregunta-col-2">25. Inflación</td>
-
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="pregunta-col-2">26. Políticas fiscales y monetarias
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-              
-              <tr>
-                <td class="pregunta-col-2">27. Tendencias demográficas</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-
-              <tr>
-                <td class="pregunta-col-2">28. Cambios en el estilo de vida</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="pregunta-col-2">29. Patrones de consumo</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="pregunta-col-2">30. Educación y salud pública</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="pregunta-col-2">31. Tecnologías emergentes (IA)</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="pregunta-col-2">32. Disponibilidad de tecnologías clave</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-
-              <tr>
-                <td class="pregunta-col-2">33. Regulaciones ambientales</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
-
-              
-              <tr>
-                <td class="pregunta-col-2">34. Cambio climático y la percepción pública sobre cuestiones ambientales
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
+            <tr>
+              <td class="pregunta-col-2">20. Abastecimiento de materias primas o insumos</td>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
 
 
 
-              <tr>
-                <td class="pregunta-col-2">35. Regulaciones de controles de precios de venta</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
+            <tr>
+              <td class="pregunta-col-2">21. Tasas de crecimiento económico</td>
+
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col-2">22. Tasas de interés</td>
+
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col-2">23. Tasas de cambio internas</td>
+
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
 
 
 
-              <tr>
-                <td class="pregunta-col-2">36. Leyes laborales</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
+            <tr>
+              <td class="pregunta-col-2">24. Fluctuaciones entre monedas</td>
 
-              
-              <tr>
-                <td class="pregunta-col-2">37. Leyes de competencia</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
 
-              
-              
-              <tr>
-                <td class="pregunta-col-2">38. Regulaciones sanitarias y seguridad</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
- 
-                            
-              
-              <tr>
-                <td class="pregunta-col-2">39. Regulaciones de importación/exportación</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
- 
-  
-                            
-              
-              <tr>
-                <td class="pregunta-col-2">40. Normativas específicas de la industria</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
- 
-                             
-              
-              <tr>
-                <td class="pregunta-col-2">41. Disponibilidad y precio de la energía</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>
- 
-                            
-              
-              <tr>
-                <td class="pregunta-col-2">42. Cambio climático</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr> 
-                            
-              
-              <tr>
-                <td class="pregunta-col-2">43. Acceso al agua</td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorRojo" name="color1" value="Rojo">
-                    <label for="colorRojo" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorAzul" name="color1" value="Azul">
-                    <label for="colorAzul" class="radio-label"></label>
-                  </div>
-                </td>
-                <td class="respuesta-col">
-                  <div class="radio-container">
-                    <input type="radio" id="colorVerde" name="color1" value="Verde">
-                    <label for="colorVerde" class="radio-label"></label>
-                  </div>
-                </td>
-              </tr>  
- 
- 
-              <!-- Agregar más preguntas según necesites -->
+
+            <tr>
+              <td class="pregunta-col-2">25. Inflación</td>
+
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col-2">26. Políticas fiscales y monetarias
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col-2">27. Tendencias demográficas</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col-2">28. Cambios en el estilo de vida</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col-2">29. Patrones de consumo</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col-2">30. Educación y salud pública</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col-2">31. Tecnologías emergentes (IA)</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col-2">32. Disponibilidad de tecnologías clave</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col-2">33. Regulaciones ambientales</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col-2">34. Cambio climático y la percepción pública sobre cuestiones ambientales
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+
+            <tr>
+              <td class="pregunta-col-2">35. Regulaciones de controles de precios de venta</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+
+            <tr>
+              <td class="pregunta-col-2">36. Leyes laborales</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col-2">37. Leyes de competencia</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+
+            <tr>
+              <td class="pregunta-col-2">38. Regulaciones sanitarias y seguridad</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+
+            <tr>
+              <td class="pregunta-col-2">39. Regulaciones de importación/exportación</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+
+
+            <tr>
+              <td class="pregunta-col-2">40. Normativas específicas de la industria</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+
+            <tr>
+              <td class="pregunta-col-2">41. Disponibilidad y precio de la energía</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+
+            <tr>
+              <td class="pregunta-col-2">42. Cambio climático</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td class="pregunta-col-2">43. Acceso al agua</td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorRojo" name="color1" value="Rojo">
+                  <label for="colorRojo" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorAzul" name="color1" value="Azul">
+                  <label for="colorAzul" class="radio-label"></label>
+                </div>
+              </td>
+              <td class="respuesta-col">
+                <div class="radio-container">
+                  <input type="radio" id="colorVerde" name="color1" value="Verde">
+                  <label for="colorVerde" class="radio-label"></label>
+                </div>
+              </td>
+            </tr>
+
+
+            <!-- Agregar más preguntas según necesites -->
           </table>
 
           <div class="centrado-flex">
@@ -1089,49 +1075,33 @@
             <button type="button" id="boton-borrar" onclick="limpiarSelecciones()">Limpiar selecciones</button>
           </div>
 
-        </form>
-      </section>
+    </form>
+    </section>
     </section>
 
     <br>
-    <section>
-      <footer>
-        <hr>
-        <div class="footer">
-          <p>Contacto</p>
-          <a href="mailto:ruben.e.garcia@gmail.com"><i class="fas fa-envelope"></i></a>
-          <a href="tel:+5491141778519"><i class="fas fa-phone"></i></a>
-          <a href="https://wa.me/5491141778519?text=Hola, necesito contactarnos.   Gracias." target="_blank"><i
-              class="fab fa-whatsapp"></i></a>
-          </p>
-        </div>
-        <p>Derechos reservados. &copy;2024 - BDT</p>
-        <br>
-        <!-- <p>Autor de la pagina</p> -->
-        <!-- <div id="footer"></div> -->
-      </footer>
-    </section>
-  </body>
 
-  <script>
-    function toggleVisibility() {
-      var element = document.getElementById('myElement');
-      if (element.style.display === 'none') {
-        element.style.display = 'block';
-        // Asegúrate de darle tiempo al navegador para que reconozca el cambio de 'display'
-        setTimeout(() => {
-          element.style.opacity = 1;
-        }, 10);
-      } else {
-        element.style.opacity = 0;
-        // Espera a que termine la transición de opacidad para cambiar el display a 'none'
-        element.addEventListener('transitionend', function handler() {
-          element.style.display = 'none';
-          element.removeEventListener('transitionend', handler);
-        });
-      }
+</body>
+
+<script>
+  function toggleVisibility() {
+    var element = document.getElementById('myElement');
+    if (element.style.display === 'none') {
+      element.style.display = 'block';
+      // Asegúrate de darle tiempo al navegador para que reconozca el cambio de 'display'
+      setTimeout(() => {
+        element.style.opacity = 1;
+      }, 10);
+    } else {
+      element.style.opacity = 0;
+      // Espera a que termine la transición de opacidad para cambiar el display a 'none'
+      element.addEventListener('transitionend', function handler() {
+        element.style.display = 'none';
+        element.removeEventListener('transitionend', handler);
+      });
     }
+  }
 
-  </script>
+</script>
 
 </html>
