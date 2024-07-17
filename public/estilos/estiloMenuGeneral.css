@@ -23,7 +23,7 @@ body.aperie {
   background-size: cover;
 }
 
-h3 {
+h3, h4 {
   margin-top: 0;
 }
 
@@ -61,7 +61,7 @@ h3 {
   gap: 15px; /* Espacio entre los iconos */
 }
   
-h1, h2, h3 {
+h1, h2, h3, h4 {
     text-align: center;
     color: #333333;
 }

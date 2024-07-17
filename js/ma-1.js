@@ -190,7 +190,7 @@ function calculaResultados() {
 // PRINCIPAL ::::::::::::::::::::::::::::::::::::::::::::::::
 
 document
-.getElementById("survey-form")
+.getElementById("formulario")
   .addEventListener("submit", function (event) {
     valores = 0;
     event.preventDefault(); // Prevenir el envío del formulario
