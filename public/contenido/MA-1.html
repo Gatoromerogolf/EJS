@@ -213,7 +213,7 @@
               <td class="pregunta-col">08. Frecuencia de las reuniones del Directorio</td>
 
               <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-8" value="1">No hay</div>
+                <div class="radio-container"><input type="radio" name="A-I-8" value="1">Mensual</div>
               </td>
 
               <td class="respuesta-col">
@@ -221,7 +221,7 @@
               </td>
 
               <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-8" value="3">Mensual</div>
+                <div class="radio-container"><input type="radio" name="A-I-8" value="3">Ad-hoc</div>
               </td>
 
             </tr>
@@ -343,48 +343,40 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">14. Existe un Código de Gobierno Corporativo aprobado por el Directorio</td>
+              <td class="pregunta-col">14. Existe un Código de Gobierno Corporativo</td>
 
               <td class="respuesta-col">
                 <div class="radio-container"><input type="radio" name="A-I-14" value="1">
               </td>
 
               <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-14" value="2">
+                <div class="radio-container"><input type="radio" name="A-I-14" value="2" onclick="manejarVisibilidadFila15()">
               </td>
 
               <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-14" value="3">
+                <div class="radio-container"><input type="radio" name="A-I-14" value="3" onclick="manejarVisibilidadFila15()">
               </td>
 
               <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-14" value="4">
+                <div class="radio-container"><input type="radio" name="A-I-14" value="4" onclick="manejarVisibilidadFila15()">
+              </td>
+
+            </tr>
+
+            <tr>
+              <td class="pregunta-col" id="fila-15" style="display: none">15. El Código de Gobierno Corporativo está aprobado por el Directorio</td>
+
+              <td class="respuesta-col" id="fila-15a" style="display: none">
+                <div class="radio-container"><input type="radio" name="A-I-15" value="1">Si</div>
+              </td>
+
+              <td class="respuesta-col" id="fila-15b" style="display: none">
+                <div class="radio-container"><input type="radio" name="A-I-15" value="2">No</div>
               </td>
             </tr>
 
             <tr>
-              <td class="pregunta-col">15. Se ha confeccionado un Reglamento de funcionamiento del Directorio</td>
-
-              <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-15" value="1">
-              </td>
-
-              <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-15" value="2">
-              </td>
-
-              <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-15" value="3">
-              </td>
-
-              <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-15" value="4">
-              </td>
-            </tr>
-
-            <tr>
-              <td class="pregunta-col">16. La remuneración del CEO, de los directores y de la Alta Gerencia es aprobada
-                por el Directorio</td>
+              <td class="pregunta-col">16. Se ha confeccionado un Reglamento de funcionamiento del Directorio</td>
 
               <td class="respuesta-col">
                 <div class="radio-container"><input type="radio" name="A-I-16" value="1">
@@ -404,8 +396,8 @@
             </tr>
 
             <tr>
-              <td class="pregunta-col">17. Las reuniones de Directorio se documentan en actas que son previamente
-                aprobadas por los directores</td>
+              <td class="pregunta-col">17. La remuneración del CEO, de los directores y de la Alta Gerencia es aprobada
+                por el Directorio</td>
 
               <td class="respuesta-col">
                 <div class="radio-container"><input type="radio" name="A-I-17" value="1">
@@ -421,6 +413,27 @@
 
               <td class="respuesta-col">
                 <div class="radio-container"><input type="radio" name="A-I-17" value="4">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="pregunta-col">18. Las reuniones de Directorio se documentan en actas que son previamente
+                aprobadas por los directores</td>
+
+              <td class="respuesta-col">
+                <div class="radio-container"><input type="radio" name="A-I-18" value="1">
+              </td>
+
+              <td class="respuesta-col">
+                <div class="radio-container"><input type="radio" name="A-I-18" value="2">
+              </td>
+
+              <td class="respuesta-col">
+                <div class="radio-container"><input type="radio" name="A-I-18" value="3">
+              </td>
+
+              <td class="respuesta-col">
+                <div class="radio-container"><input type="radio" name="A-I-18" value="4">
               </td>
             </tr>
 
@@ -512,6 +525,27 @@
   }
 </script>
 
+<script>
+  function manejarVisibilidadFila15() {
+    // Obtener el valor seleccionado en la pregunta "A-9-3"
+    var valorSeleccionado = document.querySelector('input[name="A-I-14"]:checked').value;
+    // Seleccionar la fila que queremos mostrar/ocultar
+    // var fila2 = document.getElementById('fila-2');
+
+    // Si el valor no es "1", ocultamos la fila, si no, la mostramos
+    if (valorSeleccionado === '2' || valorSeleccionado === '3' || valorSeleccionado === '4' ) {
+      // fila2.style.display = ' ';
+      document.getElementById('fila-15').style.display = 'table-cell';
+      document.getElementById('fila-15a').style.display = 'table-cell';
+      document.getElementById('fila-15b').style.display = 'table-cell';
+    } else {
+      // fila2.style.display = 'none';
+      document.getElementById('fila-15').style.display = 'none';
+      document.getElementById('fila-15a').style.display = 'none';
+      document.getElementById('fila-15b').style.display = 'none';
+    }
+  }
+</script>
 
 <script src="../datos/tabla01.js"></script>
 <script src="../datos/tabla02.js"></script>
