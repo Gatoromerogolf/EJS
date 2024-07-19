@@ -1,5 +1,5 @@
 const tabla01 = [
-  [150, 0, 730], // 1. ctdd directores
+  [150, 0, 735], // 1. ctdd directores
   [0, 20, 40, 60], // 2. exper mas de 3 años
   [0, 20, 40, 60], // 3. empre prestigiosos
   [0, 20, 40, 60], // 4. Exper en sec económico
@@ -13,7 +13,8 @@ const tabla01 = [
   [0, 5, 7.5, 10], // 12
   [0, 10, 15, 20], // 13
   [0, 10, 15, 20], // 14
-  [0, 10, 15, 20], // 15
-  [0, 20, 30, 40], // 16
-  [0, 10, 15, 20], // 17
+  [10, 0], // 15. codigo aprobado por direc
+  [0, 10, 15, 20], // 16. reglamento direct
+  [0, 20, 30, 40], // 17. remunerac
+  [0, 10, 15, 20] // 18. actas
 ];
