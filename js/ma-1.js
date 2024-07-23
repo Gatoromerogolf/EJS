@@ -290,6 +290,11 @@ function limpiarSelecciones() {
     checkbox.checked = false;
   });
 
+  document.getElementById('lineaAB').style.display = 'none';
+  document.getElementById('lineaAB1').style.display = 'none';
+  document.getElementById('lineaAB2').style.display = 'none';
+  document.getElementById('lineaAB3').style.display = 'none';
+  document.getElementById('lineaAB4').style.display = 'none';
   document.getElementById('linea2').style.display = 'none';
   document.getElementById('linea3').style.display = 'none';
   document.getElementById('linea4').style.display = 'none';

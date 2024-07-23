@@ -5,6 +5,7 @@ let maximo = 20; // 2 por 10
 let porcientoFormateado = 0;
 let puntajesIndividuales = [];
 let filasFaltantes = [];
+let isExiting = false;
 
 let checkboxesSeleccionados = [];
 
@@ -75,9 +76,12 @@ function calculaResultados() {
 // PROCESO PRINCIPAL ::::::::::::::::::::::::::::::::::::::::::
 
 document
-// Captura del formulario :::::::::::::::::::::::::::::::::::::
   .getElementById("formulario")
-  .addEventListener("submit", function (event) {
+    .addEventListener("submit", function (event) {
+      if (isExiting) {
+        isExiting = false;
+        return; // No ejecutar la validación si se está intentando salir
+    }
     valores = 0;
     event.preventDefault(); // Prevenir el envío del formulario
 

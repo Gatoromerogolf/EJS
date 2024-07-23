@@ -53,7 +53,7 @@ const options = {
             max: 100,
             title: {
                 display: true,
-                text: 'Porcentaje de Cumplimiento'
+                text: 'Situación por Factor'
             },
             ticks: {
                 callback: function(value) {
@@ -113,7 +113,7 @@ plugins: {
     },
         title: {
             display: true,
-            text: 'Cumplimiento por Área',
+            text: 'Nivel por Factor',
             font: {
                 size: 18
             }

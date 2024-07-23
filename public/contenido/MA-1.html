@@ -35,8 +35,11 @@
               <h4 class="tituloSeccion"><a href="Menu-A.html">I - La composición y responsabilidad del Directorio</a></h4>
             </div>
 
-          <p style="font-size:12px">Seleccione la opción que corresponda a su organización.</p>
-
+        <div class="salida">
+          <p>Seleccione la opción que corresponda a su organización.</p>
+          <button type="submit" id="boton-salir">Salir</button>
+        </div>
+          
           <table>
             <tr>
               <th class="pregunta-col">Situación</th>
@@ -180,7 +183,6 @@
             </tr>
           </table>
 
-
           <table class="tablaCheckbox">
             <tr>
               <td>
@@ -219,11 +221,6 @@
               <td class="respuesta-col">
                 <div class="radio-container"><input type="radio" name="A-I-8" value="2">Trimestral</div>
               </td>
-
-              <td class="respuesta-col">
-                <div class="radio-container"><input type="radio" name="A-I-8" value="3">Ad-hoc</div>
-              </td>
-
             </tr>
 
 
@@ -256,22 +253,9 @@
             <!-- </table> -->
             <br><br>
 
-            <!-- <p><span style="font-size: 13px">En cada situación indique el grado de aplicación en la siguiente escala: 1 = 'Totalmente en desacuerdo' (no aplica, no existe o es insatisfactorio) y 5 = 'Totalmente de acuerdo' (cumplimiento o satisfacción total)</span></p>
-          <table>
-
-          <tr>
-            <th class="pregunta-col">Situación</th>
-            <th class="respuesta-col">1</th>
-            <th class="respuesta-col">2</th>
-            <th class="respuesta-col">3</th>
-            <th class="respuesta-col">4</th>
-            <th class="respuesta-col">5</th>
-          </tr> -->
-
-
             <tr>
               <th class="pregunta-col">Situación</th>
-              <th class="respuesta-col">No efectiva</th>
+              <th class="respuesta-col">No efectivo</th>
               <th class="respuesta-col">Poco efectivo</th>
               <th class="respuesta-col">Efectivo</th>
               <th class="respuesta-col">Muy efectivo</th>
@@ -360,7 +344,6 @@
               <td class="respuesta-col">
                 <div class="radio-container"><input type="radio" name="A-I-14" value="4" onclick="manejarVisibilidadFila15()">
               </td>
-
             </tr>
 
             <tr>
@@ -438,7 +421,6 @@
             </tr>
 
           </table>
-
 
           <div class="centrado-flex">
             <button type="submit" id="boton-enviar">Enviar</button>

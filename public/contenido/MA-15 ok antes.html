@@ -40,27 +40,16 @@
             <button type="button" id="boton-salir">Salir</button>
           </div>
 
-          <div id="overlay">
-          <div id="ventanaSalida" >
-            <!-- <div class="confirm-modal" id="confirm-modal">-->
-              <div class="confirm-box">
-                <p>La información registrada hasta el momento quedará almacenada, <br> pudiendo completarse posteriormente
-                  los items faltantes.
-                  <br>
-                </p>
-                <p>¿Está seguro que desea salir de la aplicación?</p>
-                <p>Indique Si, si desea suspender el registro de información</p>
-                <p>Indique NO, si desea continuar con la aplicación</p>            
-                <button id="confirm-yes">Sí</button>
-                <button id="confirm-no">No</button><br>
-                <button id="confirm-yes">Salir</button>
-                <button id="confirm-no">Continuar</button><br>
-                <button id="confirm-yes">Terminar sesión</button>
-                <button id="confirm-no">Continuar</button>
-              </div>
-            <!-- </div> -->
+          <div class="confirm-modal" id="confirm-modal">
+            <div class="confirm-box">
+              <p>La información registrada hasta el momento queda almacenada, <br> pudiendo completar posteriormente los items faltantes.
+                <br>
+              </p>
+              <p>¿Está seguro que desea abandonar la aplicación?</p>
+              <button id="confirm-yes">Sí</button>
+              <button id="confirm-no">No</button>
+            </div>
           </div>
-        </div>
 
 
           <table>
@@ -123,6 +112,7 @@
 
           </table>
 
+
           <div class="centrado-flex">
             <button type="submit" id="boton-enviar">Enviar</button>
           </div>
@@ -131,14 +121,16 @@
             <button type="button" id="boton-borrar" onclick="limpiarSelecciones()">Limpiar selecciones</button>
           </div>
 
-          </form>
+          <!-- </form> -->
 
-        <!-- </form> -->
+        </form>
   </div>
 
   </section>
   </section>
 
+
+  <!-- ventana al final con resultados -->
 
   <div id="miAlerta" class="alerta-oculto">
     <div class="alerta-contenido">
@@ -159,7 +151,6 @@
       </div>
     </div>
   </div>
-
 
 </body>
 
@@ -184,45 +175,26 @@
 </script>
 
 <script>
+  let isExiting = false; // Variable global para indicar si se está intentando salir
+  document.getElementById('boton-salir').addEventListener('click', function () {
+    isExiting = true;
+    document.getElementById('confirm-modal').style.display = 'flex';
+  });
 
-document.getElementById('formulario').addEventListener('submit', function(event) {
-      event.preventDefault();
+  // document.getElementById('confirm-no').addEventListener('click', function () {
+  //   isExiting = false;
+  //   document.getElementById('confirm-modal').style.display = 'none';
+  // });
+
+  document.getElementById('confirm-yes').addEventListener('click', function () {
+    isExiting = true;
+    console.log ('antes del window.location');
+    // window.location.href = (`https://www.google.com`);  // Ruta absoluta para prueba
+    // console.log(`primer console log: ${window.location.href}`);
     });
 
-const botonSalida = document.getElementById('boton-salir');
-const ventanaSale = document.getElementById('ventanaSalida');
-const botonYes = document.getElementById('confirm-yes');
-const botonNou = document.getElementById('confirm-no');
-
-
-// Agrega un evento al botón para mostrar la ventana
-botonSalida.addEventListener('click', () => {
-  let isExiting = true;
-  ventanaSale.style.display = 'block';
-  document.getElementById('overlay').style.display = 'block';
-
-});
-
-// Agrega un evento para el botón NO
-botonNou.addEventListener('click', () => {
-  isExiting = true;
-  console.log ('dijo que NO')
-    ventanaSale.style.display = 'none';
-    document.getElementById('overlay').style.display = 'none';
-    // Continúa con la operación original de la página
-});
-
-// Agrega un evento para el botón SI
-botonYes.addEventListener('click', () => {
-  console.log ('dijo que SI')
-  isExiting = true;
-    // Redirige a una nueva página de destino (por ejemplo, Google)
-    // window.location.href = 'https://www.google.com';
-  window.location.href = '../../index.html';
-});
-
+    console.log(`segundo c log + ${window.location.href}`);  // Imprimir la ruta actual
 </script>
-
 
 <!-- <script src="../datos/tabla01.js"></script> -->
 <!-- <script src="../datos/tabla02.js"></script> -->
